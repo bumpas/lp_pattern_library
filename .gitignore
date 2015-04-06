@@ -1,3 +1,7 @@
+## Let's ignore production css
+.css
+
+## SASS stuff to ignore
 .sass-cache
 *.css.map
 
