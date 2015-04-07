@@ -35,7 +35,7 @@ section {
 	padding-top: 34px;
 	width: 170px;
 	height: 25px;
-	margin-bottom: 40px;
+	margin: 0 30px 40px 0;
 
 	&:before {
 		position: absolute;
@@ -49,11 +49,6 @@ section {
 
 	&.white:before {
 		background-color: $white;
-		border: 1px solid $light-grey;
-	}
-
-	&.white-off:before {
-		background-color: $white-off;
 		border: 1px solid $light-grey;
 	}
 
