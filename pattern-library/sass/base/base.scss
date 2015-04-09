@@ -34,7 +34,7 @@ h5 {
 }
 
 h6 {
-	font-size: 1rem;
+	font-size: $font-size;
 }
 
 small {
@@ -44,14 +44,17 @@ small {
 //buttons
 .btn {
 	display: inline-block;
+	cursor: pointer;
 	background: $aqua;
 	text-decoration: none;
 	color: $white;
+	font-size: $font-size;
 	font-weight: bold;
 	text-align: center;
+	vertical-align: middle;
 	text-transform: uppercase;
 	border: 1px solid $aqua;
-	padding: 0 16px;
+	padding: 0 20px;
 	height: 43px;
 	line-height: 43px;
 	transition: .4s;
@@ -60,5 +63,39 @@ small {
 		background: $white;
 		color: $black;
 		border: 1px solid $light-grey
+	}
+}
+
+.btn--light {
+	background: $white;
+	color: $black;
+	border-color: $white;
+
+	&:hover {
+		background: $black;
+		color: $white;
+		border-color: $black;
+	}
+}
+
+.btn--dark {
+	background: $black;
+	color: $white;
+	border-color: $black;
+
+	&:hover {
+		background: $aqua;
+		color: $white;
+		border-color: $aqua;
+	}	
+}
+
+.btn--secondary {
+	background: none;
+	border: 1px solid $black;
+	color: $black;
+
+	&:hover {
+		background: rgba(0,0,0, 0.1);
 	}
 }

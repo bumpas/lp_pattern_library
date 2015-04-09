@@ -30,14 +30,16 @@ section {
 		width: 100%;
 		top: 0;
 		left: 0;
-		z-index: -1;
+		z-index: 0;
 	}
 
 	h4:first-of-type {
+		position: relative;
 		color: white;
 		line-height: 60px;
 		margin-bottom: 60px;
 		text-transform: uppercase;
+		z-index: 1;
 	}
 }
 
@@ -89,4 +91,8 @@ section {
 		background-color: $aqua;
 	}
 
+}
+
+.buttons {
+	background: #efefef;
 }
