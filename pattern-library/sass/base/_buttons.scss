@@ -1,0 +1,108 @@
+//mixins
+@mixin hover-white {
+	background-color: $white;
+	border-color: $white;
+	color: $black;
+}
+
+@mixin hover-black {
+	background-color: $black;
+	border-color: $black;
+	color: $white;
+}
+
+@mixin hover-aqua {
+	background-color: $aqua;
+	border-color: $aqua;
+	color: $white;
+}
+
+//buttons
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: $font-size;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	transition: .4s;
+	border: 1px solid transparent;
+	height: 43px;
+	line-height: 43px;
+	padding: 0 20px;
+	margin: .25em;
+	background-color: $aqua;
+	border-color: $aqua;
+	color: $white;
+
+	&:hover {
+		@include hover-white;
+	}
+}
+//button sizes
+.btn--wide {
+	padding: 0 60px;
+}
+
+.btn--small {
+	height: 35px;
+	line-height: 35px;
+	padding: 0 16px;
+}
+
+// button colors
+
+.btn--white {
+	background-color: $white;
+	border-color: $white;
+	color: $black;
+
+	&:hover {
+		@include hover-black;
+	}
+}
+
+.btn--black {
+	background-color: $black;
+	border-color: $black;
+	color: $white;
+
+	&:hover {
+		@include hover-aqua;
+	}
+}
+
+.btn--nofillblack {
+	background-color: none;
+	border-color: $black;
+	color: $black;
+
+	&:hover {
+		@include hover-black;
+	}
+}
+
+.btn--nofillwhite {
+	background-color: none;
+	border-color: $white;
+	color: $white;
+}
+
+.btn--transblack {
+	background-color: rgba(0,0,0,0.15);
+	color: $black;
+	border-color: $black;
+
+	&:hover {
+		@include hover-black;
+	}
+}
+
+.btn--transwhite {
+	background-color: none;
+	background-color: rgba(0,0,0,0.15);
+	color: $white;
+	border-color: $white;
+}
