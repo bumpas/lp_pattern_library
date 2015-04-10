@@ -2,100 +2,10 @@
 @import "compass/reset";
 
 @import "variables";
+@import "typography";
+@import "buttons";
 
 //let's use box sizing border-box because it's awesome.
 *, *:before, *:after {
 	@include box-sizing(border-box);
-}
-
-//typography
-html {
-	font-size: $font-size;
-}
-
-h1 {
-	font-size: 4.375rem;
-}
-
-h2 {
-	font-size: 2.813rem;
-}
-
-h3 {
-	font-size: 1.750rem;
-}
-
-h4 {
-	font-size: 1.500rem;
-}
-
-h5 {
-	font-size: 1.250rem;
-}
-
-h6 {
-	font-size: $font-size;
-}
-
-small {
-	font-size: 0.625rem;
-}
-
-//buttons
-.btn {
-	display: inline-block;
-	cursor: pointer;
-	background: $aqua;
-	text-decoration: none;
-	color: $white;
-	font-size: $font-size;
-	font-weight: bold;
-	text-align: center;
-	vertical-align: middle;
-	text-transform: uppercase;
-	border: 1px solid $aqua;
-	padding: 0 20px;
-	height: 43px;
-	line-height: 43px;
-	transition: .4s;
-
-	&:hover {
-		background: $white;
-		color: $black;
-		border: 1px solid $light-grey
-	}
-}
-
-.btn--light {
-	background: $white;
-	color: $black;
-	border-color: $white;
-
-	&:hover {
-		background: $black;
-		color: $white;
-		border-color: $black;
-	}
-}
-
-.btn--dark {
-	background: $black;
-	color: $white;
-	border-color: $black;
-
-	&:hover {
-		background: $aqua;
-		color: $white;
-		border-color: $aqua;
-	}	
-}
-
-.btn--secondary {
-	background: none;
-	border: 1px solid $black;
-	color: $black;
-
-	&:hover {
-		background: rgba(0,0,0, 0.1);
-	}
 }

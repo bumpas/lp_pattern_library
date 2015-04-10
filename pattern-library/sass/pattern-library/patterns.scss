@@ -40,6 +40,7 @@ section {
 		margin-bottom: 60px;
 		text-transform: uppercase;
 		z-index: 1;
+		text-align: left;
 	}
 }
 
@@ -95,4 +96,7 @@ section {
 
 .buttons {
 	background: #efefef;
+	// background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
+	// background-size: cover;
+	text-align: center;
 }
