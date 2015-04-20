@@ -1,3 +1,34 @@
+/* Fool-proof @font-face */
+/* Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/ */
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+@include font-face(Icons, '../fonts/icons/icons', 300, normal);
+
+@mixin Icons {
+  font-family: 'Icons';
+  font-weight: 300; 
+  font-style: normal; 
+}
+
 //typography
 html {
 	font-size: $font-size;
@@ -29,4 +60,26 @@ h6 {
 
 small {
 	font-size: 0.625rem;
+}
+
+//links
+a {
+	color: $aqua;
+	text-decoration: none;
+
+	&:hover {
+		color: $medium-grey;
+	}
+
+	&.arrow:after {
+		@include Icons;
+		position: relative;
+		content: "\f105";
+		top: 0;
+		padding-left: 4px;
+	}
+
+	&.underline {
+		text-decoration: underline;
+	}
 }

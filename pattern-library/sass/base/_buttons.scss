@@ -75,7 +75,7 @@
 }
 
 .btn--nofillblack {
-	background-color: none;
+	background-color: rgba(0,0,0,0);
 	border-color: $black;
 	color: $black;
 
@@ -85,13 +85,13 @@
 }
 
 .btn--nofillwhite {
-	background-color: none;
+	background-color: rgba(0,0,0,0);
 	border-color: $white;
 	color: $white;
 }
 
 .btn--transblack {
-	background-color: rgba(0,0,0,0.15);
+	background-color: $transblack;
 	color: $black;
 	border-color: $black;
 
@@ -101,8 +101,7 @@
 }
 
 .btn--transwhite {
-	background-color: none;
-	background-color: rgba(0,0,0,0.15);
+	background-color: $transblack;
 	color: $white;
 	border-color: $white;
 }

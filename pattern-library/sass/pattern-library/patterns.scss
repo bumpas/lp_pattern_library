@@ -19,7 +19,7 @@ header {
 
 //sections
 section {
-	padding: 0 12.5% 60px;
+	padding: 0 1rem 4rem;
 	position: relative;
 
 	&:before {
@@ -33,7 +33,7 @@ section {
 		z-index: 0;
 	}
 
-	h4:first-of-type {
+	> h4:first-of-type {
 		position: relative;
 		color: white;
 		line-height: 60px;
@@ -92,11 +92,30 @@ section {
 		background-color: $aqua;
 	}
 
+	&.transblack:before {
+		background-color: $transblack;
+	}
+
+}
+
+.buttonsLinks {
+	background: #efefef;
+
+	h4 {
+		padding-bottom: .5rem;
+	}
 }
 
 .buttons {
-	background: #efefef;
-	// background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
-	// background-size: cover;
-	text-align: center;
+	margin: 0 0 2rem;
+}
+
+.buttons--background {
+	background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	padding: 1rem;
+
+	h4 {
+		color: $white;
+	}
 }
