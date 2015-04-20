@@ -4,6 +4,9 @@
 ## Bower Components
 bower_components
 
+## Node stuff
+node_modules
+
 ## Sublime Text project files
 *.sublime-workspace
 
