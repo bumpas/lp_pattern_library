@@ -12,7 +12,9 @@ gulp.task('sass', function(){
 			errLogToConsole: true,
 			onError: function(e){
 				console.log(e);
-			}
+			},
+			outputStyle: 'nested',
+			sourceComments: true
 		}))
 		.pipe(gulp.dest('css'));
 });
