@@ -1,6 +1,9 @@
 ## Let's ignore production css
 .css
 
+## Sublime Text project files
+*.sublime-workspace
+
 ## SASS stuff to ignore
 .sass-cache
 *.css.map
