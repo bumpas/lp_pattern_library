@@ -1,5 +1,5 @@
 ## Let's ignore production css
-.css
+**/*.css
 
 ## Bower Components
 bower_components
