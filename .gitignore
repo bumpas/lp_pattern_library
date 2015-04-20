@@ -1,6 +1,9 @@
 ## Let's ignore production css
 .css
 
+## Bower Components
+bower_components
+
 ## Sublime Text project files
 *.sublime-workspace
 
