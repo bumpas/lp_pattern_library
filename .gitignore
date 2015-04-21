@@ -18,3 +18,6 @@ npm-debug.log
 ## General CodeKit files to ignore
 config.codekit
 /min
+
+**/.DS_Store
+
