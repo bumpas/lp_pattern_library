@@ -29,10 +29,10 @@
 	text-transform: uppercase;
 	transition: .4s;
 	border: 2px solid transparent;
-	height: 43px;
-	line-height: 43px;
-	padding: 0 20px;
-	margin: .25em;
+	//height: 43px;
+	//line-height: 43px;
+	padding: .75rem 1.25rem;
+	margin: .25rem;
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
@@ -43,13 +43,12 @@
 }
 //button sizes
 .btn--wide {
-	padding: 0 60px;
+	padding-left: 3.75rem;
+	padding-right: 3.75rem;
 }
 
 .btn--small {
-	height: 35px;
-	line-height: 35px;
-	padding: 0 16px;
+	padding: .5rem 1rem;
 }
 
 // button colors

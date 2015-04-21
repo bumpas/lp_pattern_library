@@ -97,6 +97,10 @@ h6 {
   font-size: 1rem;
 }
 
+p {
+  font-size: 1.75rem;
+}
+
 small {
   font-size: 0.625rem;
 }
@@ -146,10 +150,8 @@ a:hover {
   -webkit-transition: .4s;
           transition: .4s;
   border: 2px solid transparent;
-  height: 43px;
-  line-height: 43px;
-  padding: 0 20px;
-  margin: .25em;
+  padding: .75rem 1.25rem;
+  margin: .25rem;
   background-color: #02BBD5;
   border-color: #02BBD5;
   color: #FFFFFF;
@@ -161,13 +163,12 @@ a:hover {
 }
 
 .btn--wide {
-  padding: 0 60px;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
 }
 
 .btn--small {
-  height: 35px;
-  line-height: 35px;
-  padding: 0 16px;
+  padding: .5rem 1rem;
 }
 
 .btn--white {
@@ -230,6 +231,22 @@ a:hover {
   box-sizing: border-box;
 }
 
+.hero {
+  text-align: center;
+}
+.hero img {
+  display: block;
+  max-width: 100%;
+}
+
+.hero__heading {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+.hero__heading span {
+  font-weight: 100;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -243,6 +260,10 @@ header {
 }
 header h1 {
   line-height: 400px;
+}
+
+.section--fluid {
+  padding: 0;
 }
 
 section {
@@ -325,7 +346,7 @@ section > h4:first-of-type {
 }
 
 .buttons--background {
-  background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
+  background: url("../images/hero-bikers.jpg") no-repeat 50% 50%;
   background-size: cover;
   padding: 1rem;
 }
