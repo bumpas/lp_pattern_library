@@ -43,15 +43,15 @@ h2 {
 }
 
 h3 {
-	font-size: 1.750rem;
+	font-size: 1.75rem;
 }
 
 h4 {
-	font-size: 1.500rem;
+	font-size: 1.5rem;
 }
 
 h5 {
-	font-size: 1.250rem;
+	font-size: 1.25rem;
 }
 
 h6 {
@@ -65,21 +65,36 @@ small {
 //links
 a {
 	color: $aqua;
-	text-decoration: none;
 
 	&:hover {
 		color: $medium-grey;
 	}
+}
 
-	&.arrow:after {
+.link {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.link--arrow {
+
+	&:after {
 		@include Icons;
 		position: relative;
 		content: "\f105";
 		top: 0;
-		padding-left: 4px;
+		margin-left: 4px;
 	}
+}
 
-	&.underline {
-		text-decoration: underline;
+.link--arrowCircled {
+
+	&:after {
+		@include Icons;
+		font-size: 1.2rem;
+		position: relative;
+		content: "\e600";
+		margin-left: 5px;
+		top: 3px;
 	}
 }
