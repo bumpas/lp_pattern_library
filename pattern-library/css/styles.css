@@ -138,6 +138,18 @@ a:hover {
   top: 3px;
 }
 
+.col-md-4, .col-md-8 {
+  float: left;
+}
+
+.col-md-4 {
+  width: 33.33%;
+}
+
+.col-md-8 {
+  width: 66.66%;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -231,12 +243,12 @@ a:hover {
   box-sizing: border-box;
 }
 
+img, embed, object, video {
+  max-width: 100%;
+}
+
 .hero {
   text-align: center;
-}
-.hero img {
-  display: block;
-  max-width: 100%;
 }
 
 .hero__heading {
