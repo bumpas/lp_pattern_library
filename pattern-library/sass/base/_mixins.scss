@@ -1,0 +1,58 @@
+// Responsive breakpoints
+
+@mixin breakpoint($class) {
+ 
+  @if $class == md {
+    @media (min-width: 768px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 992px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: md, lg";
+  }
+}
+
+/* Fool-proof @font-face */
+/* Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/ */
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff2') format('woff2'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+@include font-face(Icons, '../fonts/icons/icons', 300, normal);
+@include font-face(CoreSans, '../fonts/coresans/coresansd35regular', 300, normal);
+@include font-face(CoreSans, '../fonts/coresans/coresansd57cnbold', 700, normal);
+@include font-face(CoreSans, '../fonts/coresans/coresansd25light', 100, normal);
+
+@mixin Icons {
+  font-family: 'Icons';
+  font-weight: 300; 
+  font-style: normal; 
+}
+
+@mixin CoreSans {
+  font-family: 'CoreSans';
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .1rem;
+}

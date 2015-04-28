@@ -22,16 +22,15 @@
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: $font-size;
+	font-size: 2rem;
+	letter-spacing: .188rem;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
 	text-transform: uppercase;
 	transition: .4s;
 	border: 2px solid transparent;
-	//height: 43px;
-	//line-height: 43px;
-	padding: .75rem 1.25rem;
+	padding: 1.1rem 2.25rem;
 	margin: .25rem;
 	background-color: $aqua;
 	border-color: $aqua;
@@ -39,6 +38,11 @@
 
 	&:hover {
 		@include hover-white;
+	}
+
+	@include breakpoint(md) {
+		font-size: $font-size-md;
+		padding: .75rem 1.25rem;
 	}
 }
 //button sizes
@@ -49,6 +53,10 @@
 
 .btn--small {
 	padding: .5rem 1rem;
+
+	@include breakpoint(md) {
+		font-size: 0.875rem;
+	}
 }
 
 // button colors

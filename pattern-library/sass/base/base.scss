@@ -1,6 +1,7 @@
 @import "compass";
 @import "compass/reset";
 
+@import "mixins";
 @import "variables";
 @import "typography";
 @import "grid";
@@ -14,4 +15,32 @@
 //all media should be relatively sized
 img, embed, object, video {
 	max-width: 100%;
+}
+
+.bgFull {
+	position: absolute;
+	height: 200%;
+	width: 200%;
+	top: -50%;
+  	left: -50%;
+
+  	img {
+  		  bottom: 0;
+		  left: 0;
+		  margin: auto;
+		  min-height: 50%;
+		  min-width: 50%;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  z-index: -1;
+  	}
+}
+
+.left-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-left: 30px;
+	padding-bottom: 30px;
 }

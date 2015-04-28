@@ -59,7 +59,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @font-face {
   font-family: Icons;
   src: url("../fonts/icons/icons.eot");
-  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#Icons") format("svg");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#Icons") format("svg");
   font-weight: 300;
   font-style: normal;
 }
@@ -69,12 +69,65 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     src: url("../fonts/icons/icons.svg#Icons") format("svg");
   }
 }
+@font-face {
+  font-family: CoreSans;
+  src: url("../fonts/coresans/coresansd35regular.eot");
+  src: url("../fonts/coresans/coresansd35regular.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd35regular.woff2") format("woff2"), url("../fonts/coresans/coresansd35regular.woff") format("woff"), url("../fonts/coresans/coresansd35regular.ttf") format("truetype"), url("../fonts/coresans/coresansd35regular.svg#CoreSans") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSans;
+    src: url("../fonts/coresans/coresansd35regular.svg#CoreSans") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSans;
+  src: url("../fonts/coresans/coresansd57cnbold.eot");
+  src: url("../fonts/coresans/coresansd57cnbold.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd57cnbold.woff2") format("woff2"), url("../fonts/coresans/coresansd57cnbold.woff") format("woff"), url("../fonts/coresans/coresansd57cnbold.ttf") format("truetype"), url("../fonts/coresans/coresansd57cnbold.svg#CoreSans") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSans;
+    src: url("../fonts/coresans/coresansd57cnbold.svg#CoreSans") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSans;
+  src: url("../fonts/coresans/coresansd25light.eot");
+  src: url("../fonts/coresans/coresansd25light.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd25light.woff2") format("woff2"), url("../fonts/coresans/coresansd25light.woff") format("woff"), url("../fonts/coresans/coresansd25light.ttf") format("truetype"), url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSans;
+    src: url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
+  }
+}
 html {
-  font-size: 1rem;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'CoreSans';
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .1rem;
+  font-size: 1.75rem;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 h1 {
   font-size: 4.375rem;
+  font-weight: 700;
 }
 
 h2 {
@@ -93,16 +146,20 @@ h5 {
   font-size: 1.25rem;
 }
 
-h6 {
-  font-size: 1rem;
+b, strong {
+  font-weight: 700;
 }
 
-p {
-  font-size: 1.75rem;
+em, i {
+  font-style: oblique;
 }
 
 small {
   font-size: 0.625rem;
+}
+
+button, input, optgroup, select, textarea {
+  font: inherit;
 }
 
 a {
@@ -138,23 +195,42 @@ a:hover {
   top: 3px;
 }
 
-.col-md-4, .col-md-8 {
-  float: left;
+.row {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.col img {
+  display: block;
 }
 
 .col-md-4 {
-  width: 33.33%;
+  background: blue;
+  min-width: 33.33%;
 }
 
 .col-md-8 {
-  width: 66.66%;
+  min-width: 66.66%;
+  background: red url("../images/bg-waves.jpg") no-repeat;
+  background-size: cover;
 }
 
 .btn {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 2rem;
+  letter-spacing: .188rem;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -162,7 +238,7 @@ a:hover {
   -webkit-transition: .4s;
           transition: .4s;
   border: 2px solid transparent;
-  padding: .75rem 1.25rem;
+  padding: 1.1rem 2.25rem;
   margin: .25rem;
   background-color: #02BBD5;
   border-color: #02BBD5;
@@ -173,6 +249,12 @@ a:hover {
   border-color: #FFFFFF;
   color: #2B2B2B;
 }
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1rem;
+    padding: .75rem 1.25rem;
+  }
+}
 
 .btn--wide {
   padding-left: 3.75rem;
@@ -181,6 +263,11 @@ a:hover {
 
 .btn--small {
   padding: .5rem 1rem;
+}
+@media (min-width: 768px) {
+  .btn--small {
+    font-size: 0.875rem;
+  }
 }
 
 .btn--white {
@@ -247,6 +334,33 @@ img, embed, object, video {
   max-width: 100%;
 }
 
+.bgFull {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  left: -50%;
+}
+.bgFull img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  min-height: 50%;
+  min-width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.left-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
 .hero {
   text-align: center;
 }
@@ -257,10 +371,6 @@ img, embed, object, video {
 }
 .hero__heading span {
   font-weight: 100;
-}
-
-body {
-  font-family: sans-serif;
 }
 
 header {

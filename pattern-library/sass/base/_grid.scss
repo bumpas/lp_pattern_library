@@ -1,11 +1,27 @@
-.col-md-4, .col-md-8 {
-	float: left;
+.row {
+	overflow: hidden;
+	display: flex;
+}
+
+.col {
+	position: relative;
+	//float: left;
+	flex: 1;
+
+	img {
+		display: block;
+	}
 }
 
 .col-md-4 {
-	width: 33.33%;
+	background: blue;
+	min-width: 33.33%;
+	//flex-grow: 1;
 }
 
 .col-md-8 {
-	width: 66.66%;
+	min-width: 66.66%;
+	//flex-grow: 3;
+	background: red url("../images/bg-waves.jpg") no-repeat;
+	background-size: cover; 
 }
