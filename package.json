@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "gulp": "^3.4.0",
+    "gulp-sass": "*",
+    "gulp-concat": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-imagemin": "*",
+    "imagemin-pngquant": "*",
+    "gulp-uglify": "*",
+    "del": "*",
+    "run-sequence": "*"
+  }
+}

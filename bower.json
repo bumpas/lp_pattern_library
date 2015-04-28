@@ -1,0 +1,19 @@
+{
+  "name": "lifeproof.com",
+  "version": "0.0.0",
+  "authors": [
+    "Jake Wilson <jake.wilson@otterproducts.com>",
+    "Bumpas <andrew.bumpas@otterproducts.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "jquery": "~2.1.3"
+  }
+}

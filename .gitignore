@@ -1,5 +1,15 @@
 ## Let's ignore production css
-.css
+**/*.css
+
+## Bower Components
+bower_components
+
+## Node stuff
+node_modules
+npm-debug.log
+
+## Sublime Text project files
+*.sublime-workspace
 
 ## SASS stuff to ignore
 .sass-cache
