@@ -6,6 +6,7 @@
 @import "typography";
 @import "grid";
 @import "buttons";
+@import "utilities";
 
 //let's use box sizing border-box because it's awesome.
 *, *:before, *:after {
@@ -35,12 +36,4 @@ img, embed, object, video {
 		  top: 0;
 		  z-index: -1;
   	}
-}
-
-.left-bottom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding-left: 30px;
-	padding-bottom: 30px;
 }

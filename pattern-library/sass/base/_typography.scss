@@ -13,9 +13,12 @@ body {
 	}
 }
 
+h1, h2, h3, h4, h5, h6 {
+	@include headers;
+}
+
 h1 {
 	font-size: 4.375rem;
-	font-weight: 700;
 }
 
 h2 {

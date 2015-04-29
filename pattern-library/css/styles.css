@@ -71,9 +71,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @font-face {
   font-family: CoreSans;
+  src: url("../fonts/coresans/coresansd25light.eot");
+  src: url("../fonts/coresans/coresansd25light.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd25light.woff2") format("woff2"), url("../fonts/coresans/coresansd25light.woff") format("woff"), url("../fonts/coresans/coresansd25light.ttf") format("truetype"), url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSans;
+    src: url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSans;
   src: url("../fonts/coresans/coresansd35regular.eot");
   src: url("../fonts/coresans/coresansd35regular.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd35regular.woff2") format("woff2"), url("../fonts/coresans/coresansd35regular.woff") format("woff"), url("../fonts/coresans/coresansd35regular.ttf") format("truetype"), url("../fonts/coresans/coresansd35regular.svg#CoreSans") format("svg");
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -84,28 +97,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @font-face {
   font-family: CoreSans;
-  src: url("../fonts/coresans/coresansd57cnbold.eot");
-  src: url("../fonts/coresans/coresansd57cnbold.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd57cnbold.woff2") format("woff2"), url("../fonts/coresans/coresansd57cnbold.woff") format("woff"), url("../fonts/coresans/coresansd57cnbold.ttf") format("truetype"), url("../fonts/coresans/coresansd57cnbold.svg#CoreSans") format("svg");
+  src: url("../fonts/coresans/coresansd55bold.eot");
+  src: url("../fonts/coresans/coresansd55bold.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd55bold.woff2") format("woff2"), url("../fonts/coresans/coresansd55bold.woff") format("woff"), url("../fonts/coresans/coresansd55bold.ttf") format("truetype"), url("../fonts/coresans/coresansd55bold.svg#CoreSans") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: CoreSans;
-    src: url("../fonts/coresans/coresansd57cnbold.svg#CoreSans") format("svg");
+    src: url("../fonts/coresans/coresansd55bold.svg#CoreSans") format("svg");
   }
 }
 @font-face {
-  font-family: CoreSans;
-  src: url("../fonts/coresans/coresansd25light.eot");
-  src: url("../fonts/coresans/coresansd25light.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd25light.woff2") format("woff2"), url("../fonts/coresans/coresansd25light.woff") format("woff"), url("../fonts/coresans/coresansd25light.ttf") format("truetype"), url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
-  font-weight: 100;
+  font-family: CoreSansCN;
+  src: url("../fonts/coresans/coresansd27cnlight.eot");
+  src: url("../fonts/coresans/coresansd27cnlight.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd27cnlight.woff2") format("woff2"), url("../fonts/coresans/coresansd27cnlight.woff") format("woff"), url("../fonts/coresans/coresansd27cnlight.ttf") format("truetype"), url("../fonts/coresans/coresansd27cnlight.svg#CoreSansCN") format("svg");
+  font-weight: 300;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: CoreSans;
-    src: url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
+    font-family: CoreSansCN;
+    src: url("../fonts/coresans/coresansd27cnlight.svg#CoreSansCN") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSansCN;
+  src: url("../fonts/coresans/coresansd47cnmedium.eot");
+  src: url("../fonts/coresans/coresansd47cnmedium.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd47cnmedium.woff2") format("woff2"), url("../fonts/coresans/coresansd47cnmedium.woff") format("woff"), url("../fonts/coresans/coresansd47cnmedium.ttf") format("truetype"), url("../fonts/coresans/coresansd47cnmedium.svg#CoreSansCN") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSansCN;
+    src: url("../fonts/coresans/coresansd47cnmedium.svg#CoreSansCN") format("svg");
   }
 }
 html {
@@ -125,9 +151,15 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CoreSansCN';
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: 4.375rem;
-  font-weight: 700;
 }
 
 h2 {
@@ -205,10 +237,6 @@ a:hover {
 
 .col {
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 .col img {
   display: block;
@@ -229,16 +257,19 @@ a:hover {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
+  font-family: 'CoreSansCN';
+  font-weight: 300;
+  font-style: normal;
   font-size: 2rem;
   letter-spacing: .188rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
   -webkit-transition: .4s;
           transition: .4s;
   border: 2px solid transparent;
-  padding: 1.1rem 2.25rem;
+  padding: 1.1rem 2.4rem;
   margin: .25rem;
   background-color: #02BBD5;
   border-color: #02BBD5;
@@ -252,7 +283,7 @@ a:hover {
 @media (min-width: 768px) {
   .btn {
     font-size: 1rem;
-    padding: .75rem 1.25rem;
+    padding: .75rem 1.15rem;
   }
 }
 
@@ -326,6 +357,38 @@ a:hover {
   border-color: #FFFFFF;
 }
 
+.hidden {
+  display: none;
+}
+
+.hidden--sm {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hidden--sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.text--light {
+  color: #FFFFFF;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--left-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -353,14 +416,6 @@ img, embed, object, video {
   z-index: -1;
 }
 
-.left-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 30px;
-  padding-bottom: 30px;
-}
-
 .hero {
   text-align: center;
 }
@@ -370,7 +425,7 @@ img, embed, object, video {
   font-size: 3.5rem;
 }
 .hero__heading span {
-  font-weight: 100;
+  font-weight: 300;
 }
 
 header {

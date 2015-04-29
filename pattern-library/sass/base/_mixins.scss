@@ -40,9 +40,11 @@
 }
 
 @include font-face(Icons, '../fonts/icons/icons', 300, normal);
-@include font-face(CoreSans, '../fonts/coresans/coresansd35regular', 300, normal);
-@include font-face(CoreSans, '../fonts/coresans/coresansd57cnbold', 700, normal);
-@include font-face(CoreSans, '../fonts/coresans/coresansd25light', 100, normal);
+@include font-face(CoreSans, '../fonts/coresans/coresansd25light', 200, normal);
+@include font-face(CoreSans, '../fonts/coresans/coresansd35regular', 400, normal);
+@include font-face(CoreSans, '../fonts/coresans/coresansd55bold', 700, normal);
+@include font-face(CoreSansCN, '../fonts/coresans/coresansd27cnlight', 300, normal);
+@include font-face(CoreSansCN, '../fonts/coresans/coresansd47cnmedium', 700, normal);
 
 @mixin Icons {
   font-family: 'Icons';
@@ -55,4 +57,17 @@
   font-weight: 300;
   font-style: normal;
   letter-spacing: .1rem;
+}
+
+@mixin CoreSansCN {
+  font-family: 'CoreSansCN';
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin headers {
+  font-family: 'CoreSansCN';
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
 }

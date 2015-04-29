@@ -22,15 +22,16 @@
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
+	@include CoreSansCN;
 	font-size: 2rem;
 	letter-spacing: .188rem;
-	font-weight: bold;
+	font-weight: 700;
 	text-align: center;
 	vertical-align: middle;
 	text-transform: uppercase;
 	transition: .4s;
 	border: 2px solid transparent;
-	padding: 1.1rem 2.25rem;
+	padding: 1.1rem 2.4rem;
 	margin: .25rem;
 	background-color: $aqua;
 	border-color: $aqua;
@@ -42,7 +43,7 @@
 
 	@include breakpoint(md) {
 		font-size: $font-size-md;
-		padding: .75rem 1.25rem;
+		padding: .75rem 1.15rem;
 	}
 }
 //button sizes
