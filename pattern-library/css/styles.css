@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("//hello.myfonts.net/count/2e0f5c");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,13 +56,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 3018588, 2015-04-30T13:29:38-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CoreSansD35Regular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/regular/
+ * Copyright: Core Sans D 35 Regular
+ * 
+ * Webfont: CoreSansD37CnRegular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-regular/
+ * Copyright: Core Sans D 37 Cn Regular
+ * 
+ * Webfont: CoreSansD47CnMedium by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-medium/
+ * Copyright: Core Sans D 47 Cn Medium
+ * 
+ * Webfont: CoreSansD55Bold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/bold/
+ * Copyright: Core Sans D 55 Bold
+ * 
+ * Webfont: CoreSansD57CnBold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-bold/
+ * Copyright: Core Sans D 57 Cn Bold
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3018588
+ * Licensed pageviews: 18,750,000
+ * 
+ * © 2015 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
 /* Fool-proof @font-face */
 /* Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/ */
 @font-face {
   font-family: Icons;
   src: url("../fonts/icons/icons.eot");
   src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#Icons") format("svg");
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -71,67 +110,67 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 @font-face {
   font-family: CoreSans;
-  src: url("../fonts/coresans/coresansd25light.eot");
-  src: url("../fonts/coresans/coresansd25light.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd25light.woff2") format("woff2"), url("../fonts/coresans/coresansd25light.woff") format("woff"), url("../fonts/coresans/coresansd25light.ttf") format("truetype"), url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
-  font-weight: 200;
-  font-style: normal;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: CoreSans;
-    src: url("../fonts/coresans/coresansd25light.svg#CoreSans") format("svg");
-  }
-}
-@font-face {
-  font-family: CoreSans;
-  src: url("../fonts/coresans/coresansd35regular.eot");
-  src: url("../fonts/coresans/coresansd35regular.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd35regular.woff2") format("woff2"), url("../fonts/coresans/coresansd35regular.woff") format("woff"), url("../fonts/coresans/coresansd35regular.ttf") format("truetype"), url("../fonts/coresans/coresansd35regular.svg#CoreSans") format("svg");
+  src: url("../fonts/coresans/2E0F5C_0_0.eot");
+  src: url("../fonts/coresans/2E0F5C_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_0_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_0_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_0_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_0_0.svg#CoreSans") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: CoreSans;
-    src: url("../fonts/coresans/coresansd35regular.svg#CoreSans") format("svg");
+    src: url("../fonts/coresans/2E0F5C_0_0.svg#CoreSans") format("svg");
   }
 }
 @font-face {
   font-family: CoreSans;
-  src: url("../fonts/coresans/coresansd55bold.eot");
-  src: url("../fonts/coresans/coresansd55bold.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd55bold.woff2") format("woff2"), url("../fonts/coresans/coresansd55bold.woff") format("woff"), url("../fonts/coresans/coresansd55bold.ttf") format("truetype"), url("../fonts/coresans/coresansd55bold.svg#CoreSans") format("svg");
+  src: url("../fonts/coresans/2E0F5C_3_0.eot");
+  src: url("../fonts/coresans/2E0F5C_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_3_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_3_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_3_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_3_0.svg#CoreSans") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: CoreSans;
-    src: url("../fonts/coresans/coresansd55bold.svg#CoreSans") format("svg");
+    src: url("../fonts/coresans/2E0F5C_3_0.svg#CoreSans") format("svg");
   }
 }
 @font-face {
   font-family: CoreSansCN;
-  src: url("../fonts/coresans/coresansd27cnlight.eot");
-  src: url("../fonts/coresans/coresansd27cnlight.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd27cnlight.woff2") format("woff2"), url("../fonts/coresans/coresansd27cnlight.woff") format("woff"), url("../fonts/coresans/coresansd27cnlight.ttf") format("truetype"), url("../fonts/coresans/coresansd27cnlight.svg#CoreSansCN") format("svg");
-  font-weight: 300;
+  src: url("../fonts/coresans/2E0F5C_1_0.eot");
+  src: url("../fonts/coresans/2E0F5C_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_1_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_1_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_1_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_1_0.svg#CoreSansCN") format("svg");
+  font-weight: 400;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: CoreSansCN;
-    src: url("../fonts/coresans/coresansd27cnlight.svg#CoreSansCN") format("svg");
+    src: url("../fonts/coresans/2E0F5C_1_0.svg#CoreSansCN") format("svg");
   }
 }
 @font-face {
   font-family: CoreSansCN;
-  src: url("../fonts/coresans/coresansd47cnmedium.eot");
-  src: url("../fonts/coresans/coresansd47cnmedium.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/coresansd47cnmedium.woff2") format("woff2"), url("../fonts/coresans/coresansd47cnmedium.woff") format("woff"), url("../fonts/coresans/coresansd47cnmedium.ttf") format("truetype"), url("../fonts/coresans/coresansd47cnmedium.svg#CoreSansCN") format("svg");
+  src: url("../fonts/coresans/2E0F5C_2_0.eot");
+  src: url("../fonts/coresans/2E0F5C_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_2_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_2_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_2_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_2_0.svg#CoreSansCN") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSansCN;
+    src: url("../fonts/coresans/2E0F5C_2_0.svg#CoreSansCN") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSansCN;
+  src: url("../fonts/coresans/2E0F5C_4_0.eot");
+  src: url("../fonts/coresans/2E0F5C_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_4_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_4_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_4_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_4_0.svg#CoreSansCN") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: CoreSansCN;
-    src: url("../fonts/coresans/coresansd47cnmedium.svg#CoreSansCN") format("svg");
+    src: url("../fonts/coresans/2E0F5C_4_0.svg#CoreSansCN") format("svg");
   }
 }
 html {
@@ -139,10 +178,9 @@ html {
 }
 
 body {
-  font-family: 'CoreSans';
-  font-weight: 300;
+  font-family: 'CoreSans', sans-serif;
+  font-weight: 400;
   font-style: normal;
-  letter-spacing: .1rem;
   font-size: 1.75rem;
 }
 @media (min-width: 768px) {
@@ -152,7 +190,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'CoreSansCN';
+  font-family: 'CoreSansCN', sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -208,7 +246,7 @@ a:hover {
 
 .link--arrow:after {
   font-family: 'Icons';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   position: relative;
   content: "\f105";
@@ -218,7 +256,7 @@ a:hover {
 
 .link--arrowCircled:after {
   font-family: 'Icons';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-size: 1.2rem;
   position: relative;
@@ -229,40 +267,34 @@ a:hover {
 
 .row {
   overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .col {
   position: relative;
+  float: left;
 }
 .col img {
   display: block;
 }
 
 .col-md-4 {
-  background: blue;
-  min-width: 33.33%;
+  width: 33.33%;
 }
 
 .col-md-8 {
-  min-width: 66.66%;
-  background: red url("../images/bg-waves.jpg") no-repeat;
-  background-size: cover;
+  width: 66.66%;
 }
 
 .btn {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  font-family: 'CoreSansCN';
-  font-weight: 300;
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 500;
   font-style: normal;
   font-size: 2rem;
   letter-spacing: .188rem;
-  font-weight: 700;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -366,10 +398,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .hidden--sm {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 
@@ -381,12 +410,24 @@ a:hover {
   text-transform: uppercase;
 }
 
+.text--lowercase {
+  text-transform: lowercase;
+}
+
 .text--left-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   padding-left: 30px;
   padding-bottom: 30px;
+  width: 77.232%;
+}
+@media (min-width: 992px) {
+  .text--left-bottom {
+    width: 60.937%;
+    padding-left: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 *, *:before, *:after {
@@ -395,25 +436,6 @@ a:hover {
 
 img, embed, object, video {
   max-width: 100%;
-}
-
-.bgFull {
-  position: absolute;
-  height: 200%;
-  width: 200%;
-  top: -50%;
-  left: -50%;
-}
-.bgFull img {
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  min-height: 50%;
-  min-width: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
 }
 
 .hero {

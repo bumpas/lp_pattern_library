@@ -15,6 +15,47 @@
   }
 }
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 3018588, 2015-04-30T13:29:38-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CoreSansD35Regular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/regular/
+ * Copyright: Core Sans D 35 Regular
+ * 
+ * Webfont: CoreSansD37CnRegular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-regular/
+ * Copyright: Core Sans D 37 Cn Regular
+ * 
+ * Webfont: CoreSansD47CnMedium by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-medium/
+ * Copyright: Core Sans D 47 Cn Medium
+ * 
+ * Webfont: CoreSansD55Bold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/bold/
+ * Copyright: Core Sans D 55 Bold
+ * 
+ * Webfont: CoreSansD57CnBold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-bold/
+ * Copyright: Core Sans D 57 Cn Bold
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3018588
+ * Licensed pageviews: 18,750,000
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2e0f5c");
+
 /* Fool-proof @font-face */
 /* Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/ */
 
@@ -39,35 +80,39 @@
   }
 }
 
-@include font-face(Icons, '../fonts/icons/icons', 300, normal);
-@include font-face(CoreSans, '../fonts/coresans/coresansd25light', 200, normal);
-@include font-face(CoreSans, '../fonts/coresans/coresansd35regular', 400, normal);
-@include font-face(CoreSans, '../fonts/coresans/coresansd55bold', 700, normal);
-@include font-face(CoreSansCN, '../fonts/coresans/coresansd27cnlight', 300, normal);
-@include font-face(CoreSansCN, '../fonts/coresans/coresansd47cnmedium', 700, normal);
+@include font-face(Icons, '../fonts/icons/icons', 400, normal);
+@include font-face(CoreSans, '../fonts/coresans/2E0F5C_0_0', 400, normal);
+@include font-face(CoreSans, '../fonts/coresans/2E0F5C_3_0', 700, normal);
+@include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_1_0', 400, normal);
+@include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_2_0', 500, normal);
+@include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_4_0', 700, normal);
 
 @mixin Icons {
   font-family: 'Icons';
-  font-weight: 300; 
+  font-weight: 400; 
   font-style: normal; 
 }
 
 @mixin CoreSans {
-  font-family: 'CoreSans';
-  font-weight: 300;
+  font-family: 'CoreSans', sans-serif;
+  font-weight: 400;
   font-style: normal;
-  letter-spacing: .1rem;
 }
 
 @mixin CoreSansCN {
-  font-family: 'CoreSansCN';
-  font-weight: 300;
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
-@mixin headers {
-  font-family: 'CoreSansCN';
+@mixin CoreSansCN-med {
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin CoreSansCN-bold {
+  font-family: 'CoreSansCN', sans-serif;
   font-weight: 700;
   font-style: normal;
-  text-transform: uppercase;
 }

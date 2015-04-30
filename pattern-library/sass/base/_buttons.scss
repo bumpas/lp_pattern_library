@@ -22,10 +22,9 @@
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
-	@include CoreSansCN;
+	@include CoreSansCN-med;
 	font-size: 2rem;
 	letter-spacing: .188rem;
-	font-weight: 700;
 	text-align: center;
 	vertical-align: middle;
 	text-transform: uppercase;

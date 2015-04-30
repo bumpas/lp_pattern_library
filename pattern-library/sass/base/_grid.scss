@@ -1,10 +1,11 @@
 .row {
 	overflow: hidden;
-	display: flex;
+	display: block;
 }
 
 .col {
 	position: relative;
+	float: left;
 	
 
 	img {
@@ -13,13 +14,10 @@
 }
 
 .col-md-4 {
-	background: blue;
-	min-width: 33.33%;
+	width: 33.33%;
 	
 }
 
 .col-md-8 {
-	min-width: 66.66%;
-	background: red url("../images/bg-waves.jpg") no-repeat;
-	background-size: cover; 
+	width: 66.66%;
 }
