@@ -3,10 +3,10 @@
 	[
 		{
 			"path": ".",
-			"folder_exclude_patterns": ["bower_components", "node_modules"],
+			"folder_exclude_patterns": ["bower_components", "node_modules", "pattern-library/fonts"],
 			"file_exclude_patterns": []
 		}
 	],
-	
-	
+
+
 }
