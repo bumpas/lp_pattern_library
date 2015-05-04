@@ -106,15 +106,21 @@
   font-style: normal;
 }
 
-@mixin CoreSansCN {
-  font-family: 'CoreSansCN', sans-serif;
-  font-weight: 400;
+@mixin CoreSans-bold {
+  font-family: 'CoreSans', sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
-@mixin CoreSansCN-med {
+@mixin CoreSansCN {
   font-family: 'CoreSansCN', sans-serif;
   font-weight: 500;
+  font-style: normal;
+}
+
+@mixin CoreSansCN-light {
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
