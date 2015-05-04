@@ -9,18 +9,7 @@
 <body>
 
 	<nav class="pushy pushy-left">
-
-		<ul>
-			<li>
-				<a href="javascript:scrollToElement($('a[name=colors]'));">Color Palette</a>
-			</li>
-			<li>
-				<a href="javascript:scrollToElement($('a[name=typography]'));">Typography</a>
-			</li>
-			<li>
-				<a href="javascript:scrollToElement($('a[name=buttons]'));">Buttons</a>
-			</li>
-		</ul>
+		<ul></ul>
 	</nav>
 
 	<div class="site-overlay"></div>
@@ -33,7 +22,7 @@
 			<h1>Lifeproof.com <span>pattern library</span></h1>
 		</header>
 		<section class="colors">
-			<a name="colors"></a>
+			<a name="colors" title="Color Palette"></a>
 			<h4>Color Palette</h4>
 			<ul>
 				<li class="white">$white: #FFFFFF;</li>
@@ -46,14 +35,16 @@
 			</ul>
 		</section>
 		<section class="typography">
-			<a name="typography"></a>
+			<a name="typography" title="Typography"></a>
 			<h4>Typography</h4>
+
 			<h1>Header 1</h1>
 			<h2>Header 2</h2>
 			<h3>Header 3</h3>
 			<h4>Header 4</h4>
 			<h5>Header 5</h5>
 			<h6>Header 6</h6>
+
 			<p>
 				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut, molestiae dolores fuga, ea nostrum quod magni odit eos quae doloribus autem alias quisquam sunt vitae amet adipisci perspiciatis quasi!</span>
 				<span>Deleniti error odio aperiam nisi harum sunt ex itaque? Neque perferendis modi odit deserunt tenetur delectus, earum, libero voluptate! Earum dolor adipisci tenetur eveniet architecto nam culpa veniam, facere nihil?</span>
@@ -62,9 +53,9 @@
 			</p>
 		</section>
 		<section class="buttons">
-			<div>
-				<a name="buttons"></a>
-				<h4>Buttons</h4>
+			<a name="buttons" title="Buttons"></a>
+			<h4>Buttons</h4>
+			<div class="buttons">
 				<a href="#0" class="btn">shop lifeproof</a>
 				<a href="#0" class="btn btn--white">shop lifeproof</a>
 				<a href="#0" class="btn btn--black">shop lifeproof</a>
@@ -105,6 +96,7 @@
 			</div>
 		</section>
 		<section class="modules section--fluid">
+			<a name="modules" title="Modules"></a>
 			<h4>Modules</h4>
 			<h5>Hero</h5>
 			<div class="hero">
