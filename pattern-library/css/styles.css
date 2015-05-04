@@ -265,14 +265,15 @@ a:hover {
 }
 
 .row {
-  display: block;
+  display: table;
   position: relative;
   overflow: hidden;
 }
 
 .col {
   position: relative;
-  float: left;
+  display: table-cell;
+  vertical-align: top;
 }
 .col img {
   display: block;
@@ -281,6 +282,9 @@ a:hover {
 .col-6 {
   width: 50%;
 }
+.col-6.col-6--center {
+  vertical-align: middle;
+}
 
 .col-md-4 {
   width: 33.33%;
@@ -288,6 +292,8 @@ a:hover {
 
 .col-md-8 {
   width: 66.66%;
+  background: url("../images/bg-waves.jpg");
+  background-size: cover;
 }
 
 .btn {
@@ -402,7 +408,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .hidden--sm {
-    display: block;
+    display: inherit;
   }
 }
 
@@ -418,22 +424,6 @@ a:hover {
   text-transform: lowercase;
 }
 
-.text--left-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  width: 77.232%;
-}
-@media (min-width: 992px) {
-  .text--left-bottom {
-    width: 60.937%;
-    padding-left: 70px;
-    padding-bottom: 70px;
-  }
-}
-
 .block--center-center {
   position: absolute;
   top: 50%;
@@ -441,6 +431,7 @@ a:hover {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -578,4 +569,16 @@ section > h4:first-of-type {
 }
 .buttons--background h4 {
   color: #FFFFFF;
+}
+
+.case50 {
+  max-width: 80%;
+  padding-left: 10%;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .case50 {
+    max-width: 72%;
+    padding-left: 15%;
+  }
 }

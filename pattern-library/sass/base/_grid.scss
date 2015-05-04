@@ -1,12 +1,13 @@
 .row {
-	display: block;
+	display: table;
 	position: relative;
 	overflow: hidden;
 }
 
 .col {
 	position: relative;
-	float: left;
+	display: table-cell;
+	vertical-align: top;
 	
 
 	img {
@@ -16,6 +17,10 @@
 
 .col-6 {
 	width: 50%;
+
+	&.col-6--center {
+		vertical-align: middle;
+	}
 }
 
 .col-md-4 {
@@ -25,4 +30,6 @@
 
 .col-md-8 {
 	width: 66.66%;
+	background: url("../images/bg-waves.jpg");
+	background-size: cover;
 }

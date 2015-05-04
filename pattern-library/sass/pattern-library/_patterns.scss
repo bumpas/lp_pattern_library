@@ -130,3 +130,16 @@ section {
 		color: $white;
 	}
 }
+
+//individual module styles
+
+.case50 {
+	max-width: 80%;
+	padding-left: 10%;
+	margin: 0 auto;
+
+	@include breakpoint(lg) {
+		max-width: 72%;
+		padding-left: 15%;
+	}
+}
