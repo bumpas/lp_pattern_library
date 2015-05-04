@@ -1,6 +1,21 @@
 //typography
-html {
-	font-size: $font-size;
+
+html { 
+	font-size: 16px;
+}
+
+body {
+	@include CoreSans;
+	font-size: $font-size;	
+
+	@include breakpoint(md) {
+		font-size: $font-size-md;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include CoreSansCN-bold;
+	text-transform: uppercase;
 }
 
 h1 {
@@ -12,21 +27,66 @@ h2 {
 }
 
 h3 {
-	font-size: 1.750rem;
+	font-size: 1.75rem;
 }
 
 h4 {
-	font-size: 1.500rem;
+	font-size: 1.5rem;
 }
 
 h5 {
-	font-size: 1.250rem;
+	font-size: 1.25rem;
 }
 
-h6 {
-	font-size: $font-size;
+b, strong {
+	font-weight: 700;
+}
+
+em, i {
+	font-style: oblique;
 }
 
 small {
 	font-size: 0.625rem;
+}
+
+button, input, optgroup, select, textarea {
+	font: inherit;
+}
+
+//links
+a {
+	color: $aqua;
+
+	&:hover {
+		color: $medium-grey;
+	}
+}
+
+.link {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.link--arrow {
+
+	&:after {
+		@include Icons;
+		position: relative;
+		content: "\f105";
+		top: 0;
+		margin-left: 4px;
+	}
+}
+
+.link--arrowCircled {
+
+	&:after {
+		@include Icons;
+		font-size: 1.2rem;
+		position: relative;
+		content: "\e600";
+		margin-left: 5px;
+		top: 3px;
+	}
 }

@@ -1,0 +1,38 @@
+.hidden {
+	display: none;
+}
+
+.hidden--sm {
+	display: none;
+
+	@include breakpoint(md) {
+		display: block;
+	}
+}
+
+.text--light {
+	color: $white;
+}
+
+.text--uppercase {
+	text-transform: uppercase;
+}
+
+.text--lowercase {
+	text-transform: lowercase;
+}
+
+.text--left-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	width: 77.232%;
+	
+	@include breakpoint(lg) {
+		width: 60.937%;
+		padding-left: 70px;
+		padding-bottom: 70px;
+	}
+}

@@ -1,0 +1,554 @@
+@charset "UTF-8";
+@import url("//hello.myfonts.net/count/2e0f5c");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3018588, 2015-04-30T13:29:38-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CoreSansD35Regular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/regular/
+ * Copyright: Core Sans D 35 Regular
+ * 
+ * Webfont: CoreSansD37CnRegular by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-regular/
+ * Copyright: Core Sans D 37 Cn Regular
+ * 
+ * Webfont: CoreSansD47CnMedium by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-medium/
+ * Copyright: Core Sans D 47 Cn Medium
+ * 
+ * Webfont: CoreSansD55Bold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/bold/
+ * Copyright: Core Sans D 55 Bold
+ * 
+ * Webfont: CoreSansD57CnBold by S-Core
+ * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-bold/
+ * Copyright: Core Sans D 57 Cn Bold
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3018588
+ * Licensed pageviews: 18,750,000
+ * 
+ * © 2015 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+/* Fool-proof @font-face */
+/* Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/ */
+@font-face {
+  font-family: Icons;
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#Icons") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Icons;
+    src: url("../fonts/icons/icons.svg#Icons") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSans;
+  src: url("../fonts/coresans/2E0F5C_0_0.eot");
+  src: url("../fonts/coresans/2E0F5C_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_0_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_0_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_0_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_0_0.svg#CoreSans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSans;
+    src: url("../fonts/coresans/2E0F5C_0_0.svg#CoreSans") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSans;
+  src: url("../fonts/coresans/2E0F5C_3_0.eot");
+  src: url("../fonts/coresans/2E0F5C_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_3_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_3_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_3_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_3_0.svg#CoreSans") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSans;
+    src: url("../fonts/coresans/2E0F5C_3_0.svg#CoreSans") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSansCN;
+  src: url("../fonts/coresans/2E0F5C_1_0.eot");
+  src: url("../fonts/coresans/2E0F5C_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_1_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_1_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_1_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_1_0.svg#CoreSansCN") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSansCN;
+    src: url("../fonts/coresans/2E0F5C_1_0.svg#CoreSansCN") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSansCN;
+  src: url("../fonts/coresans/2E0F5C_2_0.eot");
+  src: url("../fonts/coresans/2E0F5C_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_2_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_2_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_2_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_2_0.svg#CoreSansCN") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSansCN;
+    src: url("../fonts/coresans/2E0F5C_2_0.svg#CoreSansCN") format("svg");
+  }
+}
+@font-face {
+  font-family: CoreSansCN;
+  src: url("../fonts/coresans/2E0F5C_4_0.eot");
+  src: url("../fonts/coresans/2E0F5C_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/coresans/2E0F5C_4_0.woff2") format("woff2"), url("../fonts/coresans/2E0F5C_4_0.woff") format("woff"), url("../fonts/coresans/2E0F5C_4_0.ttf") format("truetype"), url("../fonts/coresans/2E0F5C_4_0.svg#CoreSansCN") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: CoreSansCN;
+    src: url("../fonts/coresans/2E0F5C_4_0.svg#CoreSansCN") format("svg");
+  }
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'CoreSans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.75rem;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.375rem;
+}
+
+h2 {
+  font-size: 2.813rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: oblique;
+}
+
+small {
+  font-size: 0.625rem;
+}
+
+button, input, optgroup, select, textarea {
+  font: inherit;
+}
+
+a {
+  color: #02BBD5;
+}
+a:hover {
+  color: #B9B9B9;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link--arrow:after {
+  font-family: 'Icons';
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  content: "\f105";
+  top: 0;
+  margin-left: 4px;
+}
+
+.link--arrowCircled:after {
+  font-family: 'Icons';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  position: relative;
+  content: "\e600";
+  margin-left: 5px;
+  top: 3px;
+}
+
+.row {
+  overflow: hidden;
+  display: block;
+}
+
+.col {
+  position: relative;
+  float: left;
+}
+.col img {
+  display: block;
+}
+
+.col-md-4 {
+  width: 33.33%;
+}
+
+.col-md-8 {
+  width: 66.66%;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: .188rem;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  -webkit-transition: .4s;
+          transition: .4s;
+  border: 2px solid transparent;
+  padding: 1.1rem 2.4rem;
+  margin: .25rem;
+  background-color: #02BBD5;
+  border-color: #02BBD5;
+  color: #FFFFFF;
+}
+.btn:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #2B2B2B;
+}
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1rem;
+    padding: .75rem 1.15rem;
+  }
+}
+
+.btn--wide {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
+
+.btn--small {
+  padding: .5rem 1rem;
+}
+@media (min-width: 768px) {
+  .btn--small {
+    font-size: 0.875rem;
+  }
+}
+
+.btn--white {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #2B2B2B;
+}
+.btn--white:hover {
+  background-color: #2B2B2B;
+  border-color: #2B2B2B;
+  color: #FFFFFF;
+}
+
+.btn--black {
+  background-color: #2B2B2B;
+  border-color: #2B2B2B;
+  color: #FFFFFF;
+}
+.btn--black:hover {
+  background-color: #02BBD5;
+  border-color: #02BBD5;
+  color: #FFFFFF;
+}
+
+.btn--nofillblack {
+  background-color: transparent;
+  border-color: #2B2B2B;
+  color: #2B2B2B;
+}
+.btn--nofillblack:hover {
+  background-color: #2B2B2B;
+  border-color: #2B2B2B;
+  color: #FFFFFF;
+}
+
+.btn--nofillwhite {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn--transblack {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #2B2B2B;
+  border-color: #2B2B2B;
+}
+.btn--transblack:hover {
+  background-color: #2B2B2B;
+  border-color: #2B2B2B;
+  color: #FFFFFF;
+}
+
+.btn--transwhite {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden--sm {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hidden--sm {
+    display: block;
+  }
+}
+
+.text--light {
+  color: #FFFFFF;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--lowercase {
+  text-transform: lowercase;
+}
+
+.text--left-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  width: 77.232%;
+}
+@media (min-width: 992px) {
+  .text--left-bottom {
+    width: 60.937%;
+    padding-left: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero__heading {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+.hero__heading span {
+  font-weight: 300;
+}
+
+header {
+  height: 400px;
+  background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+header h1 {
+  line-height: 400px;
+}
+
+.section--fluid {
+  padding: 0;
+}
+
+section {
+  padding: 0 1rem 4rem;
+  position: relative;
+}
+section:before {
+  position: absolute;
+  content: "";
+  background: #2B2B2B;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+section > h4:first-of-type {
+  position: relative;
+  color: white;
+  line-height: 60px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  z-index: 1;
+  text-align: left;
+}
+
+.colors li {
+  font-size: .8rem;
+  display: inline-block;
+  position: relative;
+  padding-top: 34px;
+  width: 170px;
+  height: 25px;
+  margin: 0 30px 40px 0;
+}
+.colors li:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 25px;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+}
+.colors li.white:before {
+  background-color: #FFFFFF;
+  border: 1px solid #EFEFEF;
+}
+.colors li.black:before {
+  background-color: #2B2B2B;
+}
+.colors li.dark-grey:before {
+  background-color: #595A59;
+}
+.colors li.medium-grey:before {
+  background-color: #B9B9B9;
+}
+.colors li.light-grey:before {
+  background-color: #EFEFEF;
+}
+.colors li.red:before {
+  background-color: #ED2638;
+}
+.colors li.aqua:before {
+  background-color: #02BBD5;
+}
+.colors li.transblack:before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttonsLinks {
+  background: #efefef;
+}
+.buttonsLinks h4 {
+  padding-bottom: .5rem;
+}
+
+.buttons {
+  margin: 0 0 2rem;
+}
+
+.buttons--background {
+  background: url("../images/hero-bikers.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 1rem;
+}
+.buttons--background h4 {
+  color: #FFFFFF;
+}

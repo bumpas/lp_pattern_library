@@ -1,0 +1,23 @@
+.row {
+	overflow: hidden;
+	display: block;
+}
+
+.col {
+	position: relative;
+	float: left;
+	
+
+	img {
+		display: block;
+	}
+}
+
+.col-md-4 {
+	width: 33.33%;
+	
+}
+
+.col-md-8 {
+	width: 66.66%;
+}

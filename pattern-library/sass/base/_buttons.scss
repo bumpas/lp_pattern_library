@@ -22,17 +22,16 @@
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: $font-size;
-	font-weight: bold;
+	@include CoreSansCN-med;
+	font-size: 2rem;
+	letter-spacing: .188rem;
 	text-align: center;
 	vertical-align: middle;
 	text-transform: uppercase;
 	transition: .4s;
-	border: 1px solid transparent;
-	height: 43px;
-	line-height: 43px;
-	padding: 0 20px;
-	margin: .25em;
+	border: 2px solid transparent;
+	padding: 1.1rem 2.4rem;
+	margin: .25rem;
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
@@ -40,16 +39,24 @@
 	&:hover {
 		@include hover-white;
 	}
+
+	@include breakpoint(md) {
+		font-size: $font-size-md;
+		padding: .75rem 1.15rem;
+	}
 }
 //button sizes
 .btn--wide {
-	padding: 0 60px;
+	padding-left: 3.75rem;
+	padding-right: 3.75rem;
 }
 
 .btn--small {
-	height: 35px;
-	line-height: 35px;
-	padding: 0 16px;
+	padding: .5rem 1rem;
+
+	@include breakpoint(md) {
+		font-size: 0.875rem;
+	}
 }
 
 // button colors
@@ -75,7 +82,7 @@
 }
 
 .btn--nofillblack {
-	background-color: none;
+	background-color: rgba(0,0,0,0);
 	border-color: $black;
 	color: $black;
 
@@ -85,13 +92,13 @@
 }
 
 .btn--nofillwhite {
-	background-color: none;
+	background-color: rgba(0,0,0,0);
 	border-color: $white;
 	color: $white;
 }
 
 .btn--transblack {
-	background-color: rgba(0,0,0,0.15);
+	background-color: $transblack;
 	color: $black;
 	border-color: $black;
 
@@ -101,8 +108,7 @@
 }
 
 .btn--transwhite {
-	background-color: none;
-	background-color: rgba(0,0,0,0.15);
+	background-color: $transblack;
 	color: $white;
 	border-color: $white;
 }

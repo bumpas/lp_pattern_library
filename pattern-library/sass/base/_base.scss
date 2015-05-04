@@ -1,11 +1,19 @@
 @import "compass";
 @import "compass/reset";
 
+@import "mixins";
 @import "variables";
 @import "typography";
+@import "grid";
 @import "buttons";
+@import "utilities";
 
 //let's use box sizing border-box because it's awesome.
 *, *:before, *:after {
-	box-sizing: border-box;
+	@include box-sizing(border-box);
+}
+
+//all media should be relatively sized
+img, embed, object, video {
+	max-width: 100%;
 }
