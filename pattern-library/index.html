@@ -7,40 +7,64 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header>
-		<h1>Lifeproof.com <span>pattern library</span></h1>
-	</header>
-	<section class="colors">
-		<h4>Color Palette</h4>
+
+	<nav class="pushy pushy-left">
+
 		<ul>
-			<li class="white">$white: #FFFFFF;</li>
-			<li class="black">$black: #2B2B2B;</li>
-			<li class="dark-grey">$dark-grey: #595A59;</li>
-			<li class="medium-grey">$medium-grey: #B9B9B9;</li>
-			<li class="light-grey">$light-grey: #EFEFEF;</li>
-			<li class="red">$red: #ED2638;</li>
-			<li class="aqua">$aqua: #02BBD5;</li>
-			<li class="transblack">$transblack: rgba(0,0,0,.10);</li>
+			<li>
+				<a href="javascript:scrollToElement($('a[name=colors]'));">Color Palette</a>
+			</li>
+			<li>
+				<a href="javascript:scrollToElement($('a[name=typography]'));">Typography</a>
+			</li>
+			<li>
+				<a href="javascript:scrollToElement($('a[name=buttons]'));">Buttons</a>
+			</li>
 		</ul>
-	</section>
-	<section class="type">
-		<h4>Typography</h4>
-		<h1>Header 1 &mdash; <span class="text--lowercase">i</span>Phone</h1>
-		<h2>Header 2</h2>
-		<h3>Header 3</h3>
-		<h4>Header 4</h4>
-		<h5>Header 5</h5>
-		<h6>Header 6</h6>
-		<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <em>Nemo aut</em>, molestiae dolores fuga, ea <i>nostrum</i> quod magni odit eos quae doloribus autem alias quisquam sunt vitae amet adipisci perspiciatis quasi!</span>
-		<span>Deleniti error odio aperiam nisi harum sunt ex itaque? Neque perferendis modi odit deserunt tenetur delectus, earum, libero voluptate! Earum dolor adipisci <strong>tenetur</strong> eveniet architecto nam culpa veniam, facere nihil?</span>
-		<span>Pariatur accusantium perspiciatis dolore quibusdam eveniet, at omnis dicta consequatur recusandae quos mollitia neque ipsa officia reiciendis quisquam odio fugiat alias. Ipsa eum suscipit deserunt molestias cum quidem, accusantium laborum.</span>
-		<span>Vero tempore ipsam facilis ut provident <b>ratione</b> soluta recusandae amet! Cupiditate dolor labore, commodi. Non distinctio doloremque eligendi nam voluptatem, doloribus quod laborum optio accusantium magnam, quasi sed, quam deleniti.</span></p>
-	</section>
-	<section class="buttonsLinks">
-		<h4>Buttons &amp; Links</h4>
-		<div class="buttons">
+	</nav>
+
+	<div class="site-overlay"></div>
+
+	<div id="container">
+
+		<div class="menu-btn">&#9776;</div>
+
+		<header>
+			<h1>Lifeproof.com <span>pattern library</span></h1>
+		</header>
+		<section class="colors">
+			<a name="colors" style='padding-top:20px;'></a>
+			<h4>Color Palette</h4>
+			<ul>
+				<li class="white">$white: #FFFFFF;</li>
+				<li class="black">$black: #2B2B2B;</li>
+				<li class="dark-grey">$dark-grey: #595A59;</li>
+				<li class="medium-grey">$medium-grey: #B9B9B9;</li>
+				<li class="light-grey">$light-grey: #EFEFEF;</li>
+				<li class="red">$red: #ED2638;</li>
+				<li class="aqua">$aqua: #02BBD5;</li>
+			</ul>
+		</section>
+		<section class="typography">
+			<a name="typography"></a>
+			<h4>Typography</h4>
+			<h1>Header 1</h1>
+			<h2>Header 2</h2>
+			<h3>Header 3</h3>
+			<h4>Header 4</h4>
+			<h5>Header 5</h5>
+			<h6>Header 6</h6>
+			<p>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut, molestiae dolores fuga, ea nostrum quod magni odit eos quae doloribus autem alias quisquam sunt vitae amet adipisci perspiciatis quasi!</span>
+				<span>Deleniti error odio aperiam nisi harum sunt ex itaque? Neque perferendis modi odit deserunt tenetur delectus, earum, libero voluptate! Earum dolor adipisci tenetur eveniet architecto nam culpa veniam, facere nihil?</span>
+				<span>Pariatur accusantium perspiciatis dolore quibusdam eveniet, at omnis dicta consequatur recusandae quos mollitia neque ipsa officia reiciendis quisquam odio fugiat alias. Ipsa eum suscipit deserunt molestias cum quidem, accusantium laborum.</span>
+				<span>Vero tempore ipsam facilis ut provident ratione soluta recusandae amet! Cupiditate dolor labore, commodi. Non distinctio doloremque eligendi nam voluptatem, doloribus quod laborum optio accusantium magnam, quasi sed, quam deleniti.</span>
+			</p>
+		</section>
+		<section class="buttons">
+			<a name="buttons"></a>
 			<h4>Buttons</h4>
-			<a href="#0" class="btn">shop lifeproof</a> 
+			<a href="#0" class="btn">shop lifeproof</a>
 			<a href="#0" class="btn btn--white">shop lifeproof</a>
 			<a href="#0" class="btn btn--black">shop lifeproof</a>
 			<a href="#0" class="btn btn--nofillblack">shop lifeproof</a>
@@ -51,7 +75,7 @@
 		</div>
 		<div class="buttons buttons--background">
 			<h4>Buttons wide</h3>
-			<a href="#0" class="btn btn--wide">shop lifeproof</a> 
+			<a href="#0" class="btn btn--wide">shop lifeproof</a>
 			<a href="#0" class="btn btn--white btn--wide">shop lifeproof</a>
 			<a href="#0" class="btn btn--black btn--wide">shop lifeproof</a>
 			<a href="#0" class="btn btn--nofillblack btn--wide">shop lifeproof</a>
@@ -62,7 +86,7 @@
 		</div>
 		<div class="buttons">
 			<h4>Buttons small</h4>
-			<a href="#0" class="btn btn--small">shop lifeproof</a> 
+			<a href="#0" class="btn btn--small">shop lifeproof</a>
 			<a href="#0" class="btn btn--white btn--small">shop lifeproof</a>
 			<a href="#0" class="btn btn--black btn--small">shop lifeproof</a>
 			<a href="#0" class="btn btn--nofillblack btn--small">shop lifeproof</a>
@@ -89,15 +113,15 @@
 			<h2 class="hero__heading"><span>Unleash</span> the remarkable</h2>
 			<p class="hero__copy">Waterproof, dirt proof, snow proof and shock proof. It’s the case for every athlete, daredevil, traveler and adventurer at heart.</p>
 			<div class="hero__btns">
-				<a href="#0" class="btn btn--nofillblack">Get proof</a> 
+				<a href="#0" class="btn btn--nofillblack">Get proof</a>
 				<a href="#0" class="btn">shop now</a>
 			</div>
 		</div>
 		<h5>PDP </h5>
 		<div class="row hidden--sm">
 			<div class="col col-md-4">
-				<img src="images/nuud-sand.jpg" sizes="33.33vw" 
-					srcset="images/nuud-sand.jpg 287w, images/nuud-sand-d.jpg 480w, images/9602x.gif 960w" 
+				<img src="images/nuud-sand.jpg" sizes="33.33vw"
+					srcset="images/nuud-sand.jpg 287w, images/nuud-sand-d.jpg 480w, images/9602x.gif 960w"
 					alt="nuud case for iphone 6 in the sand" >
 				<img src="images/nuud-group.jpg" sizes="33.33vw"
 					srcset="images/nuud-group.jpg 287w, images/nuud-group-d.jpg 480w"
@@ -108,8 +132,8 @@
 					<h2>Tight Tolerances. Total Freedom.</h2>
 					<p>LifeProof engineers leave nothing to chance. Every case is meticulously crafted for a precision fit down to the micrometer. This borderline-obsessive attention to detail ensures that every feature on your device remains fully functional inside a LifeProof case &mdash; and fully resilient to water, dirt, snow and shock.</p>
 				</article>
-				
-				<img src="images/bg-waves.jpg" sizes="66.66vw" 
+
+				<img src="images/bg-waves.jpg" sizes="66.66vw"
 					srcset="images/bg-waves.jpg 573w, images/bg-waves-d.jpg 960w"
 					alt="ocean waves" >
 			</div>
@@ -133,5 +157,10 @@
 				alt="iphone 6 fre case" >
 		</div>
 	</section>
+</div>
+
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="js/plugins/pushy.js"></script>
+	<script src="js/app/app.js"></script>
 </body>
 </html>

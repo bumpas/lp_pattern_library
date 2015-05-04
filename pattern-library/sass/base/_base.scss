@@ -10,7 +10,7 @@
 
 //let's use box sizing border-box because it's awesome.
 *, *:before, *:after {
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 }
 
 //all media should be relatively sized

@@ -1,54 +1,61 @@
 // Responsive breakpoints
 
 @mixin breakpoint($class) {
- 
+
   @if $class == md {
     @media (min-width: 768px) { @content; }
   }
- 
+
   @else if $class == lg {
     @media (min-width: 992px) { @content; }
   }
- 
+
   @else {
     @warn "Breakpoint mixin supports: md, lg";
+  }
+}
+
+// Create responsive styles for element
+@mixin respond($resolution) {
+  @media(min-width: $resolution) {
+    @content;
   }
 }
 
 /**
  * @license
  * MyFonts Webfont Build ID 3018588, 2015-04-30T13:29:38-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: CoreSansD35Regular by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/regular/
  * Copyright: Core Sans D 35 Regular
- * 
+ *
  * Webfont: CoreSansD37CnRegular by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-regular/
  * Copyright: Core Sans D 37 Cn Regular
- * 
+ *
  * Webfont: CoreSansD47CnMedium by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-medium/
  * Copyright: Core Sans D 47 Cn Medium
- * 
+ *
  * Webfont: CoreSansD55Bold by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/bold/
  * Copyright: Core Sans D 55 Bold
- * 
+ *
  * Webfont: CoreSansD57CnBold by S-Core
  * URL: http://www.myfonts.com/fonts/s-core/core-sans-d/cn-bold/
  * Copyright: Core Sans D 57 Cn Bold
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3018588
  * Licensed pageviews: 18,750,000
- * 
+ *
  * © 2015 MyFonts Inc
 */
 
@@ -89,8 +96,8 @@
 
 @mixin Icons {
   font-family: 'Icons';
-  font-weight: 400; 
-  font-style: normal; 
+  font-weight: 400;
+  font-style: normal;
 }
 
 @mixin CoreSans {

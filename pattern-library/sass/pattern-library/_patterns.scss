@@ -52,6 +52,11 @@ section {
 		text-transform: uppercase;
 		z-index: 1;
 		text-align: left;
+		padding-left: 60px;
+
+		@include respond(768px) {
+			padding-left: 80px;
+		}
 	}
 }
 
