@@ -30,7 +30,7 @@
 	text-transform: uppercase;
 	transition: .4s;
 	border: 2px solid transparent;
-	padding: 1.1rem 2.4rem;
+	padding: 1.4rem 2.4rem .7rem;
 	margin: .25rem;
 	background-color: $aqua;
 	border-color: $aqua;
@@ -42,7 +42,7 @@
 
 	@include breakpoint(md) {
 		font-size: $font-size-md;
-		padding: .75rem 1.15rem;
+		padding: .85rem 1.15rem .65rem;
 	}
 }
 //button sizes
@@ -52,7 +52,7 @@
 }
 
 .btn--small {
-	padding: .5rem 1rem;
+	padding: .6rem 1rem .4rem;
 
 	@include breakpoint(md) {
 		font-size: 0.875rem;

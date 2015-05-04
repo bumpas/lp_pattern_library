@@ -1,6 +1,7 @@
 .row {
-	overflow: hidden;
 	display: block;
+	position: relative;
+	overflow: hidden;
 }
 
 .col {
@@ -11,6 +12,10 @@
 	img {
 		display: block;
 	}
+}
+
+.col-6 {
+	width: 50%;
 }
 
 .col-md-4 {
