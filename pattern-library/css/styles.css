@@ -182,6 +182,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 1.75rem;
+  color: #2B2B2B;
 }
 @media (min-width: 768px) {
   body {
@@ -250,7 +251,6 @@ a:hover {
   font-style: normal;
   position: relative;
   content: "\f105";
-  top: 0;
   margin-left: 4px;
 }
 
@@ -258,16 +258,16 @@ a:hover {
   font-family: 'Icons';
   font-weight: 400;
   font-style: normal;
-  font-size: 1.2rem;
   position: relative;
   content: "\e600";
-  margin-left: 5px;
-  top: 3px;
+  margin-left: 6px;
+  top: 2px;
 }
 
 .row {
-  overflow: hidden;
   display: block;
+  position: relative;
+  overflow: hidden;
 }
 
 .col {
@@ -276,6 +276,10 @@ a:hover {
 }
 .col img {
   display: block;
+}
+
+.col-6 {
+  width: 50%;
 }
 
 .col-md-4 {
@@ -301,7 +305,7 @@ a:hover {
   -webkit-transition: .4s;
           transition: .4s;
   border: 2px solid transparent;
-  padding: 1.1rem 2.4rem;
+  padding: 1.4rem 2.4rem .7rem;
   margin: .25rem;
   background-color: #02BBD5;
   border-color: #02BBD5;
@@ -315,7 +319,7 @@ a:hover {
 @media (min-width: 768px) {
   .btn {
     font-size: 1rem;
-    padding: .75rem 1.15rem;
+    padding: .85rem 1.15rem .65rem;
   }
 }
 
@@ -325,7 +329,7 @@ a:hover {
 }
 
 .btn--small {
-  padding: .5rem 1rem;
+  padding: .6rem 1rem .4rem;
 }
 @media (min-width: 768px) {
   .btn--small {
@@ -430,6 +434,15 @@ a:hover {
   }
 }
 
+.block--center-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -451,14 +464,28 @@ img, embed, object, video {
 }
 
 header {
-  height: 400px;
+  position: relative;
+  min-height: 200px;
   background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
   background-size: cover;
   color: #FFFFFF;
-  text-align: center;
 }
 header h1 {
-  line-height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2.8rem;
+  text-align: center;
+}
+header h1 span {
+  font-family: 'CoreSansCN', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  font-size: 2rem;
 }
 
 .section--fluid {

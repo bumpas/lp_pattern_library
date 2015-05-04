@@ -6,7 +6,8 @@ html {
 
 body {
 	@include CoreSans;
-	font-size: $font-size;	
+	font-size: $font-size;
+	color: $black;
 
 	@include breakpoint(md) {
 		font-size: $font-size-md;
@@ -74,7 +75,6 @@ a {
 		@include Icons;
 		position: relative;
 		content: "\f105";
-		top: 0;
 		margin-left: 4px;
 	}
 }
@@ -83,10 +83,10 @@ a {
 
 	&:after {
 		@include Icons;
-		font-size: 1.2rem;
+		//font-size: 1.2rem;
 		position: relative;
 		content: "\e600";
-		margin-left: 5px;
-		top: 3px;
+		margin-left: 6px;
+		top: 2px;
 	}
 }
