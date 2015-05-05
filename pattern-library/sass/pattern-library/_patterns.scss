@@ -65,9 +65,20 @@ section {
 	display: inline-block;
 	position: relative;
 	padding-top: 34px;
-	width: 170px;
+	width: 115px;
 	height: 25px;
 	margin: 0 30px 40px 0;
+	line-height: 1.1;
+
+	&:nth-child(even) {
+		margin-right: 0;
+
+		@include respond(360px) {
+			margin-right: 30px;
+		}
+	}
+
+
 
 	&:before {
 		position: absolute;
@@ -81,7 +92,7 @@ section {
 
 	&.white:before {
 		background-color: $white;
-		border: 1px solid $light-grey;
+		border: 1px solid #e2e2e2;
 	}
 
 	&.black:before {
@@ -98,6 +109,7 @@ section {
 
 	&.light-grey:before {
 		background-color: $light-grey;
+		border: 1px solid #e2e2e2;
 	}
 
 	&.red:before {
@@ -110,6 +122,10 @@ section {
 
 	&.transblack:before {
 		background-color: $transblack;
+	}
+
+	&.off-white:before {
+		border: 1px solid #e2e2e2;
 	}
 
 }
