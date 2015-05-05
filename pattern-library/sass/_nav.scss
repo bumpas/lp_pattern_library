@@ -1,0 +1,35 @@
+@import "pushy";
+
+.menu-btn {
+	position: fixed;
+	background-color: $black;
+	cursor: pointer;
+	left: 0;
+	text-align: center;
+	z-index: 999;
+	height: 60px;
+	line-height: 60px;
+	color: $white;
+	border-right-width: 1px;
+	border-style: solid;
+	border-color: $dark-grey;
+	overflow: hidden;
+	width: 60px;
+	@include CoreSansCN;
+	font-size: 1.4rem;
+
+	&:after {
+		position: relative;
+		content: "MENU";
+		display: none;
+		margin-left: 5px;
+	}
+
+	@include respond(768px) {
+		width: 90px;
+
+		&:after {
+			display: inline-block;
+		}
+	}
+}
