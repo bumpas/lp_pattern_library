@@ -1,12 +1,62 @@
 .hero {
+	position: relative;
 	text-align: center;
+	
+	@include breakpoint(md) {
+		padding-bottom: 50%;
+		overflow: hidden;
+	}
+}
+
+.hero__img {
+
+	@include breakpoint(md) {
+		@include bgFull;
+	}
+}
+
+.hero__content {
+	position: relative;
+	padding: 20px;
+
+	@include breakpoint(md) {
+		position: absolute;
+  		padding: 40px;
+		max-width: 575px;
+  		right: 0;
+  		color: $white;
+	}
+
+	@include breakpoint(lg) {
+		padding: 75px;
+		max-width: 725px;
+	}
+
 }
 
 .hero__heading {
-	text-transform: uppercase;
 	font-size: 3.5rem;
 
 	span {
 		font-weight: 300;
+	}
+}
+
+.hero__copy {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.hero__btns {
+	@include breakpoint(md) {
+		.btn--nofillblack {
+			color: $white;
+			border-color: $white;
+
+			&:hover {
+				color: $black;
+				background-color: $white;
+			}
+		}
 	}
 }

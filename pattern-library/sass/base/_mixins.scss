@@ -129,3 +129,24 @@
   font-weight: 700;
   font-style: normal;
 }
+
+//background html image full
+@mixin bgFull {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  left: -50%;
+
+    img {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      min-height: 50%;
+      min-width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+}
