@@ -12,7 +12,7 @@ gulp.task('sass', function(){
 		.pipe(sass({
 			// Error handler for SASS compiling
 			onError: function(error){
-				console.log("SASS Error on line " + error.line + ":" + error.column; + "\n" + error.message);
+				console.log("SASS Error on line " + error.line + ":" + error.column + "\n" + error.message);
 
 				notifier.notify({
 					title: "SASS Compile",
