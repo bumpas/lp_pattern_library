@@ -46,13 +46,11 @@ section {
 		color: white;
 		line-height: 60px;
 		margin-bottom: 60px;
-		text-transform: uppercase;
 		z-index: 1;
-		text-align: left;
 		padding-left: 60px;
 
 		@include breakpoint(md) {
-			padding-left: 85px;
+			padding-left: 95px;
 		}
 	}
 }
@@ -61,7 +59,21 @@ section {
 
 @import "buttons";
 
-//modules 
+//i need to fix 
+
+.modules__heading {
+	background: $aqua;
+	color: $white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 60px;
+
+	@include breakpoint(md) {
+			padding-left: 95px;
+	}
+}
+
+//modules styles that need to be ported into their own _modules.scss.
 .module__heading {
 	display: inline-block;
 	position: relative;
@@ -80,6 +92,8 @@ section {
 		border-bottom: 2px solid $aqua;
 	}
 }
+
+
 
 .col-md-8 {
 	padding: 30px;
