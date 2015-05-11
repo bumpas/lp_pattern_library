@@ -13,7 +13,7 @@ gulp.task('sass', function(){
 
 	return gulp.src(src.sass)
 		.pipe(sass({
-			// Error handler for SASS compiling
+			// Sass error handler
 			onError: function(error){
 
 				console.log("SASS Error: " + error.file + " " + error.line + ":" + error.column + "\n" + error.message);
@@ -27,6 +27,7 @@ gulp.task('sass', function(){
 
 			},
 
+			// Sass success message
 			onSuccess: function(css){
 
 				notifier.notify({
@@ -39,11 +40,14 @@ gulp.task('sass', function(){
 			outputStyle: 'nested',
 			sourceComments: true
 		}))
+		// Autoprefixer
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
+		// Output
 		.pipe(gulp.dest('css'))
+		// Reload Browser Sync
 		.pipe(reload({stream: true}));
 });
 
@@ -54,12 +58,14 @@ gulp.task('serve', ['sass'], function(){
 	});
 
 	gulp.watch(src.sass, ['sass']);
-	gulp.watch("*.html").on("change", browserSync.reload);
+	gulp.watch("./*.html").on('change', reload);
 });
 
+// Watch task
 gulp.task('watch', ['sass'], function(){
 	gulp.watch(src.sass, ['sass']);
 });
 
+// Default task (serve up Browser Sync)
 gulp.task('default', ['serve']);
 

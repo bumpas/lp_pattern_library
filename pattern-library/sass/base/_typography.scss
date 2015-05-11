@@ -1,7 +1,10 @@
 //typography
 
-html { 
-	font-size: 16px;
+html {
+	font-size: 14px;
+	@include respond(768px) {
+		font-size: 16px;
+	}
 }
 
 body {
@@ -20,23 +23,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 4.375rem;
+	font-size: rem(70);
 }
 
 h2 {
-	font-size: 2.813rem;
+	font-size: rem(45);
 }
 
 h3 {
-	font-size: 1.75rem;
+	font-size: rem(28);
 }
 
 h4 {
-	font-size: 1.5rem;
+	font-size: rem(24);
 }
 
 h5 {
-	font-size: 1.25rem;
+	font-size: rem(20);
 }
 
 b, strong {
@@ -89,4 +92,24 @@ a {
 		margin-left: 6px;
 		top: 2px;
 	}
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+.copy--large {
+	font-size: 16px;
+}
+
+.copy--medium {
+	font-size: 14px;
+}
+
+.copy--small {
+	font-size: 12px;
+}
+
+.copy--copywrite {
+	font-size: 10px;
 }

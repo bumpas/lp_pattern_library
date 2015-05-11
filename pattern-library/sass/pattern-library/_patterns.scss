@@ -55,11 +55,9 @@ section {
 	}
 }
 
-@import "colors";
-
 @import "buttons";
 
-//i need to fix 
+//i need to fix
 
 .modules__heading {
 	background: $aqua;
@@ -74,6 +72,9 @@ section {
 }
 
 //modules styles that need to be ported into their own _modules.scss.
+
+//modules
+
 .module__heading {
 	display: inline-block;
 	position: relative;
@@ -87,7 +88,7 @@ section {
 		position: absolute;
 		bottom: 20px;
 		left: 50%;
-		margin-left: -6px; 
+		margin-left: -6px;
 		width: 12px;
 		border-bottom: 2px solid $aqua;
 	}
@@ -133,3 +134,7 @@ section {
 		}
 	}
 }
+
+@import "color_section";
+@import "typography_section";
+@import "button_section";
