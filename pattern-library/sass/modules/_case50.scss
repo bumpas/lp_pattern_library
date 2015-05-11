@@ -1,0 +1,30 @@
+//6col overlay 6col module
+
+.module--case50 {
+	.col-6 {
+		vertical-align: middle;		
+	}
+
+	article {
+		max-width: 80%;
+		padding-left: 20%;
+		margin: 0 auto;
+
+		h4 { 
+			padding-bottom: 5px;
+		}
+
+		p {
+			padding-bottom: 55px;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		@include breakpoint(lg) {
+			max-width: 60%;
+			padding-left: 20%;
+		}
+	}
+}

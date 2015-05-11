@@ -54,7 +54,7 @@ section {
 		text-align: left;
 		padding-left: 60px;
 
-		@include respond(768px) {
+		@include breakpoint(md) {
 			padding-left: 85px;
 		}
 	}
@@ -63,3 +63,68 @@ section {
 @import "colors";
 
 @import "buttons";
+
+//modules 
+.module__heading {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	&:after {
+		content: " ";
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -6px; 
+		width: 12px;
+		border-bottom: 2px solid $aqua;
+	}
+}
+
+.col-md-8 {
+	padding: 30px;
+
+	article {
+		max-width: 80%;
+
+		h2:after {
+			content: " ";
+			display: block;
+			width: 14px;
+			border-bottom: 2px solid $aqua;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+	@include respond(978px) {
+		padding: 75px;
+
+		article {
+			max-width: 60.937%;
+		}
+	}
+}
+
+.waves {
+	background: url("../images/bg-waves.jpg") no-repeat;
+	background-size: cover;
+	vertical-align: bottom;
+}
+
+.snowboarder {
+	background: url("../images/snowboarder-case-t.jpg") no-repeat;
+	background-size: cover;
+	vertical-align: top;
+
+	article {
+		max-width: 49%;
+
+		@include breakpoint(lg) {
+			max-width: 31%;
+		}
+	}
+}
