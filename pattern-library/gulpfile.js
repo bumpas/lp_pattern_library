@@ -1,6 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var notifier = require('node-notifier');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
 var src = {
 	sass: 'sass/**/*.scss'
@@ -12,11 +15,12 @@ gulp.task('sass', function(){
 		.pipe(sass({
 			// Error handler for SASS compiling
 			onError: function(error){
-				console.log("SASS Error on line " + error.line + ":" + error.column + "\n" + error.message);
+
+				console.log("SASS Error: " + error.file + " " + error.line + ":" + error.column + "\n" + error.message);
 
 				notifier.notify({
-					title: "SASS Compile",
-					subtitle: "Error on line: " + error.line + ":" + error.column,
+					title: "SASS Error",
+					subtitle: error.file + " " + error.line + ":" + error.column,
 					message: error.message,
 					sound: "Hero"
 				});
@@ -35,10 +39,26 @@ gulp.task('sass', function(){
 			outputStyle: 'nested',
 			sourceComments: true
 		}))
-		.pipe(gulp.dest('css'));
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('css'))
+		.pipe(reload({stream: true}));
 });
 
-gulp.task('default', ['sass'], function(){
+// Browser Sync serve task
+gulp.task('serve', ['sass'], function(){
+	browserSync.init({
+		server: "./"
+	});
+
 	gulp.watch(src.sass, ['sass']);
 });
+
+gulp.task('watch', ['sass'], function(){
+	gulp.watch(src.sass, ['sass']);
+});
+
+gulp.task('default', ['serve']);
 
