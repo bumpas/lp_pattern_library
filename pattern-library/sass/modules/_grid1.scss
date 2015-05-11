@@ -1,4 +1,4 @@
-.hero {
+.grid1 {
 	position: relative;
 	text-align: center;
 	
@@ -8,14 +8,14 @@
 	}
 }
 
-.hero__img {
+.grid1__img {
 
 	@include breakpoint(md) {
 		@include bgFull;
 	}
 }
 
-.hero__content {
+.grid1__content {
 	position: relative;
 	padding: 20px;
 
@@ -34,7 +34,7 @@
 
 }
 
-.hero__heading {
+.grid1__heading {
 	font-size: 3.5rem;
 
 	span {
@@ -42,12 +42,12 @@
 	}
 }
 
-.hero__copy {
+.grid1__copy {
 	padding-top: 10px;
 	padding-bottom: 15px;
 }
 
-.hero__btns {
+.grid1__btns {
 	@include breakpoint(md) {
 		.btn--nofillblack {
 			color: $white;
