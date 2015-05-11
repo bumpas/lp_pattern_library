@@ -1,0 +1,26 @@
+.grid23split {
+	position: relative;
+	display: table;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+.grid23split > div {
+	display: table-cell;
+}
+
+.grid23split__col2 {
+	width: 33.33%;
+	background: url("../images/bg-grid23split.jpg") no-repeat;
+	background-size: cover;
+	padding-bottom: 41.7%;
+}
+
+.grid23split__col3 {
+	width: 66.66%;
+	padding: 30px;
+	background: url("../images/bg-waves.jpg") no-repeat;
+	background-size: cover;
+	vertical-align: bottom;
+}

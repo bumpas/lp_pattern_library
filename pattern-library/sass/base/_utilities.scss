@@ -6,6 +6,22 @@
 	display: none;
 
 	@include breakpoint(md) {
+		display: inherit;
+	}
+}
+
+.row.hidden--sm {
+	display: none;
+
+	@include breakpoint(md) {
+		display: table;
+	}
+}
+
+.col.hidden--sm {
+	display: none;
+
+	@include breakpoint(md) {
 		display: table-cell;
 	}
 }

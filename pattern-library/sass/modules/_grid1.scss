@@ -3,15 +3,30 @@
 	text-align: center;
 	
 	@include breakpoint(md) {
-		padding-bottom: 50%;
-		overflow: hidden;
+		//padding-bottom: 41.7%;
+		//overflow: hidden;
 	}
 }
 
 .grid1__img {
-
+	img {
+		width: 100%;
+	}
+	
 	@include breakpoint(md) {
-		@include bgFull;
+		img {
+			display: none;
+		}
+		position: relative;
+		background: url("../images/hero-bikers-t.jpg") no-repeat;
+		background-size: cover;
+		padding-bottom: 52.3%;
+	}
+
+	@include breakpoint(lg) {
+		background: url("../images/hero-bikers-d.jpg") no-repeat;
+		background-size: cover;
+		padding-bottom: 41.7%;
 	}
 }
 
@@ -21,9 +36,10 @@
 
 	@include breakpoint(md) {
 		position: absolute;
+		top: 0;
+		right: 0;
   		padding: 40px;
-		max-width: 575px;
-  		right: 0;
+		max-width: 590px;
   		color: $white;
 	}
 
@@ -35,7 +51,7 @@
 }
 
 .grid1__heading {
-	font-size: 3.5rem;
+	letter-spacing: 5px;
 
 	span {
 		font-weight: 300;

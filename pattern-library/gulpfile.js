@@ -54,6 +54,7 @@ gulp.task('serve', ['sass'], function(){
 	});
 
 	gulp.watch(src.sass, ['sass']);
+	gulp.watch("*.html").on("change", browserSync.reload);
 });
 
 gulp.task('watch', ['sass'], function(){
