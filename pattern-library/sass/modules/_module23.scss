@@ -4,6 +4,10 @@
 	width: 100%;
 	overflow: hidden;
 
+	article {
+		padding: rem(30);
+	}
+
 }
 
 .module23__col2 {
@@ -20,12 +24,10 @@
 .module23__col3 {
 	position: relative;
 	display: block;
-	padding: rem(30);
 
 	@include breakpoint(md) {
 		display: table-cell;
 		width: 66.66%;
-		vertical-align: bottom;
 	}
 }
 
@@ -42,6 +44,15 @@
 .module23__col3--waves {
 	background: url("../images/bg-waves.jpg") 50% 50% no-repeat;
 	background-size: cover;
+	vertical-align: bottom;
+
+	article {
+		color: $white;
+
+		h2 {
+			font-weight: 400;
+		}
+	}
 }
 
 .module23__col2--snowboarder {
@@ -54,13 +65,57 @@
 .module23__col3--snowboarder {
 	background: url("../images/snowboarder-case-t.jpg") 50% no-repeat;
 	background-size: cover;
-	vertical-align: top;
 
 	article {
+		color: $white;
 		max-width: 49%;
 
 		@include breakpoint(lg) {
 			max-width: 31%;
+		}
+	}
+}
+
+.module23__col2--fre {
+	text-align: center;
+
+	h3 {
+		font-size: rem(24);
+	}
+
+	@include breakpoint(md) {
+		text-align: left;
+		background: url("../images/bg-fre-t.jpg") no-repeat;
+		background-size: cover;
+
+		img {
+			display: none;
+		}
+
+		article {
+			position: absolute;
+		}
+	}
+}
+
+.module23__col3--fre {
+	text-align: center;
+
+	h3 {
+		font-size: rem(24);
+	}
+
+	@include breakpoint(md) {
+		text-align: left;
+		background: url("../images/bg-fre-profile-t.jpg") no-repeat;
+		background-size: cover;
+
+		img {
+			display: none;
+		}
+
+		article {
+			position: absolute;
 		}
 	}
 }
