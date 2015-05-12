@@ -1,0 +1,74 @@
+.module50 {
+	position: relative;
+	display: table;
+	width: 100%;
+}
+
+.module50__col6 {
+
+	@include breakpoint(md) {
+		display: table-cell;
+		width: 50%;
+		vertical-align: middle;
+	}	
+}
+
+.module50__col6--bg {
+	display: none;
+
+	@include breakpoint(md) {
+		display: table-cell;
+		background: url("../images/surfer-t.jpg") no-repeat;
+		background-size: cover;
+		padding-bottom: 57%;
+	}
+
+	@include breakpoint(lg) {
+		background: url("../images/surfer-d.jpg") no-repeat;
+		background-size: cover;
+		padding-bottom: 41.6%;
+	}
+}
+
+.module50__copy {
+	max-width: 80%;
+	margin: 0 auto;
+	padding-top: rem(30);
+	padding-bottom: rem(30);
+
+	@include breakpoint(md) {
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 20%;
+	}
+
+	h4 { 
+		padding-bottom: rem(5);
+	}
+
+	p {
+		padding-bottom: rem(55);
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	@include breakpoint(lg) {
+		max-width: 60%;
+		padding-left: 20%;
+	}
+}
+
+.module50__overlay {
+	display: none;
+
+	@include breakpoint(md) {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		overflow: hidden;
+	}
+}

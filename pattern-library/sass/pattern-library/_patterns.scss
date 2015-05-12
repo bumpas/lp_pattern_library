@@ -55,8 +55,6 @@ section {
 	}
 }
 
-@import "buttons";
-
 //i need to fix
 
 .modules__heading {
@@ -76,9 +74,9 @@ section {
 //modules
 
 .module__heading {
-	display: inline-block;
 	position: relative;
 	width: 100%;
+	font-weight: 400;
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -121,19 +119,6 @@ section {
 	}
 }
 
-.snowboarder {
-	background: url("../images/snowboarder-case-t.jpg") no-repeat;
-	background-size: cover;
-	vertical-align: top;
-
-	article {
-		max-width: 49%;
-
-		@include breakpoint(lg) {
-			max-width: 31%;
-		}
-	}
-}
 
 @import "color_section";
 @import "typography_section";
