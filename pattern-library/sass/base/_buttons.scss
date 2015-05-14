@@ -1,17 +1,17 @@
 //mixins
-@mixin hover-white {
-	background-color: $white;
-	border-color: $white;
-	color: $black;
+@mixin hover-primary1 {
+	background-color: $blue;
+	border-color: $blue;
+	color: $white;
 }
 
-@mixin hover-black {
+@mixin hover-primary2 {
 	background-color: $black;
 	border-color: $black;
 	color: $white;
 }
 
-@mixin hover-aqua {
+@mixin hover-primary3 {
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
@@ -23,37 +23,37 @@
 	cursor: pointer;
 	text-decoration: none;
 	@include CoreSansCN;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	letter-spacing: .188rem;
 	text-align: center;
 	vertical-align: middle;
 	text-transform: uppercase;
 	transition: .4s;
-	border: 2px solid transparent;
-	padding: 1.4rem 2.4rem .7rem;
-	margin: .25rem;
+	border: 1px solid transparent;
+	padding: rem(16) rem(20) rem(12);
+	margin: rem(5);
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
 
 	&:hover {
-		@include hover-white;
+		@include hover-primary1;
 	}
 
 	@include breakpoint(md) {
 		font-size: $font-size-md;
-		padding: .85rem 1.15rem .65rem;
+		padding: rem(14) rem(20) rem(11);
 	}
 }
 
 //button sizes
 .btn--wide {
-	padding-left: 3.75rem;
-	padding-right: 3.75rem;
+	padding-left: rem(60);
+	padding-right: rem(60);
 }
 
 .btn--small {
-	padding: .6rem 1rem .4rem;
+	padding: rem(12) rem(16) rem(8);
 
 	@include breakpoint(md) {
 		font-size: 0.875rem;
@@ -68,7 +68,7 @@
 	color: $black;
 
 	&:hover {
-		@include hover-black;
+		@include hover-primary2;
 	}
 }
 
@@ -78,7 +78,7 @@
 	color: $white;
 
 	&:hover {
-		@include hover-aqua;
+		@include hover-primary3;
 	}
 }
 
@@ -88,7 +88,7 @@
 	color: $black;
 
 	&:hover {
-		@include hover-black;
+		@include hover-primary2;
 	}
 }
 
@@ -104,7 +104,7 @@
 	border-color: $black;
 
 	&:hover {
-		@include hover-black;
+		@include hover-primary2;
 	}
 }
 
