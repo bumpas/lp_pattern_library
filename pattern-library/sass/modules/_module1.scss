@@ -1,61 +1,36 @@
 .module1 {
 	position: relative;
 	text-align: center;
-	
-	@include breakpoint(md) {
-		//padding-bottom: 41.7%;
-		//overflow: hidden;
-	}
 }
 
 .module1__img {
-	img {
-		width: 100%;
-	}
-	
-	@include breakpoint(md) {
-		img {
-			display: none;
-		}
-		position: relative;
-		background: url("../images/hero-bikers-t.jpg") no-repeat;
-		background-size: cover;
-		padding-bottom: 52.3%;
-	}
-
-	@include breakpoint(lg) {
-		background: url("../images/hero-bikers-d.jpg") no-repeat;
-		background-size: cover;
-		padding-bottom: 41.7%;
-	}
+	display: block;
 }
 
 .module1__content {
 	position: relative;
 	padding: rem(20);
+}
 
+.module1__content--overlayMd {
 	@include breakpoint(md) {
 		position: absolute;
 		top: 0;
-		right: 0;
-  		padding: rem(40);
-		max-width: rem(590);
-  		color: $white;
-	}
 
+		color: $white;
+	}
+}
+
+.module1__content--overlayLg {
 	@include breakpoint(lg) {
-		padding: rem(75);
-		max-width: rem(725);
+		position: absolute;
+		top: 0;
 	}
-
 }
 
 .module1__heading {
-	letter-spacing: rem(5);
-
-	span {
-		font-weight: 300;
-	}
+	letter-spacing: rem(2.7);
+	font-weight: 400;
 }
 
 .module1__copy {

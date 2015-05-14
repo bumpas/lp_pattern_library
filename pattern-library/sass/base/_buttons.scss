@@ -31,10 +31,13 @@
 	transition: .4s;
 	border: 1px solid transparent;
 	padding: rem(16) rem(20) rem(12);
-	margin: rem(5);
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
+	
+	+ .btn {
+		margin: rem(5);
+	}
 
 	&:hover {
 		@include hover-primary1;
