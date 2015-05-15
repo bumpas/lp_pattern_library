@@ -7,25 +7,30 @@
 	display: block;
 }
 
-.module1__content {
+.module1__wrap {
 	position: relative;
-	padding: rem(20);
+	width: 100%;
+	height: 100%;
+	padding: rem(50) rem(20);
+
+	@include breakpoint(lg) {
+		position: absolute;
+		padding: rem(50) rem(80);
+		top: 0;
+	}
 }
 
-.module1__content--overlayMd {
+.module1__wrap--overlayMd {
 	@include breakpoint(md) {
 		position: absolute;
 		top: 0;
-
-		color: $white;
 	}
 }
 
-.module1__content--overlayLg {
-	@include breakpoint(lg) {
-		position: absolute;
-		top: 0;
-	}
+.module1__content {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
 .module1__heading {
@@ -48,6 +53,55 @@
 				color: $black;
 				background-color: $white;
 			}
+		}
+	}
+}
+
+// modifiers for individual styles 
+
+.module1--mtnBikers {
+	article {
+		@include breakpoint(md) {
+			position: absolute;
+			right: 0;
+			max-width: rem(500);
+			color: white;
+		}
+	}
+}
+
+.module1--case {
+	article {
+		@include breakpoint(md) {
+			max-width: rem(640);
+			margin-left: auto;
+			margin-right: auto;
+			color: $white;
+		}
+
+		@include breakpoint(lg) {
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+
+.module1--roadBiker {
+	article {
+		@include breakpoint(lg) {
+			text-align: left;
+			max-width: rem(335);
+		}
+	}
+}
+
+.module1--collage {
+	article {
+		@include breakpoint(lg) {
+			text-align: left;
+			color: #fff;
+			max-width: rem(290);
 		}
 	}
 }
