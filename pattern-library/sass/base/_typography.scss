@@ -59,6 +59,16 @@ button, input, optgroup, select, textarea {
 	font: inherit;
 }
 
+hr {	
+	display: inline-block;
+	width: rem(12);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 2px solid $aqua;
+	margin: 4px 0 7px;
+}
+
 //links
 a {
 	color: $aqua;
@@ -100,17 +110,17 @@ a {
 }
 
 .copy--large {
-	font-size: 16px;
+	font-size: rem(16);
 }
 
 .copy--medium {
-	font-size: 14px;
+	font-size: rem(14);
 }
 
 .copy--small {
-	font-size: 12px;
+	font-size: rem(12);
 }
 
 .copy--copywrite {
-	font-size: 10px;
+	font-size: rem(10);
 }
