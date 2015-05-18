@@ -1,0 +1,64 @@
+.module61 {
+	@include clearfix;
+
+	img {
+		display: block;
+	}
+}
+
+
+.module61__one {
+	position: relative;
+	max-height: 620px;
+	overflow: hidden;
+
+	@include breakpoint(md) {
+		max-height: inherit;
+	}
+
+	article {
+		position: absolute;
+		width: 100%;
+		top: rem(15);
+		text-align: center;
+	}
+
+	@include breakpoint(md) {
+		float: right;
+		width: 40%;
+	}
+}
+
+.module61__btns {
+	position: absolute;
+	width: 100%;
+	bottom: rem(30);
+	text-align: center;
+}
+
+.module61__six {
+	@include clearfix;
+
+	@include breakpoint(md) {
+		float: left;
+		width: 60%;
+	}
+}
+
+.module61__grid {
+	position: relative;
+	float: left;
+	width: 50%;
+
+	@include breakpoint(md) {
+		width: 33.333%;
+	}
+
+	a {
+		color: $white;
+		position: absolute;
+		bottom: rem(15);
+		width: 100%;
+		text-align: center;
+	}
+}
