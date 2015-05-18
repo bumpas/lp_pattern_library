@@ -235,6 +235,75 @@
 						<a href="#0" class="btn btn--wide">shop now</a>
 					</div>
 				</article>
+
+				<div class="drawer available-devices">
+					<h2><strong>Available Devices</strong> for NüüD</h2>
+					<div>
+						<div>
+							<ul>
+								<li>
+									<a href="javascript:;">iPhone 6</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPhone 6 Plus</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPhone 5/5s</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPhone 5c</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPhone 4/4s</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="javascript:;">iPad Mini 3/2/1</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPad Mini Retina</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPad Air</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPad Air 2</a>
+								</li>
+								<li>
+									<a href="javascript:;">iPad Gen 2/3/4</a>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<ul>
+								<li>
+									<a href="javascript:;">iPod Touch</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="javascript:;">Galaxy S6</a>
+								</li>
+								<li>
+									<a href="javascript:;">Galaxy S5</a>
+								</li>
+								<li>
+									<a href="javascript:;">Galaxy S4</a>
+								</li>
+								<li>
+									<a href="javascript:;">Galaxy Note 4</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="javascript:;">Droid Turbo</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			<h5 class="modules__heading">module50</h5>
 			<div class="module50">
@@ -427,7 +496,7 @@
 					<div></div>
 					<div>
 						<button class='btn btn-primary btn--small'>Back to Top</button>
-					</div>
+					</div>`
 					<div>
 						<a href='javascript:;' class='btn btn--nofillblack btn--small'>Learn More</a>
 					</div>
@@ -444,5 +513,17 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="js/plugins/pushy.js"></script>
 	<script src="js/app/app.js"></script>
+
+	<script>
+		$(function(){
+
+			// Set drawer column heights based on # of list items
+			var mostItems = 0;
+			$('.available-devices').find('ul').each(function(){
+				var items = $(this).find('li');
+				if (items.length > mostItems) mostItems = items.length;
+			}).end().append("<style>@media (min-width: 768px){ .available-devices ul { height: " + mostItems*1.8 + "rem; } }</style>");
+		});
+	</script>
 </body>
 </html>
