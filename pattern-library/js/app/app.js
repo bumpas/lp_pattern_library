@@ -21,3 +21,17 @@ $(function(){
 
 
 });
+//slick plugin for small screen sizes only < 768px
+$(document).ready(function(){
+  $('.slick--mobile').slick({
+  	mobileFirst:true,
+  	arrows: false,
+  	dots: true,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: "unslick"
+    }
+  ]
+  });
+});

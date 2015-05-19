@@ -1,0 +1,36 @@
+.module4 {
+	@include clearfix;
+	padding-bottom: 40px;
+	border-bottom: 2px solid $light-grey;
+
+	&__col {
+		padding-left: rem(30);
+		padding-right: rem(30);
+
+		@include breakpoint(md) {
+			float: left;
+			width: 25%;
+			padding: 0;
+		}
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;	
+	}
+
+	&__col + &__col &__article {
+		@include breakpoint(md) {
+			border-left: 2px solid $light-grey;
+		}
+	}
+
+	&__article {
+		padding-top: rem(40);
+		text-align: center;
+	}
+
+	&__heading {
+		padding-bottom: rem(20);
+	}
+}
