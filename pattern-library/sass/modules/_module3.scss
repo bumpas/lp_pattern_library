@@ -28,3 +28,19 @@
 		padding-bottom: rem(15);
 	}
 }
+
+.module3--icon {
+	//the img will change to whatever the svg is and can probably go under .module3 without a modifer
+	//then we can just add a modifer to the article for padding and text align
+	.module3__img {
+		margin-top: rem(30);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.module3__article {
+		text-align: left;
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
