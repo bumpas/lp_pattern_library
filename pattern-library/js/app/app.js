@@ -9,8 +9,8 @@ $(function(){
 
 	// Auto populate offcanvas nav items
 	var nav = $('nav.pushy ul');
-	$('div#container > section').each(function(i){
-		var anchor = $(this).find('a:first');
+	$('div#container > a').each(function(i){
+		var anchor = $(this);
 		var item = $("<a></a>");
 		item
 			.attr('href', "javascript:scrollToElement($('a[name=" + anchor.attr('name') + "]'));")
