@@ -1,0 +1,95 @@
+
+.module--compare {
+
+	h2 {
+		font-size: rem(28);
+		@include CoreSansCN();
+		color: $black;
+		line-height: 1;
+		position: relative;
+		bottom: 4px;
+
+		@include respond(768px) {
+			bottom: -8px;
+		}
+	}
+
+	h3 {
+		font-size: rem(20);
+		@include CoreSans-bold();
+		text-transform: none;
+		color: $black;
+		line-height: 1;
+	}
+	h4 {
+		font-size: rem(18);
+		@include CoreSans();
+		text-transform: none;
+		color: $black;
+		line-height: 1;
+	}
+
+	.row {
+
+		padding: 15px 0 10px 0;
+
+		@include respond(768px) {
+			padding: 20px 0 15px;
+		}
+
+		> div {
+			width: 33.3333%;
+			float: left;
+			text-align: center;
+			min-height: 1px;
+			color: $aqua;
+			font-size: rem(28);
+			line-height: rem(40);
+			transition: width 300ms ease;
+
+			@include respond(768px) {
+				width: 25%;
+			}
+
+			&.hidden-mobile {
+				display: none;
+
+				@include respond(768px) {
+					display: block;
+				}
+			}
+
+			&:first-child {
+				width: 100%;
+				padding: 0 rem(10) 0 rem(10);
+
+				@include respond(768px) {
+					width: 25%;
+				}
+			}
+
+			&:not(:first-child) {
+				padding: 15px 10px 0 10px;
+
+				@include respond(768px) {
+					padding-top: 0;
+				}
+			}
+		}
+
+		&.stripe {
+			background-color: #f3f3f3;
+		}
+
+		&:last-child {
+			padding-top: 0;
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+
+
+}

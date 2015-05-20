@@ -1,0 +1,68 @@
+.drawer {
+	background-color: $light-grey;
+	color: $black;
+	@include CoreSans();
+	font-size: rem(16);
+	padding: rem(24) 0 rem(24) 0;
+
+	h2 {
+		@include CoreSans();
+		font-size: rem(24);
+		text-transform: uppercase;
+		margin-bottom: rem(24);
+	}
+
+	> div > div {
+		margin: 0 auto;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	> div > div:last-child ul:last-child {
+		border-right-width: 0;
+	}
+
+	ul {
+		float: none;
+		text-align: left;
+		border-color: $medium-grey;
+		border-style: solid;
+		padding: 20px rem(30) 20px rem(30);
+		border-bottom-width: 1px;
+
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			border-bottom-width: 0;
+		}
+
+		@include respond(768px) {
+			float: left;
+			padding-top: 0;
+			padding-bottom: 0;
+			border-bottom-width: 0;
+			border-right-width: 1px;
+
+			&:before,
+			&:after {
+				content: " ";
+				display: table;
+			}
+
+			&:after {
+				clear: both;
+			}
+		}
+	}
+
+	a {
+		color: $black;
+		text-decoration: none;
+		line-height: rem(30);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
