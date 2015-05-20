@@ -1,21 +1,27 @@
-.buttonsLinks {
-	background: #efefef;
+section.buttons {
 
-	h4 {
-		padding-bottom: .5rem;
+	background-color: $medium-grey;
+
+	> div > div {
+		float: left;
+		margin-right: 15px;
 	}
-}
 
-.buttons {
-	margin: 0 0 2rem;
-}
+	.buttonsLinks {
+		background: #efefef;
 
-.buttons--background {
-	background: url("../images/hero-bikers.jpg") no-repeat 50% 50%;
-	background-size: cover;
-	padding: 1rem;
+		h4 {
+			padding-bottom: .5rem;
+		}
+	}
 
-	h4 {
-		color: $white;
+	.buttons--background {
+		background: url("../images/hero-bikers.jpg") no-repeat 50% 50%;
+		background-size: cover;
+		padding: 1rem;
+
+		h4 {
+			color: $white;
+		}
 	}
 }
