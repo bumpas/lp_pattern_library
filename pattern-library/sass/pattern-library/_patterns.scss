@@ -21,6 +21,13 @@ header {
 	}
 }
 
+hr {
+	margin-top: rem(20);
+	margin-bottom: rem(20);
+	border-top: 1px solid $black;
+	border-bottom: none;
+}
+
 #container > h2 {
 	background: $black;
 	height: 60px;
