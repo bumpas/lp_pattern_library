@@ -1,0 +1,30 @@
+.module3 {
+	@include clearfix;
+	padding-bottom: rem(40);
+
+	&__col {
+		@include breakpoint(md) {
+			float: left;
+			width: 33.33%;
+		}
+	}
+
+	&__img {
+		display: block;
+	}
+
+	&__article {
+		text-align: center;
+		padding-top: rem(50);
+		padding-left: rem(15);
+		padding-right: rem(15);
+	}
+
+	&__heading {
+		padding-bottom: rem(18);
+	}
+
+	&__copy {
+		padding-bottom: rem(15);
+	}
+}

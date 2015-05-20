@@ -19,6 +19,10 @@
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
+	
+	+ .btn {
+		margin: rem(5);
+	}
 
 	&:hover {
 		background-color: $blue;

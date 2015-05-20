@@ -4,31 +4,75 @@
 	width: 100%;
 	overflow: hidden;
 
-	article {
-		padding: rem(30);
+	img + article {
+		color: $black;
 	}
 
+	> div {
+		display: block;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@include breakpoint(md) {
+			display: table-cell;
+		}
+	}
 }
 
-.module23__col2 {
-	display: block;
-	position: relative;
+.module23--hidden-sm {
+	display: none;
 
 	@include breakpoint(md) {
-		display: table-cell;
+		display: table;
+	}
+}
+
+.module23__col2 {	
+	@include breakpoint(md) {
 		width: 33.33%;
 		padding-bottom: 41.6%;
 	}
 }
 
 .module23__col3 {
-	position: relative;
-	display: block;
-
 	@include breakpoint(md) {
-		display: table-cell;
 		width: 66.66%;
 	}
+}
+
+.module23__copy {
+	text-align: center;
+	padding: rem(30);
+	color: $white;
+
+	@include breakpoint(md) {
+		position: absolute;
+		text-align: left;
+	}
+
+	// h1,h2,h3,h4,h5,h6 {
+	// 	position: relative;
+	// 	padding-bottom: rem(9);
+	// 	margin-bottom: rem(11);
+	// 	font-weight: 400;
+
+	// 	&:after {
+	// 		content: " ";
+	// 		position: absolute;
+	// 		bottom: 0;
+	// 		left: 50%;
+	// 		margin-left: rem(-6);
+	// 		width: rem(12);
+	// 		border-bottom: 2px solid #02BBD5;
+
+	// 		@include breakpoint(md) {
+	// 		left: 0;
+	// 		margin-left: 0;
+	// 		}
+	// 	}
+	// }
 }
 
 //modifiers for each column, background images, different article placement and color
@@ -36,86 +80,65 @@
 
 .module23__col2--split {
 	@include breakpoint(md) {
-		background: url("../images/bg-grid23split.jpg") no-repeat;
-		background-size: cover;
+		background-image: url("../images/bg-grid23split.jpg");
 	}
 }
 
 .module23__col3--waves {
-	background: url("../images/bg-waves.jpg") 50% 50% no-repeat;
-	background-size: cover;
-	vertical-align: bottom;
+	background-image: url("../images/bg-waves.jpg");
 
 	article {
-		color: $white;
-
-		h2 {
-			font-weight: 400;
-		}
+		bottom: 0;
+		max-width: 605px;
 	}
 }
 
 .module23__col2--snowboarder {
 	@include breakpoint(md) {
-		background: url("../images/snowboarder-jump-t.jpg") no-repeat;
-		background-size: cover;
+		background-image: url("../images/snowboarder-jump-t.jpg");
 	}
 }
 
 .module23__col3--snowboarder {
-	background: url("../images/snowboarder-case-t.jpg") 50% no-repeat;
-	background-size: cover;
+	background-image: url("../images/snowboarder-case-t.jpg");
+	padding-bottom: 30%;
 
 	article {
-		color: $white;
-		max-width: 49%;
-
-		@include breakpoint(lg) {
-			max-width: 31%;
-		}
+		max-width: 280px;
+		text-align: left;
 	}
 }
 
 .module23__col2--fre {
-	text-align: center;
-
-	h3 {
-		font-size: rem(24);
-	}
 
 	@include breakpoint(md) {
-		text-align: left;
-		background: url("../images/bg-fre-t.jpg") no-repeat;
-		background-size: cover;
+		background-image: url("../images/bg-fre-t.jpg");
 
 		img {
 			display: none;
 		}
+	}
 
-		article {
-			position: absolute;
+	article {
+		@include breakpoint(lg) {
+			max-width: rem(350);
 		}
 	}
 }
 
 .module23__col3--fre {
-	text-align: center;
-
-	h3 {
-		font-size: rem(24);
-	}
 
 	@include breakpoint(md) {
-		text-align: left;
-		background: url("../images/bg-fre-profile-t.jpg") no-repeat;
-		background-size: cover;
+		background-image: url("../images/bg-fre-profile-t.jpg");
 
 		img {
 			display: none;
 		}
+	}
 
-		article {
-			position: absolute;
+	article {
+		@include breakpoint(md) {
+			max-width: rem(565);
 		}
 	}
 }

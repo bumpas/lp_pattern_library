@@ -1,66 +1,45 @@
 .module1 {
 	position: relative;
 	text-align: center;
-	
-	@include breakpoint(md) {
-		//padding-bottom: 41.7%;
-		//overflow: hidden;
-	}
 }
 
 .module1__img {
-	img {
-		width: 100%;
-	}
-	
-	@include breakpoint(md) {
-		img {
-			display: none;
-		}
-		position: relative;
-		background: url("../images/hero-bikers-t.jpg") no-repeat;
-		background-size: cover;
-		padding-bottom: 52.3%;
-	}
+	display: block;
+}
+
+.module1__wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: rem(50) rem(20);
 
 	@include breakpoint(lg) {
-		background: url("../images/hero-bikers-d.jpg") no-repeat;
-		background-size: cover;
-		padding-bottom: 41.7%;
+		position: absolute;
+		padding: rem(50) rem(80);
+		top: 0;
+	}
+}
+
+.module1__wrap--overlayMd {
+	@include breakpoint(md) {
+		position: absolute;
+		top: 0;
 	}
 }
 
 .module1__content {
 	position: relative;
-	padding: rem(20);
-
-	@include breakpoint(md) {
-		position: absolute;
-		top: 0;
-		right: 0;
-  		padding: rem(40);
-		max-width: rem(590);
-  		color: $white;
-	}
-
-	@include breakpoint(lg) {
-		padding: rem(75);
-		max-width: rem(725);
-	}
-
+	width: 100%;
+	height: 100%;
 }
 
 .module1__heading {
-	letter-spacing: rem(5);
-
-	span {
-		font-weight: 300;
-	}
+	letter-spacing: rem(2.7);
+	font-weight: 400;
 }
 
 .module1__copy {
-	padding-top: rem(10);
-	padding-bottom: rem(15);
+	padding-bottom: rem(20);
 }
 
 .module1__btns {
@@ -73,6 +52,55 @@
 				color: $black;
 				background-color: $white;
 			}
+		}
+	}
+}
+
+// modifiers for individual styles 
+
+.module1--mtnBikers {
+	article {
+		@include breakpoint(md) {
+			position: absolute;
+			right: 0;
+			max-width: rem(500);
+			color: white;
+		}
+	}
+}
+
+.module1--case {
+	article {
+		@include breakpoint(md) {
+			max-width: rem(640);
+			margin-left: auto;
+			margin-right: auto;
+			color: $white;
+		}
+
+		@include breakpoint(lg) {
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+
+.module1--roadBiker {
+	article {
+		@include breakpoint(lg) {
+			text-align: left;
+			max-width: rem(335);
+		}
+	}
+}
+
+.module1--collage {
+	article {
+		@include breakpoint(lg) {
+			text-align: left;
+			color: #fff;
+			max-width: rem(290);
 		}
 	}
 }

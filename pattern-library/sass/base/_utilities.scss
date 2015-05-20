@@ -60,3 +60,11 @@
 		clear: both;
 	}
 }
+
+.break--md {
+	display: none;
+
+	@include breakpoint(md) {
+		display: block;
+	}
+}
