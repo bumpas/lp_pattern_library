@@ -1,0 +1,44 @@
+.slickDots--default {
+	text-align: center;
+	margin-top: rem(20);
+	
+	li {
+		display: inline-block;
+	}
+
+	button {
+		position: relative;
+		font-size: 0;
+		line-height: 0;
+		display: block;
+		cursor: pointer;
+		color: transparent;
+		border: 0;
+		outline: none;
+		background: transparent;
+		margin-left: rem(15);
+		margin-right: rem(15);
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: rem(16);
+			height: rem(16);
+			background: $dark-grey;
+			border-radius: 50%;
+			content: "";
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+
+	.slick-active button {
+		&:before {
+			background: none;
+			border: 2px solid $aqua;
+			padding: rem(8);
+			margin-top: -2px;
+		}
+	}
+}

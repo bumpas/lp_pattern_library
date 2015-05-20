@@ -1,7 +1,10 @@
 section.typography {
 	> div {
-		width: 50%;
-		float: left;
+
+		@include respond(500px) {
+			width: 50%;
+			float: left;
+		}
 	}
 
 	h1,h2,h3,h4,h5 {

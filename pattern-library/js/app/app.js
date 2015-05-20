@@ -27,6 +27,7 @@ $(document).ready(function(){
   	mobileFirst:true,
   	arrows: false,
   	dots: true,
+  	dotsClass: "slickDots slickDots--default",
     responsive: [
     {
       breakpoint: 768,

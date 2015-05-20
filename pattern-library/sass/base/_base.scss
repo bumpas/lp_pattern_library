@@ -1,9 +1,9 @@
 @import "variables";
 @import "mixins";
 @import "typography";
-@import "grid";
 @import "buttons";
 @import "utilities";
+@import "carousel";
 
 //let's use box sizing border-box because it's awesome.
 *, *:before, *:after {
