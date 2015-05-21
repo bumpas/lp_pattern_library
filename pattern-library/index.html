@@ -41,7 +41,6 @@
 				<li class="medium-grey">Medium Grey<br>#B9B9B9</li>
 				<li class="aqua">Aqua<br>#02BBD5</li>
 				<li class="red">Red<br>#ED2638</li>
-				<li class="blue">Blue<br>#0080C7</li>
 			</ul>
 
 			<h5>Background &amp; Element Colors</h5>
@@ -155,25 +154,39 @@
 		</section>
 
 		<a name="buttons" title="Buttons"></a>
-		<h2>
-			Buttons
-			<select name="" id="buttons-background">
-				<option value="0">Change background...</option>
-				<option value="white">White</option>
-				<option value="black">Black</option>
-				<option value="dark-grey">Dark Grey</option>
-				<option value="medium-grey">Medium Grey</option>
-				<option value="light-grey">Light Grey</option>
-				<option value="off-white">Off White</option>
-				<option value="aqua">Aqua</option>
-			</select>
-		</h2>
+		<h2>Buttons</h2>
 
 		<section class="buttons">
 
+			<p>
+				Background:
+					<select name="" id="buttons-background">
+					<option value="#FFFFFF">White</option>
+					<option value="#2B2B2B">Black</option>
+					<option value="#595959">Dark Grey</option>
+					<option value="#B9B9B9">Medium Grey</option>
+					<option value="#EFEFEF">Light Grey</option>
+					<option value="#FAFAFA">Off White</option>
+					<option value="#02BBD5">Aqua</option>
+					<option value="#0080C7">Blue</option>
+					<option value="images/hero-bikers-d.jpg">Mountain Bikers</option>
+					<option value="images/surfer-d.jpg">Surfer</option>
+					<option value="images/bg-waves.jpg">Waves</option>
+					<option value="images/bg-fre-profile-t.jpg">Fre</option>
+				</select>
+				Text Color:
+					<select name="" id="buttons-text-color">
+					<option value="#2B2B2B">Black</option>
+					<option value="#FFFFFF">White</option>
+					<option value="#595959">Dark Grey</option>
+					<option value="#B9B9B9">Medium Grey</option>
+					<option value="#02BBD5">Aqua</option>
+					<option value="#ED2638">Red</option>
+				</select>
+			</p>
+
 			<div class="clearfix">
 				<h4>Primary Buttons</h4>
-				<p>The default buttons used on the site.</p>
 
 				<div>
 					<a href="#0" class="btn">Shop Lifeproof</a>
@@ -192,35 +205,30 @@
 
 			</div>
 
-			<hr>
-
 			<div class="clearfix">
 				<h4>Secondary Buttons</h4>
-				<p>The default buttons used on the site.</p>
 
 				<div>
-					<a href="#0" class="btn btn--emptyblack">Shop Lifeproof</a>
+					<a href="#0" class="btn btn--emptyblack">Learn More</a>
 					<p>Empty Black</p>
 				</div>
 
 				<div>
-					<a href="#0" class="btn btn--emptywhite">Shop Lifeproof</a>
+					<a href="#0" class="btn btn--emptywhite">Learn More</a>
 					<p>Empty White</p>
 				</div>
 
 				<div>
-					<a href="#0" class="btn btn--emptyblack btn--alt">Shop Lifeproof</a>
+					<a href="#0" class="btn btn--emptyblack btn--alt">Learn More</a>
 					<p>Empty Black Alternate</p>
 				</div>
 
 				<div>
-					<a href="#0" class="btn btn--emptywhite btn--alt">Shop Lifeproof</a>
+					<a href="#0" class="btn btn--emptywhite btn--alt">Learn More</a>
 					<p>Empty White Alternate</p>
 				</div>
 
 			</div>
-
-			<hr>
 
 			<div class="clearfix">
 
@@ -243,8 +251,6 @@
 
 			</div>
 
-			<hr>
-
 			<div class="clearfix">
 
 				<h4>Small Buttons</h4>
@@ -266,11 +272,30 @@
 
 			</div>
 
-			<hr>
+			<div class="clearfix">
+
+				<h4>Small Wide Buttons</h4>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--small">Shop Lifeproof</a>
+					<p>Primary</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--small btn--white">Shop Lifeproof</a>
+					<p>White</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--small btn--black">Shop Lifeproof</a>
+					<p>Black</p>
+				</div>
+
+			</div>
 
 			<div class="clearfix">
 
-				<h4>Fixed Width Buttons</h4>
+				<h4>Full Width Buttons</h4>
 				<p>Buttons that adapt to the full width of the containing grid</p>
 
 				<a href="#0" class="btn btn--block">Shop Lifeproof</a>
@@ -284,7 +309,23 @@
 					<a href="#0" class="btn btn--white btn--block">Shop Lifeproof</a>
 				</div>
 
+				<div style='width:33.3333%; margin: 0;'>
+					<a href="#0" class="btn btn--emptywhite btn--block">Learn More</a>
+				</div>
+				<div style='width:33.3333%; margin: 0;'>
+					<a href="#0" class="btn btn--emptyblack btn--block">Explore</a>
+				</div>
+				<div style='width:33.3333%; margin: 0;'>
+					<a href="#0" class="btn btn--emptywhite btn--alt btn--block">Back To Top</a>
+				</div>
+
 			</div>
+		</section>
+
+		<a name="links" title="Links"></a>
+		<h2>Links</h2>
+
+		<section class="links">
 
 			<div class="links">
 				<h4>Text Links</h4>
@@ -482,41 +523,41 @@
 				</div>
 				<div class="module61__six">
 					<div class="module61__block">
-						<img src="images/61-ipad-air-2.jpg" sizes="(min-width: 768px) 20vw, 50vw" 
-							srcset="images/61-ipad-air-2.jpg 320w, http://placehold.it/640/ff0000/fff 640w" 
+						<img src="images/61-ipad-air-2.jpg" sizes="(min-width: 768px) 20vw, 50vw"
+							srcset="images/61-ipad-air-2.jpg 320w, http://placehold.it/640/ff0000/fff 640w"
 							alt="ipad air 2 case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
-					<div class="module61__block">						
+					<div class="module61__block">
 						<img src="images/61-galaxy-s5.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-galaxy-s5.jpg 320w" 
+							srcset="images/61-galaxy-s5.jpg 320w"
 							alt="galaxy s5 case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
 						<img src="images/61-ipad-mini-lifestyle.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-ipad-mini-lifestyle.jpg 320w" 
+							srcset="images/61-ipad-mini-lifestyle.jpg 320w"
 							alt="ipad mini case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 					<div class="module61__block">
 						<img src="images/61-ipad-mini.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-ipad-mini.jpg 320w" 
+							srcset="images/61-ipad-mini.jpg 320w"
 							alt="ipad mini case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 					<div class="module61__block">
 						<img src="images/61-iphone-5s.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-iphone-5s.jpg 320w" 
+							srcset="images/61-iphone-5s.jpg 320w"
 							alt="iphone 5/5s case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 					<div class="module61__block">
 						<img src="images/61-iphone-6-nuud-runner.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-iphone-6-nuud-runner.jpg 320w" 
+							srcset="images/61-iphone-6-nuud-runner.jpg 320w"
 							alt="iphone 5/5s case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 				</div>
 			</div>
 			<h5 class="modules__heading">module3</h5>
@@ -535,7 +576,7 @@
 					<article class="module3__article">
 						<h3 class="module3__heading">LifeProof vs. Chainsaw</h3>
 						<p class="module3__copy">&ldquo;Cras quis velit pellentesque, pretium velit ut, maximus leo. Fusce sagittis erat in efficitur placerat. Donec congue nulla eu justo faucibus tincidunt&hellip;&rdquo;</p>
-						<a href="#0" class="link link--plusCircled">Read more</a>						
+						<a href="#0" class="link link--plusCircled">Read more</a>
 					</article>
 				</div>
 				<div class="module3__col">
@@ -544,7 +585,7 @@
 						<h3 class="module3__heading">LifeProof case is top notch</h3>
 						<p class="module3__copy">&ldquo;Nulla dictum interdum luctus. Vestibulum at consequat enim. Nam sagittis lobortis metus, vel luctus ipsum. Maecenas condimentum metus quis sodales vestibulum&hellip;&rdquo;</p>
 						<a href="#0" class="link link--plusCircled">Read more</a>
-					</article>					
+					</article>
 				</div>
 			</div>
 			<h5 class="modules__heading">module4</h5>

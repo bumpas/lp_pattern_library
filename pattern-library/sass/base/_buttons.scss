@@ -14,15 +14,12 @@
 		background-color .4s ease,
 		border-color .4s ease,
 		color .4s ease;
-	border: 2px solid transparent;
+	border-width: 1px;
+	border-style: solid;
 	padding: rem(14) rem(20) rem(9) rem(20);
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
-	
-	+ .btn {
-		margin: rem(5);
-	}
 
 	&:hover {
 		background-color: $blue;
@@ -35,16 +32,16 @@
 		text-transform: none;
 	}
 
-	// Wide
-	&.btn--wide {
-		padding-left: rem(60);
-		padding-right: rem(60);
-	}
-
 	// Small
 	&.btn--small {
 		font-size: rem(14);
 		padding: rem(10) rem(16) rem(7) rem(16);
+	}
+
+	// Wide
+	&.btn--wide {
+		padding-left: rem(60);
+		padding-right: rem(60);
 	}
 
 	// Block
