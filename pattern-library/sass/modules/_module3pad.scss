@@ -17,6 +17,10 @@
 		margin-left: auto;
 		margin-right: auto;
 
+		h3 {
+			font-weight: 400;
+		}
+
 		.btn {
 			display: none;
 
@@ -31,7 +35,7 @@
 			vertical-align: top;
 			text-align: left;
 			width: 33%;
-			padding: 0 7%;
+			padding: rem(47) 7% 0;
 		}
 	}
 
@@ -55,8 +59,9 @@
 			margin-left: rem(90);
 		}
 
-		h4 {
-			padding-bottom: rem(15);
+		h5 {
+			padding-top: rem(3);
+			padding-bottom: rem(17);
 		}
 
 		@include breakpoint(md) {
@@ -71,11 +76,11 @@
 			width: 33%;
 			transform: translateX(100%);
 			vertical-align: top;
-			padding: 0;
+			padding: rem(27) 0 0;
 		}
 
 		@include respond(1339px) {
-			padding: 0 4%;
+			padding: rem(27) 4%;
 		}
 	}
 
