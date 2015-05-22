@@ -1,0 +1,96 @@
+.module23split {
+	@include clearfix;
+
+	&__col3 {
+		position: relative;
+		text-align: center;
+		//padding-bottom: rem(20);
+
+		img {
+			display: block;
+		}
+
+		h4 {
+			padding-bottom: rem(10);
+		}
+
+		li {
+			padding-bottom: rem(10);
+		}
+
+		@include breakpoint(md) {
+			article {
+				position: absolute;
+				top: 0;
+				padding-top: rem(48);
+				padding-left: rem(48);
+				text-align: left;
+				color: $white;
+			}
+		}
+
+		@include breakpoint(lg) {
+			float: left;
+			width: 66.66%;
+
+			article {
+				padding-top: rem(70);
+				padding-left: rem(95);
+			}
+		}
+	}
+
+	&__col2 {
+		text-align: center;
+		@include clearfix;
+		
+		article {
+			padding-left: rem(20);
+			padding-right: rem(20);
+		}
+
+		h4 {
+			padding-bottom: rem(15);
+		}
+
+		p {
+			padding-bottom: rem(15);
+		}
+
+		.btn {
+			@include breakpoint(md) {
+				display: none;
+			}
+		}
+
+		@include breakpoint(lg) {
+			float: left;
+			width: 33.33%;
+		}
+	}
+
+	&__split {
+		@include breakpoint(md) {
+			float: left;
+			width: 50%;
+		}
+
+		@include breakpoint(lg) {
+			float: none;
+			width: 100%;
+			padding-bottom: 62.5%;
+			
+			// to accomodate the modules being exactly 50% height of the container their content needs to be asbsolute
+			& > * {
+				position: absolute;
+			}
+		}
+	}
+}
+
+.video {
+	&__thumbnail {
+		display: block;
+	}
+
+}
