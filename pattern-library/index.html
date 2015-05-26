@@ -385,7 +385,7 @@
 			<div class="module23split">
 				<div class="module23split__col3">
 					<picture>
-						<source media="(min-width: 992px)" sizes="66.66vw" srcset="http://placehold.it/900x563/666/fff 900w, http://placehold.it/1440x900/666/fff 1440w" >
+						<source media="(min-width: 992px)" sizes="66.66vw" srcset="http://placehold.it/900x506/666/fff 900w, http://placehold.it/1440x810/666/fff 1440w" >
 						<source media="(min-width: 768px)" srcset="http://placehold.it/992x621/666/fff" >
 						<!-- no image below 768px -->
 					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
@@ -405,7 +405,13 @@
 				<div class="module23split__col2">
 					<div class="module23split__split">
 						<div class="video">
-							<img src="http://placehold.it/640x400/0000ff" alt="" class="video__thumb">
+							<video id="vid1" poster="http://placehold.it/640x360/000&text=video thumb 640x360 16:9 aspect">
+								<source src="videos/big_buck_bunny.webm" type="video/webm">
+								<source src="videos/big_buck_bunny.mp4" type="video/mp4">
+								Your browser does not support the <code>video</code> element.
+							</video>
+							<h3 class="video__title">Install Guide</h3>
+							<!-- <img src="http://placehold.it/640x400/0000ff&text=video thumb 640x400" alt="video thumbnail" class="video__thumb"> -->
 						</div>
 					</div>
 					<div class="module23split__split">
@@ -750,7 +756,6 @@
 				</div>
 
 			</div>
-
 		</section>
 	</div>
 
@@ -768,6 +773,17 @@
 				var items = $(this).find('li');
 				if (items.length > mostItems) mostItems = items.length;
 			}).end().append("<style>@media (min-width: 768px){ .available-devices ul { height: " + mostItems*1.8 + "rem; } }</style>");
+
+			//html5 video 
+			$('.video__title').on('click', function() {
+				$(this).prev().attr('controls', '1').get(0).play();
+				$(this).fadeOut(800);
+			});
+
+			$('.video__title').prev().bind('ended', function() {
+				$(this).load().removeAttr('controls');
+				$(this).next().fadeIn(800);
+			});
 		});
 	</script>
 </body>
