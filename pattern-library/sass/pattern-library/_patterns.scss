@@ -47,30 +47,6 @@ hr {
 section {
 	padding: 2rem 1rem 1rem;
 	position: relative;
-
-	// &:before {
-	// 	position: absolute;
-	// 	content: "";
-	// 	background: $black;
-	// 	height: 60px;
-	// 	width: 100%;
-	// 	top: 0;
-	// 	left: 0;
-	// 	z-index: 0;
-	// }
-
-	// > h4:first-of-type {
-	// 	position: relative;
-	// 	color: white;
-	// 	line-height: 60px;
-	// 	margin-bottom: 60px;
-	// 	z-index: 1;
-	// 	padding-left: 60px;
-
-	// 	@include breakpoint(md) {
-	// 		padding-left: 95px;
-	// 	}
-	// }
 }
 
 // Bumpas need to fix
@@ -78,8 +54,8 @@ section {
 .modules__heading {
 	background: $aqua;
 	color: $white;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: rem(10);
+	padding-bottom: rem(7);
 	padding-left: 60px;
 
 	@include breakpoint(md) {
