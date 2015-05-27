@@ -106,6 +106,7 @@
 
 .video {
 	width: 100%;
+	text-align: center;
 
 	&__title {
 		color: $white;
@@ -152,11 +153,6 @@
 		display: block;
 		width: 100%;
 		z-index: 1;
-	}
-
-	&__thumb {
-		display: block;
-		margin: 0 auto;
 	}
 
 }

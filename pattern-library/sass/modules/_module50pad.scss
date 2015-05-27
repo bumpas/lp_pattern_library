@@ -1,0 +1,129 @@
+.module50pad {
+	position: relative;
+
+	@include clearfix;
+
+	&__col6 {
+		@include breakpoint(md) {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	&__video {
+		position: relative;
+		text-align: center;
+		margin-bottom: rem(32);
+
+		article {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: $white;
+			z-index: 2;
+		}
+
+		.btnPlay {
+			position: relative;
+			display: block;
+			height: rem(80);
+			width: rem(80);
+			margin: rem(30) auto;
+    		@include hidetext;
+			
+			&:before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				margin-left: rem(5);
+				border-top: 15px solid transparent;
+    			border-bottom: 15px solid transparent;
+    			border-left: 25px solid $white;
+			}
+			
+    		&:after {
+    			position: absolute;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				height: rem(80);
+				width: rem(80);
+				border: 2px solid $white;
+				border-radius: 50%;
+    		}
+		}
+
+		video {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	//slider container
+
+	.slick--module50pad {
+		position: relative;
+		padding-left: rem(50);
+		padding-right: rem(50);
+		margin-bottom: rem(32);
+	}
+
+	//arrows
+
+	.slick-next, .slick-prev {
+		position: absolute;
+		top:0;
+		border: 0;
+		height: 100%;
+		background: none;
+		outline: 0;
+		cursor: pointer;
+		@include hidetext;
+
+		&:after {
+			@include Icons;
+			position: relative;
+			color: $medium-grey;
+			font-size: 6.5rem;
+			cursor: pointer;
+		}
+	}
+	.slick-next {
+		right: 0;
+
+		&:after {
+			content: "\f105";
+		}
+	}
+
+	.slick-prev {
+		left: 0;
+
+		&:after {
+			content: "\f104";
+		}
+	}
+
+	//slider items
+
+	&__item {
+		text-align: center;
+
+		@include breakpoint(md) {
+			padding: 0 rem(10);
+		}
+
+		@include breakpoint(lg) {
+			padding: 0 rem(25);
+		}		
+
+		img {
+			display: block;
+			margin: 0 auto rem(30);
+		}
+	}
+}

@@ -166,3 +166,10 @@
     clear: both;
   }
 }
+
+//hidetext mixin
+@mixin hidetext {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}

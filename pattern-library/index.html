@@ -325,6 +325,65 @@
 					srcset="images/iphone-6-fre-t.png 210w, images/iphone-6-fre-d.png 262w"
 					alt="iphone 6 fre case" >
 			</div>
+			<h5 class="modules__heading">module50pad</h5>
+			<h4 class="module__heading">Lifeactiv <b>Quickmont Accessories</b></h4>
+			<div class="module50pad">
+				<div class="module50pad__col6">
+					<div class="module50pad__video">
+						<article>
+						<h1>Live in action</h1>
+						<hr>
+						<p>LifeActive &mdash; designed for the daring</p>
+						<a href="#0" class="btnPlay">Play</a>
+						<a href="#0" class="btn">shop all quickmmount accssories</a>
+						</article>
+						<video id="vid2" poster="http://placehold.it/640x448/000&text=video thumb 640x448">
+							<source src="videos/big_buck_bunny.webm" type="video/webm">
+							<source src="videos/big_buck_bunny.mp4" type="video/mp4">
+							Your browser does not support the <code>video</code> element.
+						</video>
+					</div>
+				</div>
+				<div class="module50pad__col6">
+					<div class="slick--module50pad">
+						<div class="module50pad__item">
+							<img src="http://placehold.it/450/ff00/fff" >
+							<article class="module50pad__article">
+								<h3 class="module50pad__heading">Belt clip</h3>
+								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam laboriosam ducimus magni necessitatibus blanditiis! Nostrum saepe, error quae dolorum molestiae, hic facere dolore. Numquam perferendis earum, nisi aliquid reiciendis ex.</p>
+							</article>
+						</div>
+						<div class="module50pad__item">
+							<img src="http://placehold.it/450/00ff/000" >
+							<article class="module50pad__article">
+								<h3 class="module50pad__heading">Bike-bar mount</h3>
+								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora temporibus earum delectus quaerat ipsa eaque, error atque officia facere, consequatur quam quos voluptatum. Possimus soluta perspiciatis veniam unde culpa magni.</p>
+							</article>
+						</div>
+						<div class="module50pad__item">
+							<img src="http://placehold.it/450" >
+							<article class="module50pad__article">
+								<h3 class="module50pad__heading">Accessory 1</h3>
+								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem, atque! Neque, perspiciatis eius voluptates libero odio natus sequi veritatis debitis, repellendus quis pariatur quod aspernatur laboriosam ut saepe numquam.</p>
+							</article>					
+						</div>
+						<div class="module50pad__item">
+							<img src="http://placehold.it/450/ff2200" >
+							<article class="module50pad__article">
+								<h3 class="module50pad__heading">Surfboard Mount</h3>
+								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem, atque! Neque, perspiciatis eius voluptates libero odio natus sequi veritatis debitis, repellendus quis pariatur quod aspernatur laboriosam ut saepe numquam.</p>
+							</article>					
+						</div>
+						<div class="module50pad__item">
+							<img src="http://placehold.it/450/00ff" >
+							<article class="module50pad__article">
+								<h3 class="module50pad__heading">Helmet Mount</h3>
+								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem, atque! Neque, perspiciatis eius voluptates libero odio natus sequi veritatis debitis, repellendus quis pariatur quod aspernatur laboriosam ut saepe numquam.</p>
+							</article>					
+						</div>
+					</div>
+				</div>
+			</div>
 			<h5 class="modules__heading">module23 &mdash; pdp specs section</h5>
 			<div class="module23 module23--hidden-sm">
 				<div class="module23__col2 module23__col2--split">
@@ -381,7 +440,7 @@
 				</div>
 			</div>
 			<h5 class="modules__heading">module23split</h5>
-			<h4 class="module__heading">What's <b>in the Box</b></h4>
+			<h4 class="module__heading">What&rsquo;s <b>in the Box</b></h4>
 			<div class="module23split">
 				<div class="module23split__col3">
 					<picture>
@@ -774,15 +833,26 @@
 				if (items.length > mostItems) mostItems = items.length;
 			}).end().append("<style>@media (min-width: 768px){ .available-devices ul { height: " + mostItems*1.8 + "rem; } }</style>");
 
-			//html5 video 
+			//module23split video 
 			$('.video__title').on('click', function() {
-				$(this).prev().attr('controls', '1').get(0).play();
 				$(this).fadeOut(800);
+				$(this).prev().attr('controls', '1').get(0).play();
 			});
 
 			$('.video__title').prev().bind('ended', function() {
-				$(this).load().removeAttr('controls');
 				$(this).next().fadeIn(800);
+				$(this).load().removeAttr('controls');
+			});
+
+			//module50pad video 
+			$('.btnPlay').on('click', function() {
+				$(this).parent().fadeOut(800);
+				$(this).parent().next().attr('controls','1').get(0).play();
+			});
+
+			$('.btnPlay').parent().next().bind('ended', function() {
+				$(this).prev().fadeIn(800);
+				$(this).load().removeAttr('controls');
 			});
 		});
 	</script>
