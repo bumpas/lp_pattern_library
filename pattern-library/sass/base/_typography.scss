@@ -1,4 +1,4 @@
-//typography
+// Typography
 
 html {
 	font-size: rem(14);
@@ -50,6 +50,7 @@ h5 {
 
 p {
 	line-height: 1.5rem;
+	margin-bottom: rem(20);
 }
 
 b, strong {
@@ -68,7 +69,7 @@ button, input, optgroup, select, textarea {
 	font: inherit;
 }
 
-hr {	
+hr {
 	display: inline-block;
 	width: rem(12);
 	border-top: 0;
@@ -78,7 +79,7 @@ hr {
 	margin: 4px 0 7px;
 }
 
-//links
+// Links
 a {
 	color: $aqua;
 

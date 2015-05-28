@@ -1,0 +1,70 @@
+.module--specs {
+	padding: rem(40);
+	line-height: 1.4;
+	transition: padding .4s ease;
+
+	> div {
+		display: table;
+		margin: 0 auto;
+
+		> div {
+			display: table-row;
+
+			> div {
+				display: block;
+				text-align: left;
+
+				&:first-child {
+					@include CoreSans-bold();
+				}
+
+				&:last-child {
+					padding: 0 0 rem(20) 0;
+				}
+			}
+
+			&:last-child > div:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	@include respond(768px) {
+		background-image: url(../images/modules/specs/specs-bg.jpg);
+		background-size: cover;
+		background-position: center center;
+		padding: 5%;
+
+		> div {
+			margin: 0;
+
+			> div > div {
+				display: table-cell;
+
+				&:first-child {
+					text-align: right;
+					border-right: 1px solid $black;
+					padding: rem(10) rem(10) rem(10) 0;
+				}
+
+				&:last-child {
+					padding: rem(10) 0 rem(10) rem(10);
+				}
+			}
+		}
+	}
+
+	@include respond(900px) {
+		br {
+			display: none;
+		}
+	}
+
+	@include respond(1100px) {
+		padding-left: 15%;
+	}
+
+	@include respond(1440px) {
+		padding-left: 20%;
+	}
+}

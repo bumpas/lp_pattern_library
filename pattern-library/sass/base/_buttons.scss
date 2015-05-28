@@ -1,118 +1,110 @@
-//mixins
-@mixin hover-primary1 {
-	background-color: $blue;
-	border-color: $blue;
-	color: $white;
-}
-
-@mixin hover-primary2 {
-	background-color: $black;
-	border-color: $black;
-	color: $white;
-}
-
-@mixin hover-primary3 {
-	background-color: $aqua;
-	border-color: $aqua;
-	color: $white;
-}
-
-//buttons
+// Primary button
 .btn {
 	display: inline-block;
 	cursor: pointer;
+	@include CoreSansCN-bold;
 	text-decoration: none;
-	@include CoreSansCN;
-	font-size: 1.5rem;
-	letter-spacing: .188rem;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: rem(3);
 	text-align: center;
 	vertical-align: middle;
-	text-transform: uppercase;
-	transition: .4s;
-	border: 1px solid transparent;
-	padding: rem(16) rem(20) rem(12);
+	transition:
+		font-size .4s ease,
+		background-color .4s ease,
+		border-color .4s ease,
+		color .4s ease;
+	border-width: 1px;
+	border-style: solid;
+	padding: rem(14) rem(20) rem(9) rem(20);
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
-	
-	+ .btn {
-		margin: rem(5);
-	}
+	line-height: 1;
 
 	&:hover {
-		@include hover-primary1;
+		background-color: $blue;
+		border-color: $blue;
+		color: $white;
 	}
 
-	@include breakpoint(md) {
-		font-size: $font-size-md;
-		padding: rem(14) rem(20) rem(11);
+	// Lowercase
+	&.btn--lowercase {
+		text-transform: none;
 	}
-}
 
-//button sizes
-.btn--wide {
-	padding-left: rem(60);
-	padding-right: rem(60);
-}
-
-.btn--small {
-	padding: rem(12) rem(16) rem(8);
-
-	@include breakpoint(md) {
-		font-size: 0.875rem;
+	// Small
+	&.btn--small {
+		font-size: rem(14);
+		padding: rem(10) rem(16) rem(7) rem(16);
 	}
-}
 
-// button colors
-
-.btn--white {
-	background-color: $white;
-	border-color: $white;
-	color: $black;
-
-	&:hover {
-		@include hover-primary2;
+	// Wide
+	&.btn--wide {
+		padding-left: rem(60);
+		padding-right: rem(60);
 	}
-}
 
-.btn--black {
-	background-color: $black;
-	border-color: $black;
-	color: $white;
-
-	&:hover {
-		@include hover-primary3;
+	// Block
+	&.btn--block {
+		width: 100%;
 	}
-}
 
-.btn--nofillblack {
-	background-color: rgba(0,0,0,0);
-	border-color: $black;
-	color: $black;
+	// White
+	&.btn--white {
+		background-color: $white;
+		border-color: $white;
+		color: $black;
 
-	&:hover {
-		@include hover-primary2;
+		&:hover {
+			background-color: $black;
+			border-color: $black;
+			color: $white;
+		}
 	}
-}
 
-.btn--nofillwhite {
-	background-color: rgba(0,0,0,0);
-	border-color: $white;
-	color: $white;
-}
+	// Black
+	&.btn--black {
+		background-color: $black;
+		border-color: $black;
+		color: $white;
 
-.btn--transblack {
-	background-color: $transblack;
-	color: $black;
-	border-color: $black;
-
-	&:hover {
-		@include hover-primary2;
+		&:hover {
+			background-color: $aqua;
+			border-color: $aqua;
+			color: $white;
+		}
 	}
-}
 
-.btn--transwhite {
-	background-color: $transblack;
-	color: $white;
-	border-color: $white;
+	// Empty with black outline
+	&.btn--emptyblack {
+		background-color: rgba(0,0,0,0);
+		border-color: $black;
+		color: $black;
+
+		&:hover {
+			background-color: $aqua;
+			border-color: $aqua;
+			color: $white;
+		}
+	}
+
+	// Empty with white outline
+	&.btn--emptywhite {
+		background-color: rgba(0,0,0,0);
+		border-color: $white;
+		color: $white;
+
+		&:hover {
+			background-color: $black;
+			border-color: $black;
+			color: $white;
+		}
+	}
+
+	// Alternate background color (15% opacity)
+	&.btn--alt {
+		background-color: rgba(0,0,0,.15);
+	}
+
 }
