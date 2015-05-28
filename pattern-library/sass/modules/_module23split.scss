@@ -46,7 +46,7 @@
 		text-align: center;
 		@include clearfix;
 		
-		article {
+		.warranty {
 			position: relative;
 			padding: rem(20);
 
@@ -108,44 +108,56 @@
 	width: 100%;
 	text-align: center;
 
-	&__title {
-		color: $white;
+	&__info {
 		position: absolute;
+		top: 40%;
 		left: 50%;
-		top: 45%;
-		// pad the title below the play button
-		padding-top: rem(140);
-		transform: translate(-50%,-50%);
-		font-weight: 400;
-		letter-spacing: rem(2);
-		cursor: pointer;
+		transform: translate(-50%,-40%);
 		z-index: 2;
-		
-		//play button
-		&:before {
-			position: absolute;
-			content: "";
-			top: 50%;
-			left: 50%;
-			margin-left: rem(5);
-			transform: translate(-50%, -50%);
-			border-top: 15px solid transparent;
-    		border-bottom: 15px solid transparent;
-    		border-left: 25px solid $white;
-		}
-		
-		//play button border
-		&:after {
-			position: absolute;
-			content: "";
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+
+	
+		.btnPlay {
+			position: relative;
+			display: block;
 			height: rem(80);
 			width: rem(80);
-			border: 2px solid $white;
-			border-radius: 50%;
+			margin: 0 auto rem(10);
+			@include hidetext;
+			
+			&:before {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				margin-left: rem(5);
+				border-top: 15px solid transparent;
+				border-bottom: 15px solid transparent;
+				border-left: 25px solid $white;
+				box-shadow: 0;
+			}
+			
+			&:after {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				height: rem(80);
+				width: rem(80);
+				border: 2px solid $white;
+				border-radius: 50%;
+			}
 		}
+
+		h3 {
+			color: $white;
+			font-weight: 400;
+			letter-spacing: rem(2);
+			cursor: pointer;
+			z-index: 2;
+		}
+
 	}
 
 	video {

@@ -18,9 +18,10 @@ $(function(){
 			mobileFirst:true,
 			arrows: false,
 			dots: true,
+			dotsClass: "slickDots slickDots--default",
 			responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 767,
 				settings: "unslick"
 			}
 		]
@@ -33,7 +34,7 @@ $(function(){
 			dotsClass: "slickDots slickDots--default",
 			responsive: [
 				{
-					breakpoint: 768,
+					breakpoint: 991,
 					settings: {
 						row: 2,
 						slidesToShow: 2

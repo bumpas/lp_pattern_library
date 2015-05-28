@@ -68,3 +68,12 @@
 		display: block;
 	}
 }
+
+video::-webkit-media-controls {
+	opacity: 0;
+}
+
+.show-controls::-webkit-media-controls {
+	opacity: 1;
+	transition: 8s;
+}
