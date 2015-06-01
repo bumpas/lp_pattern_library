@@ -50,7 +50,7 @@ $(function(){
 		$('select#buttons-background').on('change', function(){
 			var value = $(this).val();
 			var pattern = /#[0-9a-fA-F]{6,6}/;
-			console.log(value);
+
 			if (pattern.test(value)) {
 				// Color
 				buttonSection.css('background-color', value).css('background-image','');
@@ -60,7 +60,7 @@ $(function(){
 				buttonSection.css('background-image', 'url('+value+')').css('background-color','');
 
 			}
-		});
+		}).trigger('change');
 
 		$('select#buttons-text-color').on('change', function(){
 			buttonSection.css('color', $(this).val());
