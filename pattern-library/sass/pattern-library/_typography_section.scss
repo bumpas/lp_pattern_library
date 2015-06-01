@@ -13,10 +13,14 @@ section.typography {
 			font-style: inherit;
 			font-weight: inherit;
 		}
+	}
 
-		p {
-			margin-bottom: 20px;
-		}
+	p {
+		margin-bottom: 20px;
+	}
+
+	.size {
+		font-size: 1rem;
 	}
 
 	.core-sans-regular {
