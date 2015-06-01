@@ -2,7 +2,7 @@
 	height: rem(30);
 	text-align: center;
 	margin-top: rem(20);
-	
+
 	li {
 		display: inline-block;
 	}
@@ -28,16 +28,20 @@
 			height: rem(16);
 			background: $dark-grey;
 			border-radius: 50%;
+			border-width: 2px;
+			border-style: solid;
+			border-color: transparent;
 			content: "";
 			text-align: center;
 			vertical-align: middle;
+			transition: border-color 0.4s ease, background-color 0.4s ease;
 		}
 	}
 
 	.slick-active button {
 		&:before {
 			background: none;
-			border: 2px solid $aqua;
+			border-color: $aqua;
 			padding: rem(8);
 			margin-top: -2px;
 		}
