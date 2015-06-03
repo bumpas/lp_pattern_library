@@ -1,7 +1,7 @@
 .module50pad {
 	position: relative;
 
-	@include breakpoint(lg) {
+	@include respond(1440px) {
 		padding: 0 9.4%;
 	}
 
