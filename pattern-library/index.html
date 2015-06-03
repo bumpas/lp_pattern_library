@@ -63,60 +63,55 @@
 
 		<section class="typography clearfix">
 
-			<div>
+			<div class='fonts'>
 
 				<div class="core-sans-regular">
+					<h4>Core Sans</h4>
 					<p>
 						ABCDEFGHIJKLMNOPQRSTUVWXYZ
-					</p>
-					<p>
+						<br/>
 						abcdefghijklmnopqrstuvwxyz
-					</p>
-					<p>
+						<br/>
 						1234567890
 					</p>
 				</div>
 				<div class="core-sans-bold">
+					<h4>Core Sans Bold</h4>
 					<p>
 						ABCDEFGHIJKLMNOPQRSTUVWXYZ
-					</p>
-					<p>
+						<br/>
 						abcdefghijklmnopqrstuvwxyz
-					</p>
-					<p>
+						<br/>
 						1234567890
 					</p>
 				</div>
 				<div class="core-sans-cn-regular">
+					<h4>Core Sans CN</h4>
 					<p>
 						ABCDEFGHIJKLMNOPQRSTUVWXYZ
-					</p>
-					<p>
+						<br/>
 						abcdefghijklmnopqrstuvwxyz
-					</p>
-					<p>
+						<br/>
 						1234567890
 					</p>
 				</div>
 				<div class="core-sans-cn-light">
+					<h4>Core Sans CN Light</h4>
 					<p>
 						ABCDEFGHIJKLMNOPQRSTUVWXYZ
-					</p>
-					<p>
+						<br/>
 						abcdefghijklmnopqrstuvwxyz
-					</p>
-					<p>
+						<br/>
 						1234567890
 					</p>
 				</div>
 				<div class="core-sans-cn-bold">
+					<h4>Core Sans CN Bold</h4>
 					<p>
 						ABCDEFGHIJKLMNOPQRSTUVWXYZ
-					</p>
-					<p>
+						<br/>
 						abcdefghijklmnopqrstuvwxyz
-					</p>
-					<p>
+						<br/>
 						1234567890
 					</p>
 				</div>
@@ -126,40 +121,44 @@
 			<div>
 
 				<h1>Headline X-Large</h1>
-				<div class='size'>70px</div>
+				<p>70px</p>
 
 				<h2>Headline Large</h2>
-				<div class='size'>45px</div>
+				<p>45px</p>
 
 				<h3>Headline Medium</h3>
-				<div class='size'>28px</div>
+				<p>28px</p>
 
 				<h4>Headline Small</h4>
-				<div class='size'>24px</div>
+				<p>24px</p>
 
 				<h5>Headline X-Small</h5>
-				<div class='size'>20px</div>
+				<p>20px</p>
 
 
 				<p class="copy--large">
 					Body Copy Large
+					<br>
+					<span class="size">16px</span>
 				</p>
-				<div class="size">16px</div>
 
 				<p class='copy--medium'>
 					Body Copy Medium
+					<br>
+					<span class="size">14px</span>
 				</p>
-				<div class="size">14px</div>
 
 				<p class='copy--small'>
 					Body Copy Small
+					<br>
+					<span class="size">12px</span>
 				</p>
-				<div class="size">12px</div>
 
 				<p class='copy--copywrite'>
 					Copyright Text
+					<br>
+					<span class="size">10px</span>
 				</p>
-				<div class="size">10px</div>
 
 			</div>
 		</section>
@@ -169,40 +168,168 @@
 
 		<section class="buttons">
 
-			<div class="buttons">
-				<h4>Standard Buttons</h4>
-				<a href="#0" class="btn">shop lifeproof</a>
-				<a href="#0" class="btn btn--white">shop lifeproof</a>
-				<a href="#0" class="btn btn--black">shop lifeproof</a>
-				<a href="#0" class="btn btn--nofillblack">shop lifeproof</a>
-				<a href="#0" class="btn btn--nofillwhite">shop lifeproof</a>
-				<a href="#0" class="btn btn--transblack">shop lifeproof</a>
-				<a href="#0" class="btn btn--transwhite">shop lifeproof</a>
+			<p>
+				Background:
+				<select name="" id="buttons-background">
+					<option value="#FFFFFF">White</option>
+					<option value="#2B2B2B">Black</option>
+					<option value="#595959">Dark Grey</option>
+					<option value="#B9B9B9">Medium Grey</option>
+					<option value="#EFEFEF">Light Grey</option>
+					<option value="#FAFAFA">Off White</option>
+					<option value="#02BBD5">Aqua</option>
+					<option value="#0080C7">Blue</option>
+					<option value="images/hero-bikers-d.jpg">Mountain Bikers</option>
+					<option selected value="images/surfer-d.jpg">Surfer</option>
+					<option value="images/bg-waves.jpg">Waves</option>
+					<option value="images/bg-fre-profile-t.jpg">Fre</option>
+				</select>
+				Text Color:
+				<select name="" id="buttons-text-color">
+					<option value="#2B2B2B">Black</option>
+					<option value="#FFFFFF">White</option>
+					<option value="#595959">Dark Grey</option>
+					<option value="#B9B9B9">Medium Grey</option>
+					<option value="#02BBD5">Aqua</option>
+					<option value="#ED2638">Red</option>
+				</select>
+			</p>
+
+			<div class="clearfix">
+				<h4>Primary Buttons</h4>
+
+				<div>
+					<a href="#0" class="btn">Shop Lifeproof</a>
+					<p>Primary</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--white">Shop Lifeproof</a>
+					<p>White</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--black">Shop Lifeproof</a>
+					<p>Black</p>
+				</div>
+
 			</div>
 
-			<div class="buttons buttons--background">
+			<div class="clearfix">
+				<h4>Secondary Buttons</h4>
+
+				<div>
+					<a href="#0" class="btn btn--emptyblack">Learn More</a>
+					<p>Empty Black</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--emptywhite">Learn More</a>
+					<p>Empty White</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--emptyblack btn--alt">Learn More</a>
+					<p>Empty Black Alternate</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--emptywhite btn--alt">Learn More</a>
+					<p>Empty White Alternate</p>
+				</div>
+			</div>
+			<div class="clearfix">
+
 				<h4>Wide Buttons</h4>
-				<a href="#0" class="btn btn--wide">shop lifeproof</a>
-				<a href="#0" class="btn btn--white btn--wide">shop lifeproof</a>
-				<a href="#0" class="btn btn--black btn--wide">shop lifeproof</a>
-				<a href="#0" class="btn btn--nofillblack btn--wide">shop lifeproof</a>
-				<a href="#0" class="btn btn--nofillwhite btn--wide">shop lifeproof</a>
-				<a href="#0" class="btn btn--transblack btn--wide">shop lifeproof</a>
-				<a href="#0" class="btn btn--transwhite btn--wide">shop lifeproof</a>
-				<button class="btn btn--wide">Shop Lifeproof</button>
+				<div>
+					<a href="#0" class="btn btn--wide">Shop Lifeproof</a>
+					<p>Primary</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--white">Shop Lifeproof</a>
+					<p>White</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--black">Shop Lifeproof</a>
+					<p>Black</p>
+				</div>
+
+			</div>
+			<div class="clearfix">
+
+				<h4>Small Buttons</h4>
+				<div>
+					<a href="#0" class="btn btn--small">Shop Lifeproof</a>
+					<p>Primary</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--small btn--white">Shop Lifeproof</a>
+					<p>White</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--small btn--black">Shop Lifeproof</a>
+					<p>Black</p>
+				</div>
+
 			</div>
 
-			<div class="buttons">
-				<h4>Small Buttons</h4>
-				<a href="#0" class="btn btn--small">shop lifeproof</a>
-				<a href="#0" class="btn btn--white btn--small">shop lifeproof</a>
-				<a href="#0" class="btn btn--black btn--small">shop lifeproof</a>
-				<a href="#0" class="btn btn--nofillblack btn--small">shop lifeproof</a>
-				<a href="#0" class="btn btn--nofillwhite btn--small">shop lifeproof</a>
-				<a href="#0" class="btn btn--transblack btn--small">shop lifeproof</a>
-				<a href="#0" class="btn btn--transwhite btn--small">shop lifeproof</a>
-				<button class="btn btn--small">Shop Lifeproof</button>
+			<div class="clearfix">
+
+				<h4>Small Wide Buttons</h4>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--small">Shop Lifeproof</a>
+					<p>Primary</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--small btn--white">Shop Lifeproof</a>
+					<p>White</p>
+				</div>
+
+				<div>
+					<a href="#0" class="btn btn--wide btn--small btn--black">Shop Lifeproof</a>
+					<p>Black</p>
+				</div>
 			</div>
+
+			<div class="clearfix">
+
+				<h4>Full Width Buttons</h4>
+				<p>Buttons that adapt to the full width of the containing grid</p>
+
+				<a href="#0" class="btn btn--block">Shop Lifeproof</a>
+				<a href="#0" class="btn btn--block btn--white">Shop Lifeproof</a>
+				<a href="#0" class="btn btn--block btn--black">Shop Lifeproof</a>
+
+				<div style='width:50%; margin: 0;'>
+					<a href="#0" class="btn btn--block">Shop Lifeproof</a>
+				</div>
+				<div style='width:50%; margin: 0;'>
+					<a href="#0" class="btn btn--white btn--block">Shop Lifeproof</a>
+				</div>
+
+				<div style='width:33.3333%; margin: 0;'>
+					<a href="#0" class="btn btn--emptywhite btn--block">Learn More</a>
+				</div>
+				<div style='width:33.3333%; margin: 0;'>
+					<a href="#0" class="btn btn--emptyblack btn--block">Explore</a>
+				</div>
+				<div style='width:33.3333%; margin: 0;'>
+					<a href="#0" class="btn btn--emptywhite btn--alt btn--block">Back To Top</a>
+				</div>
+
+			</div>
+		</section>
+
+				<a name="links" title="Links"></a>
+				<h2>Links</h2>
+
+				<section class="links">
 
 			<div class="links">
 				<h4>Text Links</h4>
@@ -230,7 +357,7 @@
 							<hr>
 							<p class="module1__copy">Waterproof, dirt proof, snow proof and shock proof. It’s the case for every athlete, daredevil, traveler and adventurer at heart.</p>
 							<div class="module1__btns">
-								<a href="#0" class="btn btn--wide btn--nofillblack">Get proof</a>
+								<a href="#0" class="btn btn--wide btn--emptywhite">Get proof</a>
 								<a href="#0" class="btn btn--wide">shop now</a>
 							</div>
 						</article>
@@ -364,21 +491,21 @@
 							<article class="module50pad__article">
 								<h3 class="module50pad__heading">Accessory 1</h3>
 								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae atque aliquam fugit.</p>
-							</article>					
+							</article>
 						</div>
 						<div class="module50pad__item">
 							<img src="http://placehold.it/450/ff2200" >
 							<article class="module50pad__article">
 								<h3 class="module50pad__heading">Surfboard Mount</h3>
 								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptatem.</p>
-							</article>					
+							</article>
 						</div>
 						<div class="module50pad__item">
 							<img src="http://placehold.it/450/00ff00" >
 							<article class="module50pad__article">
 								<h3 class="module50pad__heading">Helmet Mount</h3>
 								<p class="module50pad__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ab iste aliquam </p>
-							</article>					
+							</article>
 						</div>
 					</div>
 				</div>
@@ -507,41 +634,41 @@
 				</div>
 				<div class="module61__six">
 					<div class="module61__block">
-						<img src="images/61-ipad-air-2.jpg" sizes="(min-width: 768px) 20vw, 50vw" 
-							srcset="images/test-bikers.jpg 320w, images/test-bikers-2x.jpg 640w" 
+						<img src="images/61-ipad-air-2.jpg" sizes="(min-width: 768px) 20vw, 50vw"
+							srcset="images/test-bikers.jpg 320w, images/test-bikers-2x.jpg 640w"
 							alt="ipad air 2 case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
-					<div class="module61__block">						
+					<div class="module61__block">
 						<img src="images/61-galaxy-s5.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/test-bikers.jpg 320w" 
+							srcset="images/test-bikers.jpg 320w"
 							alt="galaxy s5 case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
 						<img src="images/61-ipad-mini-lifestyle.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-ipad-mini-lifestyle.jpg 320w" 
+							srcset="images/61-ipad-mini-lifestyle.jpg 320w"
 							alt="ipad mini case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 					<div class="module61__block">
 						<img src="images/61-ipad-mini.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-ipad-mini.jpg 320w" 
+							srcset="images/61-ipad-mini.jpg 320w"
 							alt="ipad mini case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 					<div class="module61__block">
 						<img src="images/61-iphone-5s.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-iphone-5s.jpg 320w" 
+							srcset="images/61-iphone-5s.jpg 320w"
 							alt="iphone 5/5s case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 					<div class="module61__block">
 						<img src="images/61-iphone-6-nuud-runner.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-iphone-6-nuud-runner.jpg 320w" 
+							srcset="images/61-iphone-6-nuud-runner.jpg 320w"
 							alt="iphone 5/5s case" >
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
-					</div>	
+					</div>
 				</div>
 			</div>
 			<h5 class="modules__heading">module3</h5>
@@ -560,7 +687,7 @@
 					<article class="module3__article">
 						<h3 class="module3__heading">LifeProof vs. Chainsaw</h3>
 						<p class="module3__copy">&ldquo;Cras quis velit pellentesque, pretium velit ut, maximus leo. Fusce sagittis erat in efficitur placerat. Donec congue nulla eu justo faucibus tincidunt&hellip;&rdquo;</p>
-						<a href="#0" class="link link--plusCircled">Read more</a>						
+						<a href="#0" class="link link--plusCircled">Read more</a>
 					</article>
 				</div>
 				<div class="module3__col">
@@ -569,7 +696,7 @@
 						<h3 class="module3__heading">LifeProof case is top notch</h3>
 						<p class="module3__copy">&ldquo;Nulla dictum interdum luctus. Vestibulum at consequat enim. Nam sagittis lobortis metus, vel luctus ipsum. Maecenas condimentum metus quis sodales vestibulum&hellip;&rdquo;</p>
 						<a href="#0" class="link link--plusCircled">Read more</a>
-					</article>					
+					</article>
 				</div>
 			</div>
 			<h5 class="modules__heading">module3--icon</h5>
@@ -593,7 +720,7 @@
 					<article class="module3__article">
 						<h3 class="module3__heading">IP-68 Ingress Protection</h3>
 						<p class="module3__copy">Ther international standard for Ingress Protection (IP). 6 and 8 are the highest ratings for solids and liquids. IP-68 rated cases withstand circulating talc for 8 hours and water immersion to 6.6 ft / 2m for 1 hr.</p><p>No doubt about it. Your new LifeProof case keeps water, dirt, dust and snow out.</p>
-					</article>					
+					</article>
 				</div>
 			</div>
 			<h5 class="modules__heading">module3pad</h5>
@@ -687,7 +814,7 @@
 						<img src="http://placehold.it/75" />
 						<h5>CES 2015<br> Innovation Award</h4>
 					</li>
-				</ul>	
+				</ul>
 			</div>
 			<h5 class="modules__heading">compare</h5>
 
@@ -834,7 +961,7 @@
 				if (items.length > mostItems) mostItems = items.length;
 			}).end().append("<style>@media (min-width: 768px){ .available-devices ul { height: " + mostItems*1.8 + "rem; } }</style>");
 
-			//module23split video & module50pad video 
+			//module23split video & module50pad video
 			$('.btnPlay').on('click', function() {
 				$(this).parent().fadeOut(800);
 				$(this).parent().next().attr('controls','1').get(0).play();
@@ -851,7 +978,7 @@
 				$(this).prev().fadeIn(500);
 				$(this).load().removeAttr('controls').removeClass('show-controls');
 			});
-			
+
 		});
 	</script>
 </body>
