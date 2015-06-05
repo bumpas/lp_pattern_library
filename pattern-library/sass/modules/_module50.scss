@@ -16,17 +16,13 @@
 .module50__col6--bg {
 	display: none;
 
-	@include breakpoint(md) {
-		display: table-cell;
-		background: url("../images/surfer-t.jpg") no-repeat;
-		background-size: cover;
-		padding-bottom: 57%;
+	img {
+		display: block;
+		width: 100%;
 	}
 
-	@include breakpoint(lg) {
-		background: url("../images/surfer-d.jpg") no-repeat;
-		background-size: cover;
-		padding-bottom: 41.6%;
+	@include breakpoint(md) {
+		display: table-cell;
 	}
 }
 
@@ -70,5 +66,11 @@
 		left: 50%;
 		transform: translate(-50%,-50%);
 		overflow: hidden;
+		width: 18.194%;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 }
