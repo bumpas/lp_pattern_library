@@ -84,56 +84,6 @@ section {
 	}
 }
 
-//modules styles that need to be ported into their own _modules.scss.
-
-//modules
-
-.module__heading {
-	position: relative;
-	width: 100%;
-	font-weight: 400;
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
-
-	&:after {
-		content: " ";
-		position: absolute;
-		bottom: 20px;
-		left: 50%;
-		margin-left: -6px;
-		width: 12px;
-		border-bottom: 2px solid $aqua;
-	}
-}
-
-
-
-.col-md-8 {
-	padding: 30px;
-
-	article {
-		max-width: 80%;
-
-		h2:after {
-			content: " ";
-			display: block;
-			width: 14px;
-			border-bottom: 2px solid $aqua;
-			margin-top: 10px;
-			margin-bottom: 20px;
-		}
-	}
-
-	@include respond(978px) {
-		padding: 75px;
-
-		article {
-			max-width: 60.937%;
-		}
-	}
-}
-
 @import "sections/colors";
 @import "sections/typography";
 @import "sections/buttons";
