@@ -1091,37 +1091,51 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="js/plugins/pushy.js"></script>
 	<script src="js/plugins/slick.min.js"></script>
-	<script src="js/app/app.js"></script>
+	<script src="js/frontend.js"></script>
 
 	<script>
 		$(function(){
 
-			// Set drawer column heights based on # of list items
-			var mostItems = 0;
-			$('.available-devices').find('ul').each(function(){
-				var items = $(this).find('li');
-				if (items.length > mostItems) mostItems = items.length;
-			}).end().append("<style>@media (min-width: 768px){ .available-devices ul { height: " + mostItems*1.8 + "rem; } }</style>");
-
-			//module23split video & module50pad video
-			$('.btnPlay').on('click', function() {
-				$(this).parent().fadeOut(800);
-				$(this).parent().next().attr('controls','1').get(0).play();
-				$(this).parent().next().addClass('show-controls');
-
+			// Auto populate offcanvas nav items
+			var nav = $('nav.pushy ul');
+			$('div#container > a').each(function(i){
+				var anchor = $(this);
+				var item = $("<a></a>");
+				item
+					.attr('href', "javascript:scrollToElement($('a[name=" + anchor.attr('name') + "]'));")
+					.text(anchor.attr('title'))
+					.wrap("<li></li>");
+				nav.append(item);
 			});
 
-			$('.btnPlay').parent().next().bind('ended', function() {
-				$(this).prev().fadeIn(500);
-				$(this).load().removeAttr('controls').removeClass('show-controls');
-			});
+			var buttonSection = $('section.buttons');
+			$('select#buttons-background').on('change', function(){
+				var value = $(this).val();
+				var pattern = /#[0-9a-fA-F]{6,6}/;
 
-			$('.btnPlay').parent().next().bind('webkitendfullscreen', function() {
-				$(this).prev().fadeIn(500);
-				$(this).load().removeAttr('controls').removeClass('show-controls');
+				if (pattern.test(value)) {
+					// Color
+					buttonSection.css('background-color', value).css('background-image','');
+
+				} else {
+					// Image
+					buttonSection.css('background-image', 'url('+value+')').css('background-color','');
+
+				}
+			}).trigger('change');
+
+			$('select#buttons-text-color').on('change', function(){
+				buttonSection.css('color', $(this).val());
 			});
 
 		});
+
+		scrollToElement = function(element){
+			$('html,body').animate({
+				scrollTop: element.offset().top
+			});
+			$('.menu-btn').click();
+		}
 	</script>
 </body>
 </html>
