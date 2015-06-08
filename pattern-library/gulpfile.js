@@ -6,6 +6,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
+var cmq = require('gulp-combine-media-queries');
 
 var src = {
 	sass: 'sass/**/*.scss'
@@ -48,6 +49,9 @@ gulp.task('sass', function(){
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
+
+		// Combine media queries
+		.pipe(cmq())
 
 		// Normal output
 		.pipe(gulp.dest('css'))
