@@ -1,9 +1,10 @@
-.drawer {
+.module--drawer {
 	background-color: $light-grey;
 	color: $black;
 	@include CoreSans();
 	font-size: rem(16);
 	padding: rem(24) 0 rem(24) 0;
+	text-align: center;
 
 	h2 {
 		@include CoreSans();
