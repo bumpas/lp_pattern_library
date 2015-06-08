@@ -347,9 +347,11 @@
 		<section class="modules section--fluid">
 			<h5 class="modules__heading">module1</h5>
 			<div class="module1 module1--mtnBikers">
-				<img class="module1__img" src="images/hero-bikers.jpg"
-					srcset="images/hero-bikers.jpg 640w, images/hero-bikers-t.jpg 860w, images/hero-bikers-d.jpg 1440w"
-					alt="mountain bikers hiking" >
+				<picture>
+					<source media="(min-width: 992px)" srcset="images/hero-bikers-d.jpg" >
+					<source media="(min-width: 768px)" srcset="images/hero-bikers-t.jpg" >
+					<img class="module1__img" srcset="images/hero-bikers.jpg" alt="surfer" >
+				</picture>
 				<div class="module1__wrap module1__wrap--overlayMd">
 					<div class="module1__content">
 						<article>
@@ -431,12 +433,71 @@
 					</div>
 				</div>
 			</div>
+			<div class="module1 module1--case">
+				<picture>
+					<source media="(min-width: 992px)" srcset="images/nuud-dark.jpg" >
+					<source media="(min-width: 768px)" srcset="images/nuud-dark-t.jpg" >
+					<img class="module1__img" srcset="images/nuud-dark-m.jpg" alt="phone case" >
+				</picture>
+				<div class="module1__wrap module1__wrap--overlayMd">
+					<div class="module1__content">
+						<article>
+							<h2 class="module1__heading">LIVE BEYOND THE LIMITS WITH <b>NÜÜD</b></h2>
+							<hr>
+							<p class="module1__copy">LifeProof NÜÜD tears down all barriers. Waterproof and drop proof with screenless technology, nüüd goes everywhere and keeps you in touch all along the way.</p>
+							<div class="module1__btns">
+								<a href="#0" class="btn">Shop NÜÜD by device</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="module1 module1--roadBiker">
+				<picture>
+					<source media="(min-width: 992px)" srcset="images/nuud-biker.jpg" >
+					<source media="(min-width: 768px)" srcset="images/nuud-biker-t.jpg" >
+					<img class="module1__img" srcset="images/nuud-biker-m.jpg" alt="road biker" >
+				</picture>						
+				<div class="module1__wrap">
+					<div class="module1__content">
+						<article>
+							<h4 class="module1__heading"><b>Conquer everything.</b> Compromise nothing.</h4>
+							<p class="module1__copy">NÜÜD keeps every port, button and feature in play, including fingerprint scanners and health sensors. Plus, the AR-coated glass lens and Sound Enhancement System deliver vibrant shots and rich sounds.</p>
+							<div class="module1__btns">
+								<a href="#0" class="btn">Shop NÜÜD by device</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="module1 module1--collage">
+				<picture>
+					<source media="(min-width: 992px)" srcset="images/nuud-collage.jpg" >
+					<source media="(min-width: 768px)" srcset="images/nuud-collage-t.jpg" >
+					<img class="module1__img" srcset="images/nuud-collage-m.jpg" alt="road bike gear" >
+				</picture>
+				<div class="module1__wrap">
+					<div class="module1__content">
+						<article>
+							<h2 class="module1__heading"><b>NÜÜD</b> Collection</h2>
+							<p class="module1__copy">Living LifeProof demands the right gear for every adventure. From surfing with your smartphone to trekking with your tablet, nüüd has it covered.</p>
+							<div class="module1__btns">
+								<a href="#0" class="btn">Shop NÜÜD by device</a>
+							</div>
+						</article>	
+					</div>
+				</div>
+			</div>
 			<h5 class="modules__heading">module50</h5>
 			<div class="module50">
 				<div class="module50__col6 module50__col6--bg">
-					<!-- <img src="images/surfer-t.jpg" sizes="50vw"
-						srcset="images/surfer-t.jpg 430w, images/surfer-d.jpg 720w"
-						alt="surfer" > -->
+					<picture>
+						<source media="(min-width: 992px)" srcset="images/surfer-d.jpg" >
+						<source media="(min-width: 768px)" srcset="images/surfer-t.jpg" >
+						<!-- no image below 768px -->
+					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
+						<img srcset="images/surfer-t.jpg" alt="surfer" >
+					</picture>
 				</div>
 				<div class="module50__col6">
 					<article class="module50__copy">
@@ -448,9 +509,13 @@
 						<p>Complete access to all buttons, ports, controls and Touch ID with LifeProof Apple iPhone 6 cases</p>
 					</article>
 				</div>
-				<img class="module50__overlay" src="images/iphone-6-fre-t.png" sizes="18.194vw"
-					srcset="images/iphone-6-fre-t.png 210w, images/iphone-6-fre-d.png 262w"
-					alt="iphone 6 fre case" >
+				<picture>
+					<source media="(min-width: 992px)" srcset="images/iphone-6-fre-d.png" >
+					<source media="(min-width: 768px)" srcset="images/iphone-6-fre-t.png" >
+					<!-- no image below 768px -->
+				    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
+					<img class="module50__overlay" srcset="images/iphone-6-fre-t.png" alt="surfer" >
+				</picture>
 			</div>
 			<h5 class="modules__heading">module50pad</h5>
 			<h4 class="module__heading">Lifeactiv <b>Quickmont Accessories</b></h4>
@@ -513,15 +578,19 @@
 			<h5 class="modules__heading">module23 &mdash; pdp specs section</h5>
 			<div class="module23 module23--hidden-sm">
 				<div class="module23__col2 module23__col2--split">
-					<!-- <img src="images/nuud-sand.jpg" sizes="33.33vw"
-						srcset="images/nuud-sand.jpg 287w, images/nuud-sand-d.jpg 480w, images/9602x.gif 960w"
-						alt="nuud case for iphone 6 in the sand" >
-					<img src="images/nuud-group.jpg" sizes="33.33vw"
-						srcset="images/nuud-group.jpg 287w, images/nuud-group-d.jpg 480w"
-						alt="grop of runners taking selfie with nuud case for iphone 6" > -->
+					<picture>
+						<img srcset="images/nuud-sand-d.jpg" alt="fpo">
+					</picture>
+					<picture>
+						<img srcset="images/nuud-group-d.jpg" alt="fpo">
+					</picture>
 				</div>
 				<div class="module23__col3 module23__col3--waves">
-					<article class="module23__copy">
+					<picture>
+						<source media="(min-width: 858px)" srcset="images/bg-waves-d.jpg">
+						<img srcset="images/bg-waves.jpg" alt="fpo">
+					</picture>
+					<article class="module23__copy module23__copy--bottom module23__copy--white">
 						<h2>Tight Tolerances. Total Freedom.</h2>
 						<hr>
 						<p>LifeProof engineers leave nothing to chance. Every case is meticulously crafted for a precision fit down to the micrometer. This borderline-obsessive attention to detail ensures that every feature on your device remains fully functional inside a LifeProof case &mdash; and fully resilient to water, dirt, snow and shock.</p>
@@ -532,12 +601,17 @@
 			<h4 class="module__heading  hidden--sm">Where will you go <b>with frē</b></h4>
 			<div class="module23  module23--hidden-sm">
 				<div class="module23__col2 module23__col2--snowboarder">
-					<!-- <img src="images/snowboarder-jump-t.jpg" sizes="33.33vw"
-						srcset="images/snowboarder-jump-t.jpg 287w, images/snowboarder-jump-d.jpg 480w"
-						alt="snowboarder jumping" > -->
+					<picture>
+					<source media="(min-width: 992px)" srcset="http://placehold.it/480x601" >
+					<img srcset="images/snowboarder-jump-t.jpg" alt="snowboarder jumping" >
+					</picture>
 				</div>
 				<div class="module23__col3 module23__col3--snowboarder">
-					<article class="module23__copy">
+					<picture>
+						<source media="(min-width: 992px)" srcset="images/snowboarder-case-d.jpg" >
+						<img srcset="images/snowboarder-case-t.jpg" alt="fpo">
+					</picture>
+					<article class="module23__copy module23__copy--top module23__copy--white">
 						<p>With frē iPhone 6 case, you and your iPhone can go all in and come back with pics to prove it &mdash; because a story without proof is just a tall tale.</p>
 					</article>
 				</div>
@@ -545,20 +619,22 @@
 			<h5 class="modules__heading">module23 &mdash; series page</h5>
 			<div class="module23">
 				<div class="module23__col2 module23__col2--fre">
-					<img src="images/fre-gradient.jpg"
-						srcset="images/fre-gradient.jpg 640w"
-						alt="fre waterproof case" >
-					<article class="module23__copy">
+					<picture>
+						<source media="(min-width: 768px)" srcset="http://placehold.it/287x359" >
+						<img srcset="images/fre-gradient.jpg" alt="fpo" >
+					</picture>
+					<article class="module23__copy module23__copy--top">
 						<h3>Clearly <b>Functional</b></h3>
 						<hr>
 						<p>Going NÜÜD is all about not covering up. So along with opening the touchscreen to direct touch, the clear case back opens your device’s colors, curves and lines for all to see.</p>
 					</article>
 				</div>
 				<div class="module23__col3 module23__col3--fre">
-					<img src="http://placehold.it/320x200"
-						srcset="http://placehold.it/640x300, http://placehold.it/1280x300 1280w"
-						alt="fre waterproof case" >
-					<article class="module23__copy">
+					<picture>
+						<source media="(min-width: 768px)" srcset="images/bg-fre-profile-t.jpg" >
+						<img srcset="images/fre-profile-gradient.jpg" alt="fpo" >
+					</picture>
+					<article class="module23__copy module23__copy--top">
 						<h3>Uncommonly <b>compact</b></h3>
 						<hr>
 						<p>Never bulky, NÜÜD adds mere millimeters and a handful of grams to the overall size and weight of your device. So, it feels natural in your hand when you venture into nature.</p>
@@ -570,12 +646,11 @@
 			<div class="module23split">
 				<div class="module23split__col3">
 					<picture>
-						<source media="(min-width: 992px)" sizes="66.66vw" srcset="http://placehold.it/900x506/666/fff 900w, http://placehold.it/1440x810/666/fff 1440w" >
+						<source media="(min-width: 992px)" sizes="66.66vw" srcset="http://placehold.it/1440x810/666/fff" >
 						<source media="(min-width: 768px)" srcset="http://placehold.it/992x621/666/fff" >
 						<!-- no image below 768px -->
 					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
-					    <!-- fallback -->
-						<img src="http://placehold.it/860x538/ff00" >
+						<img srcset="http://placehold.it/860x538/ff00" alt="fpo" >
 					</picture>
 					<article>
 						<h4>Comes with</h4>
@@ -617,12 +692,12 @@
 			<h5 class="modules__heading">module61</h5>
 			<div class="module61">
 				<div class="module61__one">
-					<!-- <img src="images/61-iphone-6-nuud.jpg" sizes="(min-width: 768px) 60vw"
-						srcset="images/61-iphone-6-nuud.jpg 640w"
-						alt="iphone 6 waterproof drop proof case" > -->
-					<img src="http://placehold.it/320" sizes="(min-width: 768px) 40vw, 100vw"
-						srcset="http://placehold.it/320 320w, http://placehold.it/768 768w, http://placehold.it/1536 1536w"
-						alt="iphone 6 waterproof drop proof case" >
+						<picture>
+							<source media="(min-width: 1036px)" srcset="http://placehold.it/768" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/415" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/768" >
+							<img srcset="http://placehold.it/415" alt="iphone 6 waterproof drop proof case" >
+						</picture>
 					<article>
 						<h2>Leave Nothing Behind</h2>
 						<p>waterproof, drop proof cases for iPhone 6</p>
@@ -634,39 +709,57 @@
 				</div>
 				<div class="module61__six">
 					<div class="module61__block">
-						<img src="images/61-ipad-air-2.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/test-bikers.jpg 320w, images/test-bikers-2x.jpg 640w"
-							alt="ipad air 2 case" >
+						<picture>
+							<source media="(min-width: 1050px)" srcset="http://placehold.it/385/000fff/000" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/210/000fff/000" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/385/000fff/000" >
+							<img srcset="http://placehold.it/210/000fff/000" alt="fpo" >
+						</picture>
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
-						<img src="images/61-galaxy-s5.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/test-bikers.jpg 320w"
-							alt="galaxy s5 case" >
+						<picture>
+							<source media="(min-width: 1050px)" srcset="http://placehold.it/385/ff00ff/000" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/210/ff00ff/000" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/385/ff00ff/000" >
+							<img srcset="http://placehold.it/210/ff00ff/000" alt="fpo" >
+						</picture>
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
-						<img src="images/61-ipad-mini-lifestyle.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-ipad-mini-lifestyle.jpg 320w"
-							alt="ipad mini case" >
+						<picture>
+							<source media="(min-width: 1050px)" srcset="http://placehold.it/385/ff33ff/000" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/210/ff33ff/000" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/385/ff33ff/000" >
+							<img srcset="http://placehold.it/210/ff33ff/000" alt="fpo" >
+						</picture>
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
-						<img src="images/61-ipad-mini.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-ipad-mini.jpg 320w"
-							alt="ipad mini case" >
+						<picture>
+							<source media="(min-width: 1050px)" srcset="http://placehold.it/385/ff0000/000" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/210/ff0000/000" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/385/ff0000/000" >
+							<img srcset="http://placehold.it/210/ff0000/000" alt="fpo" >
+						</picture>
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
-						<img src="images/61-iphone-5s.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-iphone-5s.jpg 320w"
-							alt="iphone 5/5s case" >
+						<picture>
+							<source media="(min-width: 1050px)" srcset="http://placehold.it/385/DD00ff/000" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/210/DD00ff/000" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/385/DD00ff/000" >
+							<img srcset="http://placehold.it/210/DD00ff/000" alt="fpo" >
+						</picture>
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 					<div class="module61__block">
-						<img src="images/61-iphone-6-nuud-runner.jpg" sizes="(min-width: 768px) 20vw, 50vw"
-							srcset="images/61-iphone-6-nuud-runner.jpg 320w"
-							alt="iphone 5/5s case" >
+						<picture>
+							<source media="(min-width: 1050px)" srcset="http://placehold.it/385/ff0066/000" >
+							<source media="(min-width: 768px)" srcset="http://placehold.it/210/ff0066/000" >
+							<source media="(min-width: 416px)" srcset="http://placehold.it/385/ff0066/000" >
+							<img srcset="http://placehold.it/210/ff0066/000" alt="fpo" >
+						</picture>
 						<a class="link link--arrowCircled" href="#1">Shop iPad Air 2 &ndash; NÜÜD</a>
 					</div>
 				</div>
@@ -675,7 +768,12 @@
 			<h4 class="module__heading">Living <b>Proof</b></h4>
 			<div class="module3 slick--mobile">
 				<div class="module3__col">
-					<img class="module3__img" src="http://placehold.it/768x342/ff00/fff" >
+					<picture>
+						<source media="(min-width: 1246px)" srcset="http://placehold.it/767x410">
+						<source media="(min-width: 768px)" srcset="http://placehold.it/415x220">
+						<source media="(min-width: 416px)" srcset="http://placehold.it/767x410">
+						<img srcset="http://placehold.it/415x220" alt="fpo" >
+					</picture>
 					<article class="module3__article">
 						<h3 class="module3__heading">Phone Survives Drops in LifeProof</h3>
 						<p class="module3__copy">&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut auctor libero. Aliquam nec ligula aliquam, sodales magna eu, malesuada nisi. Morbi eget felis a lacus&hellip;&rdquo;</p>
@@ -683,7 +781,12 @@
 					</article>
 				</div>
 				<div class="module3__col">
-					<img class="module3__img" src="http://placehold.it/768x342/0000ff/000000" >
+					<picture>
+						<source media="(min-width: 1246px)" srcset="http://placehold.it/767x410/00ff00">
+						<source media="(min-width: 768px)" srcset="http://placehold.it/415x220/00ff00">
+						<source media="(min-width: 416px)" srcset="http://placehold.it/767x410/00ff00">
+						<img srcset="http://placehold.it/415x220/00ff00" alt="fpo" >
+					</picture>
 					<article class="module3__article">
 						<h3 class="module3__heading">LifeProof vs. Chainsaw</h3>
 						<p class="module3__copy">&ldquo;Cras quis velit pellentesque, pretium velit ut, maximus leo. Fusce sagittis erat in efficitur placerat. Donec congue nulla eu justo faucibus tincidunt&hellip;&rdquo;</p>
@@ -691,7 +794,12 @@
 					</article>
 				</div>
 				<div class="module3__col">
-					<img class="module3__img" src="http://placehold.it/768x342" >
+					<picture>
+						<source media="(min-width: 1246px)" srcset="http://placehold.it/767x410/ffff00">
+						<source media="(min-width: 768px)" srcset="http://placehold.it/415x220/ffff00">
+						<source media="(min-width: 416px)" srcset="http://placehold.it/767x410/ffff00">
+						<img srcset="http://placehold.it/415x220/ffff00" alt="fpo" >
+					</picture>
 					<article class="module3__article">
 						<h3 class="module3__heading">LifeProof case is top notch</h3>
 						<p class="module3__copy">&ldquo;Nulla dictum interdum luctus. Vestibulum at consequat enim. Nam sagittis lobortis metus, vel luctus ipsum. Maecenas condimentum metus quis sodales vestibulum&hellip;&rdquo;</p>
@@ -755,7 +863,7 @@
 					</li>
 				</ul>
 				<div class="module3pad__img">
-					<img class="" src="images/nuud-breakout.jpg" alt="nuud case">
+					<img src="images/nuud-breakout.jpg" alt="nuud case">
 				</div>
 				<div class="module3pad__btn">
 					<a href="#0" class="btn">Shop nüüd by device</a>

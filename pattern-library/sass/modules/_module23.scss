@@ -1,23 +1,12 @@
 .module23 {
 	position: relative;
-	display: table;
 	width: 100%;
-	overflow: hidden;
-
-	img + article {
-		color: $black;
-	}
+	@include clearfix;
 
 	> div {
 		display: block;
 		position: relative;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-
-		@include breakpoint(md) {
-			display: table-cell;
-		}
+		float: left;
 	}
 }
 
@@ -25,18 +14,27 @@
 	display: none;
 
 	@include breakpoint(md) {
-		display: table;
+		display: block;
 	}
 }
 
-.module23__col2 {	
+.module23__col2 {
+	img {
+		display: block;
+		width: 100%;
+	}	
 	@include breakpoint(md) {
 		width: 33.33%;
-		padding-bottom: 41.6%;
 	}
 }
 
 .module23__col3 {
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+
 	@include breakpoint(md) {
 		width: 66.66%;
 	}
@@ -44,101 +42,46 @@
 
 .module23__copy {
 	text-align: center;
-	padding: rem(30);
-	color: $white;
+	padding: rem(60);
 
 	@include breakpoint(md) {
 		position: absolute;
 		text-align: left;
 	}
 
-	// h1,h2,h3,h4,h5,h6 {
-	// 	position: relative;
-	// 	padding-bottom: rem(9);
-	// 	margin-bottom: rem(11);
-	// 	font-weight: 400;
-
-	// 	&:after {
-	// 		content: " ";
-	// 		position: absolute;
-	// 		bottom: 0;
-	// 		left: 50%;
-	// 		margin-left: rem(-6);
-	// 		width: rem(12);
-	// 		border-bottom: 2px solid #02BBD5;
-
-	// 		@include breakpoint(md) {
-	// 		left: 0;
-	// 		margin-left: 0;
-	// 		}
-	// 	}
-	// }
-}
-
-//modifiers for each column, background images, different article placement and color
-	
-
-.module23__col2--split {
-	@include breakpoint(md) {
-		background-image: url("../images/bg-grid23split.jpg");
+	&--white {
+		color: $white;
 	}
-}
 
-.module23__col3--waves {
-	background-image: url("../images/bg-waves.jpg");
+	&--black {
+		color: $black;
+	}
 
-	article {
+	&--top {
+		top: 0;
+	}
+
+	&--bottom {
 		bottom: 0;
-		max-width: 605px;
 	}
 }
 
-.module23__col2--snowboarder {
-	@include breakpoint(md) {
-		background-image: url("../images/snowboarder-jump-t.jpg");
-	}
-}
+// .module23__copy--waves {
+// 	color: $white;
+// 	bottom: 0;
+// 	max-width: 448px;
+// }
 
-.module23__col3--snowboarder {
-	background-image: url("../images/snowboarder-case-t.jpg");
-	padding-bottom: 30%;
+// .module23__copy--snowboard {
+// 	color: $white;
+// 	top: 0;
+// 	max-width: 315px;
+// }
 
-	article {
-		max-width: 280px;
-		text-align: left;
-	}
-}
+// .module23__copy--fre {
+// 	top: 0;
 
-.module23__col2--fre {
-
-	@include breakpoint(md) {
-		background-image: url("../images/bg-fre-t.jpg");
-
-		img {
-			display: none;
-		}
-	}
-
-	article {
-		@include breakpoint(lg) {
-			max-width: rem(350);
-		}
-	}
-}
-
-.module23__col3--fre {
-
-	@include breakpoint(md) {
-		background-image: url("../images/bg-fre-profile-t.jpg");
-
-		img {
-			display: none;
-		}
-	}
-
-	article {
-		@include breakpoint(md) {
-			max-width: rem(565);
-		}
-	}
-}
+// 	@include breakpoint(md) {
+// 		max-width: 350px;
+// 	}
+// }
