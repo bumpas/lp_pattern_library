@@ -10,6 +10,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^1.3.3",
     "gulp-uglify": "*",
+    "gulp-combine-media-queries": "*",
     "imagemin-pngquant": "*",
     "node-notifier": "^4.2.1",
     "run-sequence": "*"
