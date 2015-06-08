@@ -1,19 +1,140 @@
-@import "reset";
-@import "base/base";
-@import "nav";
-@import "modules/module1";
-@import "modules/module50";
-@import "modules/module50pad";
-@import "modules/module23";
-@import "modules/module23split";
-@import "modules/module61";
-@import "modules/module3";
-@import "modules/module3pad";
-@import "modules/module4";
-@import "modules/compare";
-@import "modules/drawer";
-@import "modules/specs";
-@import "plugins/plugins";
+// styles exclusive to pattern library
 
-//exclusive styles for pattern library
-@import "pattern-library/patterns";
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "nav";
+
+html {
+	font-size: rem(14);
+	@include respond(768px) {
+		font-size: rem(16);
+	}
+}
+
+body {
+	@include CoreSans;
+	font-size: $font-size;
+	color: $black;
+
+	@include breakpoint(md) {
+		font-size: $font-size-md;
+	}
+}
+
+*::selection {
+	color: $aqua;
+	background: $dark-grey;
+}
+
+//header
+header {
+	position: relative;
+	min-height: 200px;
+	background: url("../images/hero-ocean.jpg") no-repeat 50% 50%;
+	background-size: cover;
+	color: $white;
+
+	h1 {
+		font-size: 2.8rem;
+		text-align: center;
+		padding-top: 65px;
+
+		span {
+			@include CoreSansCN;
+			display: block;
+			font-size: 2rem;
+		}
+	}
+}
+
+#container > h2 {
+	background: $black;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	color: $white;
+	padding-left: 100px;
+	font-size: rem(24);
+}
+
+
+//sections
+.section--fluid {
+	padding: 0;
+}
+
+section {
+	padding: 2rem 1rem 1rem;
+	position: relative;
+}
+
+// Bumpas need to fix
+
+.modules__heading {
+	background: $aqua;
+	color: $white;
+	padding-top: rem(10);
+	padding-bottom: rem(7);
+	padding-left: 60px;
+
+	@include breakpoint(md) {
+			padding-left: 95px;
+	}
+}
+
+//modules styles that need to be ported into their own _modules.scss.
+
+//modules
+
+.module__heading {
+	position: relative;
+	width: 100%;
+	font-weight: 400;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	&:after {
+		content: " ";
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -6px;
+		width: 12px;
+		border-bottom: 2px solid $aqua;
+	}
+}
+
+
+
+.col-md-8 {
+	padding: 30px;
+
+	article {
+		max-width: 80%;
+
+		h2:after {
+			content: " ";
+			display: block;
+			width: 14px;
+			border-bottom: 2px solid $aqua;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+	@include respond(978px) {
+		padding: 75px;
+
+		article {
+			max-width: 60.937%;
+		}
+	}
+}
+
+@import "sections/colors";
+@import "sections/typography";
+@import "sections/buttons";
+

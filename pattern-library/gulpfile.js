@@ -13,7 +13,7 @@ var src = {
 
 gulp.task('sass', function(){
 
-	return gulp.src(src.sass)
+	return gulp.src(['sass/styles.scss','sass/frontend.scss'])
 		.pipe(sass({
 			// Sass error handler
 			onError: function(error){
@@ -52,8 +52,12 @@ gulp.task('sass', function(){
 		// Normal output
 		.pipe(gulp.dest('css'))
 
+		// Rename file
+		.pipe(rename(function(path){
+			path.basename += ".min";
+		}))
+
 		// Minified output
-		.pipe(rename('minified.css'))
 		.pipe(minifyCss())
 		.pipe(gulp.dest('css'))
 

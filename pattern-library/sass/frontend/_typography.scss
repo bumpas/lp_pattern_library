@@ -1,27 +1,5 @@
 // Typography
 
-html {
-	font-size: rem(14);
-	@include respond(768px) {
-		font-size: rem(16);
-	}
-}
-
-body {
-	@include CoreSans;
-	font-size: $font-size;
-	color: $black;
-
-	@include breakpoint(md) {
-		font-size: $font-size-md;
-	}
-}
-
-*::selection {
-	color: $aqua;
-	background: $dark-grey;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	@include CoreSansCN-bold;
 	text-transform: uppercase;
