@@ -72,7 +72,10 @@
 @include font-face(CoreSans, '../fonts/coresans/2E0F5C_3_0', 700, normal);
 
 // Core Sans Condensed Regular
-@include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_2_0', 500, normal);
+@include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_1_0', 400, normal);
+
+// Core Sans Condensed Medium
+// @include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_2_0', 500, normal);
 
 // Core Sans Condensed Bold
 @include font-face(CoreSansCN, '../fonts/coresans/2E0F5C_4_0', 700, normal);
