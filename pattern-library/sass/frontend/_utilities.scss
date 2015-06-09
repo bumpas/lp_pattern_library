@@ -51,14 +51,7 @@
 }
 
 .clearfix {
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
+	@include clearfix;
 }
 
 .break--md {
@@ -69,6 +62,7 @@
 	}
 }
 
+//video specific to hide double play button on mobile
 video::-webkit-media-controls {
 	opacity: 0;
 }
