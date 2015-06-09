@@ -35,10 +35,6 @@ section.typography {
 		@include CoreSansCN();
 	}
 
-	.core-sans-cn-light {
-		@include CoreSansCN-light();
-	}
-
 	.core-sans-cn-bold {
 		@include CoreSansCN-bold();
 	}
