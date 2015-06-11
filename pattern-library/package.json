@@ -13,6 +13,8 @@
     "gulp-combine-media-queries": "*",
     "imagemin-pngquant": "*",
     "node-notifier": "^4.2.1",
-    "run-sequence": "*"
+    "run-sequence": "*",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-svgstore": "^5.0.2"
   }
 }

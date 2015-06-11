@@ -7,9 +7,12 @@ var reload = browserSync.reload;
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var cmq = require('gulp-combine-media-queries');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
 
 var src = {
-	sass: 'sass/**/*.scss'
+	sass: 'sass/**/*.scss',
+	svg: 'svg-sprites/svgs/**/*.svg'
 };
 
 gulp.task('sass', function(){
@@ -70,13 +73,33 @@ gulp.task('sass', function(){
 
 });
 
+// Combine and Minify SVGs
+gulp.task('svg', function(){
+
+	gulp.src(src.svg)
+
+		// Minify SVG
+		.pipe(svgmin())
+
+		// Combine all SVGs
+		.pipe(svgstore())
+
+		// Output
+		.pipe(rename('lifeproof-svg-sprites.svg'))
+		.pipe(gulp.dest('images'))
+
+		// Reload Browser Sync
+		.pipe(reload({stream: true}));
+});
+
 // Browser Sync serve task
-gulp.task('serve', ['sass'], function(){
+gulp.task('serve', ['sass', 'svg'], function(){
 	browserSync.init({
 		server: "./"
 	});
 
 	gulp.watch(src.sass, ['sass']);
+	gulp.watch(src.svg, ['svg']);
 	gulp.watch("./*.html").on('change', reload);
 });
 
