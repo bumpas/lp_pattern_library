@@ -102,13 +102,14 @@ gulp.task('svg', function(){
 });
 
 // Browser Sync serve task
-gulp.task('serve', ['sass', 'svg'], function(){
+gulp.task('serve', ['sass', 'svg', 'js'], function(){
 	browserSync.init({
 		server: "./"
 	});
 
 	gulp.watch(src.sass, ['sass']);
 	gulp.watch(src.svg, ['svg']);
+	gulp.watch(src.js, ['js']);
 	gulp.watch("./*.html").on('change', reload);
 });
 
