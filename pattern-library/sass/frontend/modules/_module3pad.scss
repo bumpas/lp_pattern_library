@@ -47,8 +47,9 @@
 			min-height: rem(75);
 			margin-bottom: rem(30);
 		}
-		
-		img {
+
+		svg {
+			height: 75px;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -86,7 +87,7 @@
 	}
 
 	&__img {
-		
+
 		img {
 			display: block;
 			margin: 0 auto;

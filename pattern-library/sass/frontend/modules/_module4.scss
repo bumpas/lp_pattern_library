@@ -16,7 +16,7 @@
 
 	&__img {
 		display: block;
-		margin: 0 auto;	
+		margin: 0 auto;
 	}
 
 	&__col + &__col &__article {
@@ -53,8 +53,9 @@
 		margin-bottom: rem(30);
 		text-align: center;
 
-		img {
+		svg {
 			padding-bottom: 10px;
+			height: 75px;
 		}
 
 		h5 {

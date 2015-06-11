@@ -45,10 +45,14 @@
 	&__col2 {
 		text-align: center;
 		@include clearfix;
-		
+
 		.warranty {
 			position: relative;
 			padding: rem(20);
+
+			svg {
+				height: 50px;
+			}
 
 			@include breakpoint(lg) {
 				top: 50%;
@@ -94,7 +98,7 @@
 			float: none;
 			width: 100%;
 			padding-bottom: 56.25%;
-			
+
 			// to accomodate the modules being exactly 50% height of the container their content needs to be asbsolute
 			& > * {
 				position: absolute;
@@ -116,7 +120,7 @@
 		transform: translate(-50%,-40%);
 		z-index: 2;
 
-	
+
 		.btnPlay {
 			position: relative;
 			display: block;
@@ -124,7 +128,7 @@
 			width: rem(80);
 			margin: 0 auto rem(10);
 			@include hidetext;
-			
+
 			&:before {
 				position: absolute;
 				content: "";
@@ -137,7 +141,7 @@
 				border-left: 25px solid $white;
 				box-shadow: 0;
 			}
-			
+
 			&:after {
 				position: absolute;
 				content: "";
