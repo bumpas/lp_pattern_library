@@ -9,10 +9,17 @@ var rename = require('gulp-rename');
 var cmq = require('gulp-combine-media-queries');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 var src = {
 	sass: 'sass/**/*.scss',
-	svg: 'svg-sprites/svgs/**/*.svg'
+	svg: 'svg-sprites/svgs/**/*.svg',
+	js: [
+		'js/plugins/svg-polyfill.js',
+		'js/plugins/svg4everybody.js',
+		'js/main.js'
+	]
 };
 
 gulp.task('sass', function(){
@@ -71,6 +78,17 @@ gulp.task('sass', function(){
 		.pipe(minifyCss())
 		.pipe(gulp.dest('css'));
 
+});
+
+// Minify and concatenate JavaScript
+gulp.task('js', function(){
+	gulp.src(src.js)
+		.pipe(concat('frontend.js'))
+		.pipe(gulp.dest('js'))
+		.pipe(reload({stream: true}))
+		.pipe(uglify())
+		.pipe(rename('frontend.min.js'))
+		.pipe(gulp.dest('js'));
 });
 
 // Combine and Minify SVGs
