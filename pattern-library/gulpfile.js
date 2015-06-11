@@ -11,6 +11,10 @@ var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var insert = require('gulp-insert');
+var moment = require('moment');
+
+var timestampFormat = "X dddd, MMMM Do YYYY, h:mm:ss a ZZ";
 
 var src = {
 	sass: 'sass/**/*.scss',
@@ -23,6 +27,8 @@ var src = {
 };
 
 gulp.task('sass', function(){
+
+	var timestamp = "/* Timestamp " + moment().format(timestampFormat) + " */\n";
 
 	return gulp.src(['sass/styles.scss','sass/frontend.scss'])
 		.pipe(sass({
@@ -63,6 +69,9 @@ gulp.task('sass', function(){
 		// Combine media queries
 		.pipe(cmq())
 
+		// Timestamp
+		.pipe(insert.prepend(timestamp))
+
 		// Normal output
 		.pipe(gulp.dest('css'))
 
@@ -74,29 +83,43 @@ gulp.task('sass', function(){
 			path.basename += ".min";
 		}))
 
-		// // Minified output
+		// Minify
 		.pipe(minifyCss())
+
+		// Another Timestamp
+		.pipe(insert.prepend(timestamp))
+
+		// Output
 		.pipe(gulp.dest('css'));
 
 });
 
 // Minify and concatenate JavaScript
 gulp.task('js', function(){
+
+	var timestamp = "// Timestamp " + moment().format(timestampFormat) + "\n";
+
 	gulp.src(src.js)
 		.pipe(concat('frontend.js'))
+		.pipe(insert.prepend(timestamp))
 		.pipe(gulp.dest('js'))
 		.pipe(reload({stream: true}))
 		.pipe(uglify())
 		.pipe(rename('frontend.min.js'))
+		.pipe(insert.prepend(timestamp))
 		.pipe(gulp.dest('js'));
 });
 
 // Combine and Minify SVGs
 gulp.task('svg', function(){
+
+	var timestamp = "<!-- Timestamp " + moment().format(timestampFormat) + " -->\n";
+
 	gulp.src(src.svg)
 		.pipe(svgmin())
 		.pipe(svgstore())
 		.pipe(rename('lifeproof-svg-sprites.svg'))
+		.pipe(insert.prepend(timestamp))
 		.pipe(gulp.dest('images'))
 		.pipe(reload({stream: true}));
 });
@@ -116,3 +139,32 @@ gulp.task('serve', ['sass', 'svg', 'js'], function(){
 // Default task (serve up Browser Sync)
 gulp.task('default', ['serve']);
 
+function timestamp() {
+	// Create a date object with the current time
+  var now = new Date();
+
+	// Create an array with the current month, day and time
+  var date = [ now.getMonth() + 1, now.getDate(), now.getFullYear() ];
+
+	// Create an array with the current hour, minute and second
+  var time = [ now.getHours(), now.getMinutes(), now.getSeconds() ];
+
+	// Determine AM or PM suffix based on the hour
+  var suffix = ( time[0] < 12 ) ? "AM" : "PM";
+
+	// Convert hour from military time
+  time[0] = ( time[0] < 12 ) ? time[0] : time[0] - 12;
+
+	// If hour is 0, set it to 12
+  time[0] = time[0] || 12;
+
+	// If seconds and minutes are less than 10, add a zero
+  for ( var i = 1; i < 3; i++ ) {
+    if ( time[i] < 10 ) {
+      time[i] = "0" + time[i];
+    }
+  }
+
+	// Return the formatted string
+  return date.join("/") + " " + time.join(":") + " " + suffix;
+}
