@@ -80,11 +80,6 @@ gulp.task('serve', ['sass'], function(){
 	gulp.watch("./*.html").on('change', reload);
 });
 
-// Watch task
-gulp.task('watch', ['sass'], function(){
-	gulp.watch(src.sass, ['sass']);
-});
-
 // Default task (serve up Browser Sync)
 gulp.task('default', ['serve']);
 
