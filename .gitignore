@@ -24,3 +24,4 @@ config.codekit
 ## Ignore frontend.js
 frontend.js
 frontend.min.js
+lifeproof-svg-sprites.svg
