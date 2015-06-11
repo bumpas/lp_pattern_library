@@ -93,20 +93,11 @@ gulp.task('js', function(){
 
 // Combine and Minify SVGs
 gulp.task('svg', function(){
-
 	gulp.src(src.svg)
-
-		// Minify SVG
 		.pipe(svgmin())
-
-		// Combine all SVGs
 		.pipe(svgstore())
-
-		// Output
 		.pipe(rename('lifeproof-svg-sprites.svg'))
 		.pipe(gulp.dest('images'))
-
-		// Reload Browser Sync
 		.pipe(reload({stream: true}));
 });
 
