@@ -21,3 +21,6 @@ config.codekit
 
 **/.DS_Store
 
+## Ignore frontend.js
+frontend.js
+frontend.min.js
