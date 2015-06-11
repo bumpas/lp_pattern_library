@@ -56,17 +56,18 @@ gulp.task('sass', function(){
 		// Normal output
 		.pipe(gulp.dest('css'))
 
+		// Reload Browser Sync
+		.pipe(reload({stream: true}))
+
 		// Rename file
 		.pipe(rename(function(path){
 			path.basename += ".min";
 		}))
 
-		// Minified output
+		// // Minified output
 		.pipe(minifyCss())
-		.pipe(gulp.dest('css'))
+		.pipe(gulp.dest('css'));
 
-		// Reload Browser Sync
-		.pipe(reload({stream: true}));
 });
 
 // Browser Sync serve task
