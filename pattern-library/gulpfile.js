@@ -99,7 +99,6 @@ gulp.task('js', function(){
 
 	var timestamp = "// Timestamp " + moment().format(timestampFormat) + "\n";
 
-	gulp.src(src.js)
 	return gulp.src(src.js)
 		.pipe(concat('frontend.js'))
 		.pipe(insert.prepend(timestamp))
@@ -114,7 +113,6 @@ gulp.task('js', function(){
 // Combine and Minify SVGs
 gulp.task('svg', function(){
 
-	gulp.src(src.svg)
 	return gulp.src(src.svg)
 		.pipe(svgmin())
 		.pipe(svgstore())
