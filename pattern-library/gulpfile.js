@@ -116,7 +116,7 @@ gulp.task('svg', function(){
 	gulp.src(src.svg)
 		.pipe(svgmin())
 		.pipe(svgstore())
-		.pipe(rename('lifeproof-svg-sprites.svg'))
+		.pipe(rename('sprites.svg'))
 		.pipe(gulp.dest('images'))
 		.pipe(reload({stream: true}));
 });
