@@ -26,3 +26,6 @@ pattern-library/**/frontend.js
 pattern-library/**/frontend.min.js
 pattern-library/**/lifeproof-svg-sprites.svg
 pattern-library/**/sprites.svg
+
+## Ignore build directory
+pattern-library/build

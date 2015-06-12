@@ -13,6 +13,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var insert = require('gulp-insert');
 var moment = require('moment');
+var del = require('del');
 
 var timestampFormat = "X dddd, MMMM Do YYYY, h:mm:ss a ZZ";
 
@@ -119,6 +120,26 @@ gulp.task('svg', function(){
 		.pipe(rename('sprites.svg'))
 		.pipe(gulp.dest('images'))
 		.pipe(reload({stream: true}));
+});
+
+// Output to build directory
+gulp.task('build', function(){
+
+	return del('build', function(){
+		return gulp.src([
+				'index.html',
+				'css/frontend.css',
+				'css/styles.css',
+				'images/**',
+				'fonts/**',
+				'videos/**',
+				'js/jquery.js',
+				'js/frontend.js',
+				'js/plugins/**'
+			], { base: '.' })
+			.pipe(gulp.dest('build'));
+	});
+
 });
 
 // Browser Sync serve task
