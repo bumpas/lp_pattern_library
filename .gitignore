@@ -22,6 +22,7 @@ config.codekit
 **/.DS_Store
 
 ## Ignore frontend.js
-frontend.js
-frontend.min.js
-lifeproof-svg-sprites.svg
+pattern-library/**/frontend.js
+pattern-library/**/frontend.min.js
+pattern-library/**/lifeproof-svg-sprites.svg
+pattern-library/**/sprites.svg
