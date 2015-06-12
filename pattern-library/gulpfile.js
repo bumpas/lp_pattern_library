@@ -113,13 +113,10 @@ gulp.task('js', function(){
 // Combine and Minify SVGs
 gulp.task('svg', function(){
 
-	var timestamp = "<!-- Timestamp " + moment().format(timestampFormat) + " -->\n";
-
 	gulp.src(src.svg)
 		.pipe(svgmin())
 		.pipe(svgstore())
 		.pipe(rename('lifeproof-svg-sprites.svg'))
-		.pipe(insert.prepend(timestamp))
 		.pipe(gulp.dest('images'))
 		.pipe(reload({stream: true}));
 });
