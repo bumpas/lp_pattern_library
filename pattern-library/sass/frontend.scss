@@ -6,8 +6,28 @@
 @import "frontend/utilities";
 @import "frontend/carousel";
 
-*, *:before, *:after {
+//box sizing for our modules
+.module1, 
+.module50, 
+.module50pad, 
+.module23, 
+.module23split, 
+.module61, 
+.module3, 
+.module4, 
+.module--compare, 
+.module--drawer, 
+.module--heading {
 	box-sizing: border-box;
+
+	* {
+		box-sizing: inherit;
+
+		&:before, &:after {
+			box-sizing: inherit;
+		}
+	}
+
 }
 
 // All media should be relatively sized
