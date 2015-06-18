@@ -8,7 +8,6 @@
 
 		img {
 			display: block;
-			width: 100%;
 		}
 
 		h4 {
@@ -54,11 +53,6 @@
 			svg {
 				height: 50px;
 			}
-
-			@include breakpoint(lg) {
-				top: 50%;
-				transform: translateY(-50%);
-			}
 		}
 
 		h4 {
@@ -98,14 +92,6 @@
 		@include breakpoint(lg) {
 			float: none;
 			width: 100%;
-			padding-bottom: 56.25%;
-
-			// to accomodate the modules being exactly 50% height of the container their content needs to be asbsolute
-			& > * {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-			}
 		}
 	}
 }
@@ -113,6 +99,11 @@
 .videoWrap {
 	width: 100%;
 	text-align: center;
+
+	img {
+		display: block;
+		width: 100%;
+	}
 
 	&__info {
 		position: absolute;
@@ -128,6 +119,7 @@
 			height: rem(80);
 			width: rem(80);
 			margin: 0 auto rem(10);
+			outline: none;
 			@include hidetext;
 
 			&:before {
@@ -163,14 +155,19 @@
 			cursor: pointer;
 			z-index: 2;
 		}
-
 	}
 
-	video {
-		position: relative;
-		display: block;
-		width: 100%;
-		z-index: 1;
-	}
+	.videoManual {
+			position: absolute;
+			bottom: 30px;
+			transform: translateX(-50%);
+			color: $white;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			span {
+				text-decoration: underline;
+			}
+		}
 
 }

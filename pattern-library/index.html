@@ -518,18 +518,22 @@
 			<div class="module50pad">
 				<div class="module50pad__col6">
 					<div class="module50pad__video">
-						<article>
-						<h1>Live in action</h1>
-						<hr class="dash">
-						<p>LifeActive &mdash; designed for the daring</p>
-						<a href="#0" class="btnPlay">Play</a>
-						<a href="#0" class="btn">shop all quickmount accssories</a>
+						<picture class="video__cover">
+							<source media="(min-width: 992px)" srcset="images/video-cover-d.jpg" >
+							<source media="(min-width: 768px)" srcset="images/video-cover-t.jpg" >
+							<source srcset="images/video-cover.jpg" >
+							<!--fallback image -->
+							<img srcset="images/video-cover.jpg" alt="video cover road cyclist" >
+						</picture>
+						<article class="video__info">
+							<h1>Live in action</h1>
+							<hr class="dash">
+							<p>LifeActive &mdash; designed for the daring</p>
+							<a href="#0" class="btnPlay">Play</a>
+							<a href="#0" class="btn">shop all quickmount accssories</a>
 						</article>
-						<video class="hide-controls" muted poster="http://placehold.it/640x360/000?text=video+thumb+640x360+16x9+aspect">
-							<source src="videos/big_buck_bunny.webm" type="video/webm">
-							<source src="videos/big_buck_bunny.mp4" type="video/mp4">
-							Your browser does not support the <code>video</code> element.
-						</video>
+						<div class="video__holder" data-vid-src="k9mmLKiTF9c"></div>
+						<!-- <iframe width="640" height="360" src="https://www.youtube.com/embed/k9mmLKiTF9c?rel=0&amp;&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 					</div>
 				</div>
 				<div class="module50pad__col6">
@@ -575,15 +579,23 @@
 			<div class="module23 module23--hidden-sm">
 				<div class="module23__col2 module23__col2--split">
 					<picture>
-						<img srcset="images/nuud-sand-d.jpg" alt="fpo">
+						<source media="(min-width: 768px)" srcset="images/nuud-sand-d.jpg">
+						<!-- no image below 768px -->
+					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
+						<img srcset="http://placehold.it/860x538" alt="fpo" >
 					</picture>
 					<picture>
-						<img srcset="images/nuud-group-d.jpg" alt="fpo">
+						<source media="(min-width: 768px)" srcset="images/nuud-group-d.jpg">
+						<!-- no image below 768px -->
+					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
+						<img srcset="http://placehold.it/860x538" alt="fpo" >
 					</picture>
 				</div>
 				<div class="module23__col3 module23__col3--waves">
 					<picture>
-						<source media="(min-width: 858px)" srcset="images/bg-waves-d.jpg">
+						<source media="(min-width: 768px)" srcset="images/bg-waves-d.jpg">
+						<!-- no image below 768px -->
+					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
 						<img srcset="images/bg-waves.jpg" alt="fpo">
 					</picture>
 					<article class="module23__copy module23__copy--bottom module23__copy--white">
@@ -642,11 +654,11 @@
 			<div class="module23split">
 				<div class="module23split__col3">
 					<picture>
-						<source media="(min-width: 992px)" sizes="66.66vw" srcset="http://placehold.it/1440x810/666/fff" >
-						<source media="(min-width: 768px)" srcset="http://placehold.it/992x621/666/fff" >
+						<source media="(min-width: 992px)" srcset="http://placehold.it/1440x810/666666/ffffff" >
+						<source media="(min-width: 768px)" srcset="http://placehold.it/992x621/666666/ffffff" >
 						<!-- no image below 768px -->
 					    <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs= ">
-						<img srcset="http://placehold.it/860x538/ff00" alt="fpo" >
+						<img srcset="http://placehold.it/860x538" alt="fpo" >
 					</picture>
 					<article>
 						<h4>Comes with</h4>
@@ -661,15 +673,20 @@
 				<div class="module23split__col2">
 					<div class="module23split__split">
 						<div class="videoWrap">
+							<picture class="video__cover">
+								<source media="(min-width: 992px)" srcset="images/install-guide-d.jpg" >
+								<source media="(min-width: 768px)" srcset="images/install-guide-t.jpg" >
+								<source srcset="images/install-guide.jpg" >
+								<!--fallback image -->
+								<img srcset="images/install-guide.jpg" alt="video install guide" >
+							</picture>
 							<article class="videoWrap__info">
-								<a href="#0" class="btnPlay">Play</a>
+								<a href="javascript:;" class="btnPlay">Play</a>
 								<h3>Install Guide</h3>
 							</article>
-							<video muted poster="http://placehold.it/640x360/000000?text=video+thumb+640x360+16:9+aspect">
-								<source src="videos/big_buck_bunny.webm" type="video/webm">
-								<source src="videos/big_buck_bunny.mp4" type="video/mp4">
-								Your browser does not support the <code>video</code> element.
-							</video>
+							<div class="video__holder" data-vid-src="k9mmLKiTF9c"></div>
+							<a href="pdfs/20-50720_IM_fre_MANUAL_REV001.pdf" target="_blank" class="videoManual copy--small">Download <span>User's Manual</span></a>
+							<!-- <iframe width="640" height="360" src="https://www.youtube.com/embed/k9mmLKiTF9c?rel=0&amp;&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 					</div>
 					<div class="module23split__split">
@@ -1111,8 +1128,9 @@
 
 		</section>
 	</div>
-
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
 	<script src="js/plugins/pushy.js"></script>
 	<script src="js/plugins/slick.min.js"></script>
 	<script src="js/frontend.js"></script>

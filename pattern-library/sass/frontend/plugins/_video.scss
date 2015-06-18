@@ -1,0 +1,82 @@
+// overwrite ui-dialog styles 
+
+.ui-dialog.moduleVideo {
+	max-width: 100%;
+	overflow: visible;
+
+	.video__holder {
+		display: none;
+		position: relative !important;
+		height: 0 !important;
+		padding-bottom: 56.25% !important;
+
+		&.ui-dialog-content {
+			padding: 0;
+		}
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&.ui-widget-content {
+		background: none;
+		border: 0;
+		padding: 0;
+	}
+	&.ui-corner-all {
+		border: 0;
+		border-radius: 0;
+	}
+
+	.ui-widget-header {
+		background: none;
+	}
+
+	.ui-dialog-titlebar {
+		border: 0;
+		padding: 0;
+		width: 100%;
+		height: 0;
+
+		.ui-dialog-title {
+			display: none;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.ui-dialog-titlebar-close {
+		top: -30px;
+		right: 0;
+		margin: 0;
+		width: 74px;
+		border: 0;
+		outline: 0;
+
+		&:after {
+			content: "close x";
+			color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&:hover {
+			background: none;
+			border: 0;
+		}
+	}
+
+	//overlay styles 
+	& + .ui-widget-overlay {
+		background: #000;
+		opacity: 0.8;
+	}
+}

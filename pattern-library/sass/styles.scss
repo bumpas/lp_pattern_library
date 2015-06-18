@@ -8,9 +8,14 @@
 
 html {
 	font-size: rem(14);
+	box-sizing: border-box;
 	@include respond(768px) {
 		font-size: rem(16);
 	}
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
 body {
