@@ -73,7 +73,19 @@ $(function(){
 		]
 	});
 
-
+	//module3 read more drawer expand
+	$('.module3__more').on('click', function(){
+		var el =$(this);
+		var prev =$(this).prev();
+		if (el.text() == el.data("text-swap")) {
+    		el.text(el.data("text-original"));
+    		prev.slideUp();
+  		} else {
+    		el.data("text-original", el.text());
+    		el.text(el.data("text-swap"));
+    		prev.slideDown();
+    	}
+	});
 });
 
 

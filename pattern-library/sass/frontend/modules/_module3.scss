@@ -3,14 +3,16 @@
 	padding-bottom: rem(40);
 
 	&__col {
+		
+		img {
+				display: block;
+				margin: 0 auto;
+		}
+		
 		@include breakpoint(md) {
 			float: left;
 			width: 33.33%;
 		}
-	}
-
-	&__img {
-		display: block;
 	}
 
 	&__article {
@@ -27,6 +29,10 @@
 
 	&__copy {
 		padding-bottom: rem(15);
+	}
+
+	&__copy--more {
+		display: none;
 	}
 }
 
