@@ -6,11 +6,12 @@
 		@include breakpoint(md) {
 			float: left;
 			width: 33.33%;
-		}
-	}
 
-	&__img {
-		display: block;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
 	}
 
 	&__article {
