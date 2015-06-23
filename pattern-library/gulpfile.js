@@ -1,19 +1,11 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var notifier = require('node-notifier');
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var cmq = require('gulp-combine-media-queries');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var insert = require('gulp-insert');
-var moment = require('moment');
-var del = require('del');
+var $ = require('gulp-load-plugins')({
+	pattern: ['gulp-*', 'gulp.*', '*'],
+	rename: {
+		'gulp-combine-media-queries': 'cmq',
+		'node-notifier': 'notifier'
+	}
+});
 
 var timestampFormat = "X dddd, MMMM Do YYYY, h:mm:ss a ZZ";
 
@@ -29,16 +21,16 @@ var src = {
 
 gulp.task('sass', function(){
 
-	var timestamp = "/* Timestamp " + moment().format(timestampFormat) + " */\n";
+	var timestamp = "/* Timestamp " + $.moment().format(timestampFormat) + " */\n";
 
 	return gulp.src(['sass/styles.scss','sass/frontend.scss'])
-		.pipe(sass({
+		.pipe($.sass({
 			// Sass error handler
 			onError: function(error){
 
 				console.log("SASS Error: " + error.file + " " + error.line + ":" + error.column + "\n" + error.message);
 
-				notifier.notify({
+				$.notifier.notify({
 					title: "SASS Error",
 					subtitle: error.file + " " + error.line + ":" + error.column,
 					message: error.message,
@@ -50,7 +42,7 @@ gulp.task('sass', function(){
 			// Sass success message
 			onSuccess: function(css){
 
-				notifier.notify({
+				$.notifier.notify({
 					title: "SASS Compile",
 					message: "Success",
 					sound: false
@@ -62,33 +54,33 @@ gulp.task('sass', function(){
 		}))
 
 		// Autoprefixer
-		.pipe(autoprefixer({
+		.pipe($.autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
 
 		// Combine media queries
-		.pipe(cmq())
+		.pipe($.cmq())
 
 		// Timestamp
-		.pipe(insert.prepend(timestamp))
+		.pipe($.insert.prepend(timestamp))
 
 		// Normal output
 		.pipe(gulp.dest('css'))
 
 		// Reload Browser Sync
-		.pipe(reload({stream: true}))
+		.pipe($.browserSync.reload({stream: true}))
 
 		// Rename file
-		.pipe(rename(function(path){
+		.pipe($.rename(function(path){
 			path.basename += ".min";
 		}))
 
 		// Minify
-		.pipe(minifyCss())
+		.pipe($.minifyCss())
 
 		// Another Timestamp
-		.pipe(insert.prepend(timestamp))
+		.pipe($.insert.prepend(timestamp))
 
 		// Output
 		.pipe(gulp.dest('css'));
@@ -98,16 +90,16 @@ gulp.task('sass', function(){
 // Minify and concatenate JavaScript
 gulp.task('js', function(){
 
-	var timestamp = "// Timestamp " + moment().format(timestampFormat) + "\n";
+	var timestamp = "// Timestamp " + $.moment().format(timestampFormat) + "\n";
 
 	return gulp.src(src.js)
-		.pipe(concat('frontend.js'))
-		.pipe(insert.prepend(timestamp))
+		.pipe($.concat('frontend.js'))
+		.pipe($.insert.prepend(timestamp))
 		.pipe(gulp.dest('js'))
-		.pipe(reload({stream: true}))
-		.pipe(uglify())
-		.pipe(rename('frontend.min.js'))
-		.pipe(insert.prepend(timestamp))
+		.pipe($.browserSync.reload({stream: true}))
+		.pipe($.uglify())
+		.pipe($.rename('frontend.min.js'))
+		.pipe($.insert.prepend(timestamp))
 		.pipe(gulp.dest('js'));
 });
 
@@ -115,17 +107,17 @@ gulp.task('js', function(){
 gulp.task('svg', function(){
 
 	return gulp.src(src.svg)
-		.pipe(svgmin())
-		.pipe(svgstore())
-		.pipe(rename('sprites.svg'))
+		.pipe($.svgmin())
+		.pipe($.svgstore())
+		.pipe($.rename('sprites.svg'))
 		.pipe(gulp.dest('images'))
-		.pipe(reload({stream: true}));
+		.pipe($.browserSync.reload({stream: true}));
 });
 
 // Output to build directory
 gulp.task('build', function(){
 
-	return del('build', function(){
+	return $.del('build', function(){
 		return gulp.src([
 				'index.html',
 				'css/frontend.css',
@@ -139,19 +131,18 @@ gulp.task('build', function(){
 			], { base: '.' })
 			.pipe(gulp.dest('build'));
 	});
-
 });
 
 // Browser Sync serve task
 gulp.task('serve', ['sass', 'svg', 'js'], function(){
-	browserSync.init({
+	$.browserSync.init({
 		server: "./"
 	});
 
 	gulp.watch(src.sass, ['sass']);
 	gulp.watch(src.svg, ['svg']);
 	gulp.watch(src.js, ['js']);
-	gulp.watch("./*.html").on('change', reload);
+	gulp.watch("./*.html").on('change', $.browserSync.reload);
 });
 
 // Default task (serve up Browser Sync)
