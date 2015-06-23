@@ -158,9 +158,11 @@
 	}
 
 	.videoManual {
+			display: block;
 			position: absolute;
+			width: 100%;
 			bottom: 30px;
-			transform: translateX(-50%);
+			text-align: center;
 			color: $white;
 			text-transform: uppercase;
 			text-decoration: none;
