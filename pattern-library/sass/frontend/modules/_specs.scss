@@ -3,8 +3,6 @@
 	line-height: 1.4;
 	transition: padding .4s ease;
 	position: relative;
-	// background:
-	// 	linear-gradient(180deg, transparent 50%, rgba(255, 255, 255, 0.5) 80%), radial-gradient(ellipse at center bottom, #FFF 15%, #aab0b0 78%);
 	width: 100%;
 	display: table;
 
@@ -44,7 +42,6 @@
 	}
 
 	@include respond(768px) {
-		background-image: url(../images/modules/specs/specs-bg.jpg);
 		background-size: cover;
 		background-position: center center;
 		padding: 0 5%;
@@ -71,9 +68,15 @@
 		.device-image {
 			display: block;
 
-			> img {
-				padding-top: rem(40);
+			&.top > img {
+				vertical-align: top;
+				padding: 0 0 rem(40) 0;
+			}
+
+			> img,
+			&.bottom > img {
 				vertical-align: bottom;
+				padding: rem(40) 0 0 0;
 			}
 		}
 	}
