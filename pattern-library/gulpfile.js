@@ -15,6 +15,7 @@ var src = {
 	js: [
 		'js/plugins/svg-polyfill.js',
 		'js/plugins/svg4everybody.js',
+		'js/plugins/indexof-polyfill.js',
 		'js/main.js'
 	]
 };
