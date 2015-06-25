@@ -122,7 +122,9 @@ gulp.task('build', function(){
 		return gulp.src([
 				'index.html',
 				'css/frontend.css',
+				'css/frontend.min.css',
 				'css/styles.css',
+				'css/styles.min.css',
 				'images/**',
 				'fonts/**',
 				'videos/**',
