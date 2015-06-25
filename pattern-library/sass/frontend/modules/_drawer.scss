@@ -5,12 +5,32 @@
 	font-size: rem(16);
 	padding: rem(24) 0 rem(24) 0;
 	text-align: center;
+	position: relative;
+
+	svg.close {
+		fill: #b9b9b9;
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		right: rem(24);
+		cursor: pointer;
+		transition: fill 0.4s ease;
+
+		&:hover {
+			fill: darken(#b9b9b9, 15%);
+		}
+	}
+
+	&.drawer--closed {
+		display: none;
+	}
 
 	h2 {
 		@include CoreSans();
 		font-size: rem(24);
 		text-transform: uppercase;
 		margin-bottom: rem(24);
+		position: relative;
 	}
 
 	> div > div {
