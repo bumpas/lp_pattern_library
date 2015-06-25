@@ -90,10 +90,10 @@ $(function(){
 	// Drawer opening & closing events
 	$('.module--drawer').on('open', function(){
 		$(this).stop().slideDown().removeClass('drawer--closed').addClass('drawer--opened');
-		$('.btn[data-drawer-toggle="#' + $(this).attr('id') + '"]').removeClass('btn--closed').addClass('btn--opened');
+		$('.btn[data-drawer-toggle="#' + $(this).attr('id') + '"] svg.plus-circle').addClass('minus');
 	}).on('close', function(){
 		$(this).stop().slideUp().removeClass('drawer--opened').addClass('drawer--closed');
-		$('.btn[data-drawer-toggle="#' + $(this).attr('id') + '"]').removeClass('btn--opened').addClass('btn--closed');
+		$('.btn[data-drawer-toggle="#' + $(this).attr('id') + '"] svg.plus-circle').removeClass('minus');
 	});
 
 	// Drawer triggers via buttons
