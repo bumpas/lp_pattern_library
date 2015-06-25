@@ -1,0 +1,11 @@
+.footer {
+	@include CoreSansCN;
+
+	&__subheader, &__select {
+		@include CoreSansCN-bold;
+	}
+
+	.footer__number {
+		@include CoreSansCN;
+	}
+}

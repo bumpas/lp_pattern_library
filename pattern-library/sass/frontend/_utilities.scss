@@ -10,19 +10,27 @@
 	}
 }
 
-.row.hidden--sm {
+.hidden--md {
 	display: none;
 
-	@include breakpoint(md) {
-		display: table;
+	@include breakpoint(lg) {
+		display: inherit;
 	}
 }
 
-.col.hidden--sm {
-	display: none;
+.show--sm {
+	display: inherit;
 
 	@include breakpoint(md) {
-		display: table-cell;
+		display: none !important;
+	}
+}
+
+.show--md {
+	display: inherit;
+
+	@include breakpoint(lg) {
+		display: none !important;
 	}
 }
 

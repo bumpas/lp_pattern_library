@@ -1,0 +1,451 @@
+.footer {
+	background: #2c2c2b;
+	color: $white;
+	font-family: "SansD-Cn-Regular", sans-serif;
+
+	&__wrap {
+		position: relative;
+		padding: rem(30) rem(15);
+		@include clearfix;
+
+		@include breakpoint(md) {
+			padding: rem(40) 14.5%;
+		}
+
+		@include breakpoint(lg) {
+			padding: rem(40) 9.375%;
+		}
+	}
+
+	&__header {
+		position: relative;
+		font-size: 1.145rem;
+		letter-spacing: rem(3.5);
+		padding-bottom: rem(8);
+		margin-bottom: rem(10);
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 1px;
+			bottom: 0;
+			background: $aqua;
+
+		}
+
+		@include breakpoint(lg) {
+			font-size: rem(18);
+			letter-spacing: rem(3);
+			padding-bottom: rem(6);
+			margin-bottom: rem(20);
+		}
+	}
+
+	&__subheader {
+		padding-bottom: rem(7);
+		margin-bottom: rem(14);
+		color: $aqua;
+		letter-spacing: rem(2.5);
+		font-family: "SansD-Cn-Bold", sans-serif;
+		text-transform: uppercase;
+		border-bottom: 1px solid #868686;
+
+		@include breakpoint(lg) {
+			font-size: rem(14);
+		}
+	}
+
+	&__select {
+		left: 0;
+		width: 100% !important;
+	    height: 40px !important;
+	    font-family: "SansD-Cn-Bold", sans-serif;
+	    color: $aqua;
+	    letter-spacing: rem(2.5);
+		text-transform: uppercase;
+	    cursor: pointer;
+	    border: 1px solid #565655;
+	    margin-bottom: rem(10);
+
+	    .customSelectInner {
+	    	padding: 13px 9px;
+
+	    	&:after {
+	    		content: "\f107";
+	    		@include Icons;
+	    		color: #fff;
+	    		position: absolute;
+	    		right: rem(29);
+	    	}
+	    }
+
+	    @include breakpoint(md) {
+	    	font-size: rem(14);
+	    }
+	}
+
+	&__list {
+		li {
+			padding: rem(5) 0;
+		}
+
+		a {
+			color: $white;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: rem(1);
+			font-size: rem(12);
+		}
+	}
+
+	&__col1 {
+		@include breakpoint(md) {
+			float: left;
+			width: 30%;
+		}
+
+		@include breakpoint(lg) {
+			width: 82.9%;
+		}
+	}
+
+	&__col2 {
+		@include breakpoint(md) {
+			float: right;
+			width: 50%;
+		}
+
+		@include breakpoint(lg) {
+			width: 14.5%;
+		}
+	}
+
+	&__connect {
+
+	}
+
+	&__tel {
+		position: relative;
+
+		.footer__number {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-family: "SansD-Cn-Regular", sans-serif;
+			color: $white;
+			text-decoration: none;
+			letter-spacing: rem(1.5);
+
+			&:before { 
+				@include Icons;
+				font-size: .8rem;
+				display: inline-block;
+				vertical-align: middle;
+				padding-right: rem(8);
+				padding-top: rem(1);
+				content:"\f095";
+
+			}
+
+			@include breakpoint(md) {
+				position: relative;
+			}
+
+			@include breakpoint(lg) {
+				font-size: rem(12);
+			}
+		}
+
+		@include breakpoint(md) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__counterfeits {
+		position: relative;
+		margin-bottom: rem(40);
+
+		a {
+			color: $white;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: rem(1.5);
+		
+			&:before {
+				@include Icons;
+				font-size: .8rem;
+				display: inline-block;
+				vertical-align: middle;
+				padding-right: rem(8);
+				padding-top: rem(1);
+				content:"\f071";
+			}
+
+			@include breakpoint(lg) {
+				font-size: rem(12);
+			}
+		}
+
+		&.show--sm {
+			a {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+
+	&__social {
+		@include clearfix;
+		margin-bottom: rem(30);
+
+		.footer__newsletter {
+			margin-bottom: rem(20);
+
+			.formSingle {
+				margin: 10px 0;
+				@include clearfix;
+
+				&__input {
+					float: left;
+					width: 62%;
+					height: rem(41);
+					line-height: rem(41);
+					vertical-align: top;
+				}
+
+				&__btn {
+					float: right;
+					width: 34%;
+					padding-left: .25rem;
+					padding-right: .25rem;
+					vertical-align: top;
+
+					@include breakpoint(lg) {
+						font-size: rem(14);
+					}
+				}
+			}
+
+			p {
+				letter-spacing: rem(1.5);
+
+				@include breakpoint(lg) {
+					font-size: rem(12);
+				}
+			}
+
+			@include breakpoint(md) {
+				margin-bottom: rem(40);
+			}
+
+			@include breakpoint(lg) {
+				float: left;
+				width: 30%;
+			}
+		}
+		
+		.footer__socialHolder {
+			
+			.socialIcons {
+
+				&__icon {
+					display: inline-block;
+					position: relative;
+					width: rem(30);
+					height: rem(30);
+					border: 1px solid white;
+					vertical-align: top;
+					margin-right: rem(17);
+
+					&:last-child {
+						margin-right: 0;
+					}
+					
+					&:before {
+						@include Icons;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+
+					&--facebook {
+						&:before {
+							content: "\f09a";
+						}
+					}
+
+					&--twitter {
+						&:before {
+							content: "\f099";
+						}
+					}
+
+					&--instagram {
+						&:before {
+							content: "\f16d";
+						}
+					}
+
+					&--youtube {
+						&:before {
+							content: "\f167";
+						}
+					}
+
+					&--pinterest {
+						&:before {
+							content: "\f231";
+						}
+					}
+
+					&--google {
+						&:before {
+							content: "\f0d5";
+						}
+					}
+
+					&--tumblr {
+						&:before {
+							content: "\f173";
+						}
+					}
+
+					@include breakpoint(md) {
+						margin-right: 7px;
+					}
+				}
+
+				&__link {
+					@include hidetext;
+					position: relative;
+					display: block;
+					width: rem(30);
+					height: rem(30);
+					z-index: 1;
+				}
+			}
+
+			@include breakpoint(lg) {
+				float: right;
+				width: 48.75%;
+			}
+
+		}
+
+		@include breakpoint(md) {
+			float: right;
+			width: 50%;
+		}
+
+		@include breakpoint(lg) {
+			float: none;
+			width: 100%;
+			clear: both;
+		}
+	}
+
+	&__lifeproof {
+		position: relative;
+		margin-bottom: rem(20);
+		@include clearfix;
+
+		> div {
+			@include breakpoint(lg) {
+				float: left;
+				width: 29.9%;
+				margin-right: 5.15%;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		@include breakpoint(lg) {
+			float: right;
+			width: 58.74%;
+		}
+	}
+
+	&__shop {
+		position: relative;
+		margin-bottom: rem(20);
+		@include clearfix;
+
+		@include breakpoint(lg) {
+			float: left;
+			width: 38.27%;
+		}
+
+		.col--shop {
+			float: left;
+			width: 50%;
+
+			&:last-child {
+				float: right;
+				padding-left: rem(20);
+			}
+		}
+	}
+
+	&__toenail {
+		position: relative;
+		font-size: 0.8571rem;
+		background: #262625;
+		text-align: center;
+		padding: rem(20) 0;
+
+		ul {
+			margin-bottom: rem(25);
+		}
+
+		li {
+			display: inline-block;
+			padding-right: rem(12);
+			margin-right: rem(12);
+			border-right: 1px solid white;
+
+			&:last-child {
+				padding-right: 0;
+				margin-right: 0;
+				border-right: 0;
+			}
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+
+		p {
+			padding: rem(3) 0;
+		}
+
+		@include breakpoint(md) {
+			font-size: rem(12);
+		}
+
+		@include breakpoint(lg) {
+			display: table;
+			width: 100%;
+			padding: rem(16) 9.375%;
+
+			ul {
+				display: table-cell;
+				text-align: left;
+			}
+
+			p {
+				display: table-cell;
+				text-align: center;
+
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
