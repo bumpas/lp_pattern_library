@@ -15,6 +15,7 @@ var src = {
 	js: [
 		'js/plugins/svg-polyfill.js',
 		'js/plugins/svg4everybody.js',
+		'js/plugins/jquery-svg-shim.js',
 		'js/plugins/indexof-polyfill.js',
 		'js/main.js'
 	]
@@ -108,7 +109,11 @@ gulp.task('js', function(){
 gulp.task('svg', function(){
 
 	return gulp.src(src.svg)
-		.pipe($.svgmin())
+		.pipe($.svgmin({
+			plugins: [{
+				cleanupIDs: false
+			}]
+		}))
 		.pipe($.svgstore())
 		.pipe($.rename('sprites.svg'))
 		.pipe(gulp.dest('images'))
@@ -122,7 +127,9 @@ gulp.task('build', function(){
 		return gulp.src([
 				'index.html',
 				'css/frontend.css',
+				'css/frontend.min.css',
 				'css/styles.css',
+				'css/styles.min.css',
 				'images/**',
 				'fonts/**',
 				'videos/**',

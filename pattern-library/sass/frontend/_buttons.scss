@@ -20,12 +20,14 @@
 	background-color: $aqua;
 	border-color: $aqua;
 	color: $white;
+	fill: $white;
 	line-height: 1;
 
 	&:hover {
 		background-color: $blue;
 		border-color: $blue;
 		color: $white;
+		fill: $white;
 	}
 
 	// Lowercase
@@ -55,11 +57,13 @@
 		background-color: $white;
 		border-color: $white;
 		color: $black;
+		fill: $black;
 
 		&:hover {
 			background-color: $black;
 			border-color: $black;
 			color: $white;
+			fill: $white;
 		}
 	}
 
@@ -68,11 +72,13 @@
 		background-color: $black;
 		border-color: $black;
 		color: $white;
+		fill: $white;
 
 		&:hover {
 			background-color: $aqua;
 			border-color: $aqua;
 			color: $white;
+			fill: $white;
 		}
 	}
 
@@ -81,11 +87,13 @@
 		background-color: rgba(0,0,0,0);
 		border-color: $black;
 		color: $black;
+		fill: $black;
 
 		&:hover {
 			background-color: $aqua;
 			border-color: $aqua;
 			color: $white;
+			fill: $white;
 		}
 	}
 
@@ -94,11 +102,13 @@
 		background-color: rgba(0,0,0,0);
 		border-color: $white;
 		color: $white;
+		fill: $white;
 
 		&:hover {
 			background-color: $black;
 			border-color: $black;
 			color: $white;
+			fill: $white;
 		}
 	}
 
@@ -107,4 +117,12 @@
 		background-color: rgba(0,0,0,.15);
 	}
 
+	// SVG Icons
+	svg.icon {
+		width: 24px;
+	  height: 24px;
+	  position: relative;
+	  top: -2px;
+	  vertical-align: middle;
+	}
 }

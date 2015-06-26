@@ -27,11 +27,11 @@ $(function(){
 				effect: "fadeOut",
 				duration: 300
 			},
-			open: function(event, ui) { 
+			open: function(event, ui) {
 				// Close dialog when outside is clicked
-				$('.ui-widget-overlay').bind('click', function(){ 
-					$(element).dialog('close'); 
-				}); 
+				$('.ui-widget-overlay').bind('click', function(){
+					$(element).dialog('close');
+				});
 			},
 			close: function () {
 				// necessary as it stops the video when the dialog is closed
@@ -86,6 +86,33 @@ $(function(){
     		prev.slideDown();
     	}
 	});
+
+	// Drawer opening & closing events
+	$('.module--drawer').on('open', function(){
+		$(this).stop().slideDown().removeClass('drawer--closed').addClass('drawer--opened');
+		$('.btn[data-drawer-toggle="#' + $(this).attr('id') + '"] svg.plus-circle').addClass('minus');
+	}).on('close', function(){
+		$(this).stop().slideUp().removeClass('drawer--opened').addClass('drawer--closed');
+		$('.btn[data-drawer-toggle="#' + $(this).attr('id') + '"] svg.plus-circle').removeClass('minus');
+	});
+
+	// Drawer triggers via buttons
+	$('.btn[data-drawer-toggle]').on('click', function(){
+		var button = $(this);
+		var drawer = $(button.attr('data-drawer-toggle') + '.module--drawer');
+
+		if (drawer.hasClass('drawer--opened')) {
+			drawer.trigger('close');
+		} else {
+			drawer.trigger('open');
+		}
+	});
+
+	// Drawer triggers via close button
+	$('.module--drawer .close').on('click', function(){
+		$(this).trigger('close');
+	});
+
 });
 
 

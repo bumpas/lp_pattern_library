@@ -1,0 +1,13 @@
+svg.plus-circle {
+
+	#horizontal,
+	#vertical {
+		transition: transform 0.4s ease;
+		transform-origin: center center;
+	}
+
+	&.minus {
+		#vertical { transform: rotateZ(270deg); }
+		#horizontal { transform: rotateZ(180deg); }
+	}
+}
