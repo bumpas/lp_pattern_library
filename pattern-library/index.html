@@ -1188,22 +1188,50 @@
 						<div class="footer__social show--sm">
 							<div class="footer__newsletter">
 								<p>Sign up to receive special promotions</p>
-								<form method="post" class="formSingle" novalidate="novalidate">
-								  <input type="text" placeholder="EMAIL ADDRESS" class="formSingle__input" title="EMAIL ADDRESS TITLE" name="Email" onfocus="this.value=(this.value==this.defaultValue)?'':this.value; return true;">
-								  <button class="formSingle__btn btn btn--emptywhite" title="Subscribe Title" name="Submit">subscribe</button>
-								  <!-- <p class="error message">Please enter a valid email.</p>
-								  <p class="success message">Thank you!</p> -->
+								<form method="post" class="formSingle newslettersignup" novalidate="novalidate">
+								  <input type="text" placeholder="EMAIL ADDRESS" class="formSingle__input newsletterEmail" title="EMAIL ADDRESS TITLE" name="Email" onfocus="this.value=(this.value==this.defaultValue)?'':this.value; return true;">
+								  <button class="formSingle__btn btn btn--emptywhite submitEmail" title="Subscribe Title" name="Submit">subscribe</button>
+								  <p class="error message">Please enter a valid email.</p>
+								  <p class="success message">Thank you!</p>
 								</form>
 							</div>
 							<div class="footer__socialHolder">
 								<ul class="socialIcons">
-									<li class="socialIcons__icon socialIcons__icon--facebook"><a class="socialIcons__link" href="" title="facebook">facebook</a></li>
-									<li class="socialIcons__icon socialIcons__icon--twitter"><a class="socialIcons__link" href="" title="twitter">twitter</a></li>
-									<li class="socialIcons__icon socialIcons__icon--instagram"><a class="socialIcons__link" href="" title="instagram">instagram</a></li>
-									<li class="socialIcons__icon socialIcons__icon--youtube"><a class="socialIcons__link" href="" title="youtube">youtube</a></li>
-									<li class="socialIcons__icon socialIcons__icon--pinterest"><a class="socialIcons__link" href="" title="pinterest">pinterest</a></li>
-									<li class="socialIcons__icon socialIcons__icon--google"><a class="socialIcons__link" href="" title="google plus">google plus</a></li>
-									<li class="socialIcons__icon socialIcons__icon--tumblr"><a class="socialIcons__link" href="" title="tumblr">tumblr</a></li>
+									<li class="socialIcons__icon socialIcons__icon--facebook"><a class="socialIcons__link" href="" title="facebook">
+										<svg class="facebook">
+											<use xlink:href="images/sprites.svg#facebook"/>
+										</svg>
+									</a></li>
+									<li class="socialIcons__icon socialIcons__icon--twitter"><a class="socialIcons__link" href="" title="twitter">
+										<svg class="twitter">
+											<use xlink:href="images/sprites.svg#twitter"/>
+										</svg>
+									</a></li>
+									<li class="socialIcons__icon socialIcons__icon--instagram"><a class="socialIcons__link" href="" title="instagram">
+										<svg class="instagram">
+											<use xlink:href="images/sprites.svg#instagram"/>
+										</svg>
+									</a></li>
+									<li class="socialIcons__icon socialIcons__icon--youtube"><a class="socialIcons__link" href="" title="youtube">
+										<svg class="youtube">
+											<use xlink:href="images/sprites.svg#youtube"/>
+										</svg>
+									</a></li>
+									<li class="socialIcons__icon socialIcons__icon--pinterest"><a class="socialIcons__link" href="" title="pinterest">
+										<svg class="pinterest">
+											<use xlink:href="images/sprites.svg#pinterest"/>
+										</svg>
+									</a></li>
+									<li class="socialIcons__icon socialIcons__icon--google-plus"><a class="socialIcons__link" href="" title="google plus">
+										<svg class="google-plus">
+											<use xlink:href="images/sprites.svg#google-plus"/>
+										</svg>
+									</a></li>
+									<li class="socialIcons__icon socialIcons__icon--tumblr"><a class="socialIcons__link" href="" title="tumblr">
+										<svg class="tumblr">
+											<use xlink:href="images/sprites.svg#tumblr"/>
+										</svg>
+									</a></li>
 								</ul>
 							</div>
 						</div><!-- end footer__social -->
@@ -1332,11 +1360,11 @@
 							<div class="footer__newsletter">
 								<div class="footer__subheader">Be the first to know</div>
 								<p>Sign up to receive special promotions</p>
-								<form method="post" class="formSingle" novalidate="novalidate">
-								  <input type="text" placeholder="EMAIL ADDRESS" class="formSingle__input" title="EMAIL ADDRESS TITLE" name="Email" onfocus="this.value=(this.value==this.defaultValue)?'':this.value; return true;">
-								  <button class="formSingle__btn btn btn--emptywhite" title="Subscribe Title" name="Submit">subscribe</button>
-								  <!-- <p class="error message">Please enter a valid email.</p>
-								  <p class="success message">Thank you!</p> -->
+								<form method="post" class="formSingle newslettersignup" novalidate="novalidate">
+								  <input type="text" placeholder="EMAIL ADDRESS" class="formSingle__input newsletterEmail" title="EMAIL ADDRESS TITLE" name="Email" onfocus="this.value=(this.value==this.defaultValue)?'':this.value; return true;">
+								  <button class="formSingle__btn btn btn--emptywhite submitEmail" title="Subscribe Title" name="Submit">subscribe</button>
+								  <p class="error message">Please enter a valid email.</p>
+								  <p class="success message">Thank you!</p>
 								</form>
 							</div>
 							<div class="footer__socialHolder">
@@ -1382,7 +1410,12 @@
 						</div><!-- end footer__social -->
 					<div class="footer__counterfeits show--sm">
 						<div class="footer__subheader">Not a LifeProof case?</div>
-						<a href="">Report Counterfeits</a>
+						<a href="">
+							<svg class="counterfeits">
+								<use xlink:href="images/sprites.svg#exclamation-triangle"/>
+							</svg>
+							Report Counterfeits
+						</a>
 					</div><!-- end footer__counterfeits -->
 				</div><!-- end footer wrap -->
 				<div class="footer__toenail">
