@@ -12,6 +12,10 @@ section.buttons {
 		margin-bottom: 20px;
 	}
 
+	.btn {
+		@include CoreSansCN-bold;
+	}
+
 	.buttonsLinks {
 		background: #efefef;
 
