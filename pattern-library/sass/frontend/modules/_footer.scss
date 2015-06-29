@@ -122,7 +122,15 @@
 	}
 
 	&__connect {
+		svg {
+			width: rem(18);
+			height: rem(16);
+			fill: #FFF;
+			position: relative;
 
+			&.phone { top: 3px; }
+			&.counterfeits { top: 1px; }
+		}
 	}
 
 	&__tel {
@@ -137,15 +145,11 @@
 			text-decoration: none;
 			letter-spacing: rem(1.5);
 
-			&:before { 
-				@include Icons;
-				font-size: .8rem;
+			&:before {
 				display: inline-block;
 				vertical-align: middle;
 				padding-right: rem(8);
 				padding-top: rem(1);
-				content:"\f095";
-
 			}
 
 			@include breakpoint(md) {
@@ -171,15 +175,12 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			letter-spacing: rem(1.5);
-		
+
 			&:before {
-				@include Icons;
-				font-size: .8rem;
 				display: inline-block;
 				vertical-align: middle;
 				padding-right: rem(8);
 				padding-top: rem(1);
-				content:"\f071";
 			}
 
 			@include breakpoint(lg) {
@@ -245,9 +246,9 @@
 				width: 30%;
 			}
 		}
-		
+
 		.footer__socialHolder {
-			
+
 			.socialIcons {
 
 				&__icon {
@@ -262,7 +263,7 @@
 					&:last-child {
 						margin-right: 0;
 					}
-					
+
 					&:before {
 						@include Icons;
 						position: absolute;
@@ -272,46 +273,16 @@
 						-webkit-font-smoothing: antialiased;
 					}
 
-					&--facebook {
-						&:before {
-							content: "\f09a";
-						}
-					}
+					svg {
+						width: 100%;
+						height: 100%;
+						padding: rem(6);
+						fill: #FFF;
+						position: relative;
 
-					&--twitter {
-						&:before {
-							content: "\f099";
-						}
-					}
-
-					&--instagram {
-						&:before {
-							content: "\f16d";
-						}
-					}
-
-					&--youtube {
-						&:before {
-							content: "\f167";
-						}
-					}
-
-					&--pinterest {
-						&:before {
-							content: "\f231";
-						}
-					}
-
-					&--google {
-						&:before {
-							content: "\f0d5";
-						}
-					}
-
-					&--tumblr {
-						&:before {
-							content: "\f173";
-						}
+						&.facebook { left: -1px; }
+						&.tumblr { left: -2px; }
+						&.pinterest { top: -1px; }
 					}
 
 					@include breakpoint(md) {
@@ -323,8 +294,8 @@
 					@include hidetext;
 					position: relative;
 					display: block;
-					width: rem(30);
-					height: rem(30);
+					width: 100%;
+					height: 100%;
 					z-index: 1;
 				}
 			}
