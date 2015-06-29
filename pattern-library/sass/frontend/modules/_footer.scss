@@ -194,6 +194,12 @@
 				top: 0;
 				right: 0;
 			}
+
+			.counterfeits {
+				fill: #FFF;
+				height: 0.85rem;
+				width: 1.15rem;
+			}
 		}
 	}
 
@@ -284,9 +290,9 @@
 						fill: #FFF;
 						position: relative;
 
-						&.facebook { left: -1px; }
-						&.tumblr { left: -2px; }
-						&.pinterest { top: -1px; }
+						&.tumblr { left: -1px; }
+						&.pinterest { left: 1px; }
+						&.instragram { left: 1px; }
 					}
 
 					@include breakpoint(md) {
