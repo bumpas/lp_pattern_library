@@ -77,6 +77,12 @@ em, i {
 	font-style: oblique;
 }
 
+//buttons 
+
+button, .btn {
+	@include CoreSansCN-bold;
+}
+
 //header
 header {
 	position: relative;

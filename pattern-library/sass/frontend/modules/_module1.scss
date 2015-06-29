@@ -70,6 +70,31 @@
 	}
 }
 
+.module1--wakeboarder {
+	article {
+		@include breakpoint(md) {
+			position: absolute;
+			top: rem(82);
+			right: 0;
+		}
+	}
+
+	.module1__copy {
+		font-size: rem(24);
+		letter-spacing: rem(1);
+		padding-bottom: rem(35);
+	}
+
+	.module1__btns {
+		.btn {
+			font-weight: 100;
+			margin-left: rem(14);
+			margin-right: rem(14);
+			margin-bottom: rem(5);
+		}
+	}
+}
+
 .module1--case {
 	article {
 		@include breakpoint(md) {
