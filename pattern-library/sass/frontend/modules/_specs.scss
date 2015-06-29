@@ -68,12 +68,16 @@
 		.device-image {
 			display: block;
 
+			> img {
+				vertical-align: middle;
+				padding: rem(40) 0 rem(40);
+			}
+
 			&.top > img {
 				vertical-align: top;
 				padding: 0 0 rem(40) 0;
 			}
 
-			> img,
 			&.bottom > img {
 				vertical-align: bottom;
 				padding: rem(40) 0 0 0;
