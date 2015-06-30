@@ -1,0 +1,23 @@
+.banner {
+	background: url("../images/banner-bg.jpg") no-repeat;
+	background-size: cover;
+	padding-top: rem(18);
+	padding-right: rem(10);
+	padding-left: rem(25);
+
+	&__header {
+		max-width: 1170px;
+		margin: 0 auto;
+		letter-spacing: rem(4);
+
+		span {
+			color: $aqua;
+		}
+	}
+
+	&__disclaimer {
+		text-align: right;
+		font-size: rem(12);
+		font-style: italic;
+	}
+}
