@@ -86,4 +86,17 @@
 			padding-top: 0;
 		}
 	}
+
+	// Fixing backend dev's style issues
+	.colors {
+		ul {
+			text-align: center;
+			padding-left: rem(30);
+			padding-right: rem(30);
+		}
+		li {
+			border-color: rgba(0,0,0,0);
+			cursor: inherit;
+		}
+	}
 }
