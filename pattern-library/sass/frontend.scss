@@ -21,6 +21,7 @@
 .module--drawer,
 .module--heading,
 .module--specs,
+.banner,
 .footer {
 	box-sizing: border-box;
 
@@ -53,6 +54,7 @@ img, embed, object, video {
 @import "frontend/modules/drawer";
 @import "frontend/modules/specs";
 @import "frontend/modules/heading";
+@import "frontend/modules/banner";
 @import "frontend/modules/footer";
 
 // Plugins
