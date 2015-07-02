@@ -24,14 +24,14 @@
 	img {
 		display: block;
 		width: 100%;
-	}	
+	}
 	@include breakpoint(md) {
 		width: 33.33%;
 	}
 }
 
 .module23__col3 {
-	
+
 	img {
 		display: block;
 		width: 100%;
@@ -43,10 +43,11 @@
 }
 
 .module23__copy {
+	padding: 5%;
+	position: absolute;
 	text-align: center;
-	padding: rem(60);
 
-	@include breakpoint(md) {
+	@include breakpoint(768px) {
 		position: absolute;
 		text-align: left;
 	}
@@ -66,6 +67,20 @@
 	&--bottom {
 		bottom: 0;
 	}
+
+	&--left {
+		left: 0;
+		text-align: left;
+		width: 50%;
+	}
+
+	&--right {
+		right: 0;
+		text-align: right;
+		width: 50%;
+	}
+
+
 }
 
 // .module23__copy--waves {

@@ -29,6 +29,7 @@ a {
 
 .link {
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .link--arrow {
@@ -71,4 +72,10 @@ a {
 
 .copy--copywrite {
 	font-size: rem(10);
+}
+
+.module {
+	h1,h2,h3,h4,h5,h6 {
+		text-transform: uppercase;
+	}
 }

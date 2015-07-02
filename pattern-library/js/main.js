@@ -113,6 +113,11 @@ $(function(){
 		$(this).trigger('close');
 	});
 
+	// Scroll to Top buttons
+	$('.scroll-to-top').on('click', function(){
+		$('html,body').animate({scrollTop: 0}, 1000);
+	});
+
 });
 
 

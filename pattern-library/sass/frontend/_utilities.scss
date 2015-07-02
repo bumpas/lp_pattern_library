@@ -34,28 +34,36 @@
 	}
 }
 
-.text--light {
-	color: $white;
-}
+.text {
+	&--light {
+		color: $white;
+	}
 
-.text--aqua {
-	color: $aqua;
-}
-
-.text--uppercase {
-	text-transform: uppercase;
-}
-
-.text--lowercase {
-	text-transform: lowercase;
-}
-
-.text--nowrap {
-	white-space: nowrap;
-}
-
-.text--weight400 {
-	font-weight: 400;
+    &--aqua {
+        color: $aqua;
+    }
+	
+	&--uppercase {
+		text-transform: uppercase;
+	}
+	&--lowercase {
+		text-transform: lowercase;
+	}
+	&--nowrap {
+		white-space: nowrap;
+	}
+	&--weight400 {
+		font-weight: 400;
+	}
+	&--left {
+		text-align: left
+	}
+	&--center {
+		text-align: center;
+	}
+	&--right {
+		text-align: right;
+	}
 }
 
 .block--center-center {

@@ -86,4 +86,40 @@
 			padding-top: 0;
 		}
 	}
+
+	// Fixing backend dev's style issues
+	.colors {
+		ul {
+			text-align: center;
+			padding-left: rem(30);
+			padding-right: rem(30);
+		}
+		li {
+			border-color: rgba(0,0,0,0);
+			cursor: inherit;
+		}
+	}
+
+	&.module--compare-2 {
+		.row {
+			> div {
+				width: 50%;
+
+				&:first-child {
+					width: 100%;
+				}
+			}
+		}
+
+		@include respond(768px) {
+			.row {
+				> div,
+				> div:first-child {
+					width: 33%;
+				}
+			}
+		}
+	}
+
+
 }
