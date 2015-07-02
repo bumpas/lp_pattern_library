@@ -47,7 +47,7 @@
 	position: absolute;
 	text-align: center;
 
-	@include breakpoint(768px) {
+	@include breakpoint(md) {
 		position: absolute;
 		text-align: left;
 	}
