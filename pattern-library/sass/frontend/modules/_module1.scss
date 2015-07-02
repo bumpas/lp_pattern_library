@@ -37,6 +37,11 @@
 .module1__heading {
 	letter-spacing: rem(2.7);
 	font-weight: 400;
+	text-transform: uppercase;
+
+	b {
+		font-family: "SansD-Cn-Bold", sans-serif;
+	}
 }
 
 .module1__copy {
@@ -58,6 +63,54 @@
 }
 
 // modifiers for individual styles 
+
+.module1--iphone6 {
+	.module1__heading {
+		font-size: rem(24);
+		padding-bottom: rem(5);
+
+		@include breakpoint(md) {
+			font-size: rem(70);
+			color: $white;
+			padding-bottom: rem(14);
+		}
+
+		@include respond(1380px) {
+			letter-spacing: rem(17);
+		}
+	}
+
+	.dash {
+		@include breakpoint(md) {
+			display: none;
+		}
+	}
+
+	.module1__copy {
+		font-family: "SansD-Cn-Regular", sans-serif;
+		letter-spacing: rem(3);
+
+		span {
+			display: block;
+			visibility: hidden;
+			height: 10px;
+
+			@include breakpoint(md) {
+				display: inline;
+				visibility: visible;
+				height: auto;
+			}
+		}
+		
+		@include breakpoint(md) {
+			color: $white;
+		}
+
+		@include respond(1380px) {
+			font-size: rem(28);
+		}
+	}
+}
 
 .module1--mtnBikers {
 	article {
