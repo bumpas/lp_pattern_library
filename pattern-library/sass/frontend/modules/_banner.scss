@@ -1,23 +1,57 @@
 .banner {
-	background: url("../images/banner-bg.jpg") no-repeat;
+	position: relative;
 	background-size: cover;
-	padding-top: rem(18);
+	background-repeat: no-repeat;
+	padding-top: rem(14);
 	padding-right: rem(10);
+	padding-bottom: rem(4);
 	padding-left: rem(25);
 
 	&__header {
 		max-width: 1170px;
 		margin: 0 auto;
 		letter-spacing: rem(4);
-
-		span {
-			color: $aqua;
-		}
 	}
 
 	&__disclaimer {
-		text-align: right;
+		position: absolute;
+		right: rem(10);
+		bottom: 0;
 		font-size: rem(12);
 		font-style: italic;
+	}
+}
+
+.banner--1 {
+	background-image: url("../images/banner-bg.jpg");
+}
+
+.banner--2 {
+	background-image: url("../images/banner-bg-2.jpg");
+
+	span {
+		display: block;
+
+		a {
+			font-size: rem(28);
+			font-weight: 700;
+			text-decoration: none;
+			vertical-align: middle;
+			padding-right: rem(20);
+
+			&:first-child {
+				@include breakpoint(lg) {
+					padding-left: rem(85);
+				}
+			}
+
+			@include breakpoint(md) {
+				padding-right: rem(43);
+			}
+		}
+
+		@include breakpoint(lg) {
+			display: inline;
+		}
 	}
 }
