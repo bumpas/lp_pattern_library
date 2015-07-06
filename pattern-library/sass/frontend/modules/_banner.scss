@@ -34,7 +34,7 @@
 
 		a {
 			font-size: rem(28);
-			font-weight: 700;
+			@include CoreSansCN-bold;
 			text-decoration: none;
 			vertical-align: middle;
 			padding-right: rem(20);

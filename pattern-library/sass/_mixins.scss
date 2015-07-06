@@ -7,20 +7,20 @@
 }
 
 @mixin CoreSans {
-  font-family: 'CoreSans', sans-serif;
-  font-weight: 400;
+  font-family: 'CoreSans', 'SansD-Regular', sans-serif;
+  //font-weight: 400;
   font-style: normal;
 }
 
 @mixin CoreSans-bold {
-  font-family: 'CoreSans', sans-serif;
-  font-weight: 700;
+  font-family: 'CoreSans', 'SansD-Bold', sans-serif;
+  //font-weight: 700;
   font-style: normal;
 }
 
 @mixin CoreSansCN {
-  font-family: 'CoreSansCN', sans-serif;
-  font-weight: 400;
+  font-family: 'CoreSansCN', 'SansD-Cn-Regular', sans-serif;
+  //font-weight: 400;
   font-style: normal;
 }
 
@@ -31,8 +31,8 @@
 // }
 
 @mixin CoreSansCN-bold {
-  font-family: 'CoreSansCN', sans-serif;
-  font-weight: 700;
+  font-family: 'CoreSansCN', 'SansD-Cn-Bold', sans-serif;
+  //font-weight: 700;
   font-style: normal;
 }
 

@@ -62,6 +62,9 @@
 	}
 
 	a {
+		@include CoreSansCN;
+		text-transform: inherit;
+		font-size: rem(20);
 		color: $white;
 		position: absolute;
 		bottom: rem(15);

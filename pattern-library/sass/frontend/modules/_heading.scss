@@ -7,6 +7,10 @@
 	padding-bottom: 30px;
 	text-transform: uppercase;
 
+	b {
+		@include CoreSansCN-bold;
+	}
+
 	&:after {
 		content: " ";
 		position: absolute;

@@ -40,7 +40,7 @@
 	text-transform: uppercase;
 
 	b {
-		font-family: "SansD-Cn-Bold", sans-serif;
+		@include CoreSansCN-bold;
 	}
 }
 
@@ -87,7 +87,7 @@
 	}
 
 	.module1__copy {
-		font-family: "SansD-Cn-Regular", sans-serif;
+		@include CoreSansCN;
 		letter-spacing: rem(3);
 
 		span {

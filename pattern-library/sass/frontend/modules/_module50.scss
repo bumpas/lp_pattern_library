@@ -40,7 +40,8 @@
 
 	h4 { 
 		padding-bottom: rem(5);
-		font-weight: 700;
+		@include CoreSansCN-bold;
+		text-transform: uppercase;
 	}
 
 	p {

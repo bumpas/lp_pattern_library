@@ -47,6 +47,12 @@
 	position: absolute;
 	text-align: center;
 
+	h3 {
+		b {
+			@include CoreSansCN-bold;
+		}
+	}
+
 	@include breakpoint(md) {
 		position: absolute;
 		text-align: left;

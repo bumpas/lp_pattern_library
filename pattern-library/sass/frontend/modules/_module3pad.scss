@@ -21,6 +21,10 @@
 			font-weight: 400;
 		}
 
+		b {
+			@include CoreSansCN-bold;
+		}
+
 		.btn {
 			display: none;
 
@@ -65,7 +69,7 @@
 		h5 {
 			padding-top: rem(3);
 			padding-bottom: rem(17);
-			font-weight: 700;
+			@include CoreSansCN-bold;
 		}
 
 		@include breakpoint(md) {

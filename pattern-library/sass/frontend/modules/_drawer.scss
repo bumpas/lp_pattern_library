@@ -31,6 +31,10 @@
 		text-transform: uppercase;
 		margin-bottom: rem(24);
 		position: relative;
+
+		b {
+			@include CoreSansCN-bold;
+		}
 	}
 
 	> div > div {

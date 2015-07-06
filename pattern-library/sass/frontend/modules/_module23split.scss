@@ -58,7 +58,7 @@
 		h4 {
 			padding-top: rem(15);
 			padding-bottom: rem(15);
-			font-weight: 700;
+			@include CoreSansCN-bold;
 		}
 
 		p {

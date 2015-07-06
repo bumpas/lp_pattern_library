@@ -1,7 +1,7 @@
 .footer {
 	background: #2c2c2b;
 	color: $white;
-	font-family: "SansD-Cn-Regular", sans-serif;
+	@include CoreSansCN;
 
 	&__wrap {
 		position: relative;
@@ -47,7 +47,7 @@
 		margin-bottom: rem(14);
 		color: $aqua;
 		letter-spacing: rem(2.5);
-		font-family: "SansD-Cn-Bold", sans-serif;
+		@include CoreSansCN-bold;
 		text-transform: uppercase;
 		border-bottom: 1px solid #868686;
 
@@ -60,7 +60,7 @@
 		left: 0;
 		width: 100% !important;
 	    height: 40px !important;
-	    font-family: "SansD-Cn-Bold", sans-serif;
+	    @include CoreSansCN-bold;
 	    color: $aqua;
 	    letter-spacing: rem(2.5);
 		text-transform: uppercase;
@@ -140,7 +140,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			font-family: "SansD-Cn-Regular", sans-serif;
+			@include CoreSansCN;
 			color: $white;
 			text-decoration: none;
 			letter-spacing: rem(1.5);

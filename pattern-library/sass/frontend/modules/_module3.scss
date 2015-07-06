@@ -24,7 +24,7 @@
 
 	&__heading {
 		padding-bottom: rem(18);
-		font-weight: 700;
+		@include CoreSansCN-bold;
 	}
 
 	&__copy {

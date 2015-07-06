@@ -138,18 +138,6 @@ section {
 	}
 }
 
-.module1__heading {
-	b {
-		@include CoreSansCN-bold;
-	}
-}
-
-.module1--iphone6 .module1__copy {
-	@include CoreSansCN;
-}
-
 @import "sections/colors";
 @import "sections/typography";
 @import "sections/buttons";
-@import "sections/footer";
-
