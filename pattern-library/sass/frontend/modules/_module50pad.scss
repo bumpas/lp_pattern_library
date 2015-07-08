@@ -8,10 +8,12 @@
 	@include clearfix;
 
 	&__col6 {
+		text-align: center;
+		margin-bottom: rem(30);
+
 		@include breakpoint(md) {
 			float: left;
 			width: 50%;
-			//padding: 0 rem(15);
 		}
 
 		&:first-child {
@@ -147,6 +149,7 @@
 	//slider items
 
 	&__item {
+		position: relative;
 		text-align: center;
 
 		@include breakpoint(md) {
@@ -167,5 +170,10 @@
 
 	&__heading {
 		@include CoreSansCN-bold;
+		padding-bottom: rem(15);
+	}
+
+	&__copy {
+		padding-bottom: rem(30);
 	}
 }
