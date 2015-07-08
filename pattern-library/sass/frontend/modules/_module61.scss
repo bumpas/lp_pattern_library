@@ -61,7 +61,7 @@
 		width: 33.333%;
 	}
 
-	a {
+	.link {
 		@include CoreSansCN;
 		text-transform: inherit;
 		font-size: rem(20);
