@@ -118,6 +118,11 @@ $(function(){
 		$('html,body').animate({scrollTop: 0}, 1000);
 	});
 
+	//footer faux selects navigate all the time
+	$('.footer__select').change(function() {
+		window.location = $(this).find('option:selected').data('href');
+	});
+
 });
 
 
