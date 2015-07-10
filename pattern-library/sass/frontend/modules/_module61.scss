@@ -67,8 +67,16 @@
 		font-size: rem(20);
 		color: $white;
 		position: absolute;
-		bottom: rem(15);
+		bottom: 0;
 		width: 100%;
 		text-align: center;
+		padding: .5rem 1rem;
+		background: rgba(0,0,0,.5);
+
+		@include breakpoint(lg) {
+			bottom: rem(15);
+			padding: 0 1rem;
+			background: none;
+		}
 	}
 }
