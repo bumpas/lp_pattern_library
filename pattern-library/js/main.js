@@ -118,6 +118,37 @@ $(function(){
 		$('html,body').animate({scrollTop: 0}, 1000);
 	});
 
+	// PDP Whats in the box link
+	$('.pdp-buystack a#whatsinthebox').on('click', function(){
+		var whatsInTheBoxModule = $('.otter-tab .whats-in-the-box'),
+			classes = whatsInTheBoxModule.closest('.otter-tab').attr('class').split(' '),
+			tab = null;
+
+		// Determine which otter tab "What's in the box?" is on.
+		for(c in classes) {
+			if (classes[c] == 'otter-tab' || classes[c] == 'primetime') continue;
+			if ($('.otter-tabs nav li[data-section="' + classes[c] + '"]').length == 1) {
+				tab = classes[c];
+				break;
+			}
+		}
+		// If no tab found, don't do anything
+		if (tab == null) {
+			return false;
+		}
+
+		// Click the tab if necessary
+		var tab = $('.otter-tabs nav li[data-section="' + tab + '"]');
+		if (!tab.hasClass('active')) {
+			tab.trigger('click');
+		}
+
+		// Scroll to the module
+		$('html,body').animate({
+			scrollTop: whatsInTheBoxModule.offset().top - 44 // Account for sticky nav height
+		}, 1000);
+	});
+
 	//footer faux selects navigate all the time
 	$('.footer__select').change(function() {
 		window.location = $(this).find('option:selected').data('href');
