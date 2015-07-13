@@ -64,6 +64,11 @@
 	&--right {
 		text-align: right;
 	}
+
+	&--asterisk {
+		font-size: .75em;
+		vertical-align: super;
+	}
 }
 
 .block--center-center {

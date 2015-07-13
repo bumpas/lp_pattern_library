@@ -8,7 +8,7 @@
 	padding-left: rem(25);
 
 	&__header {
-		max-width: 1170px;
+		//max-width: 1170px;
 		margin: 0 auto;
 		letter-spacing: rem(4);
 	}
@@ -52,6 +52,49 @@
 
 		@include breakpoint(lg) {
 			display: inline;
+		}
+	}
+}
+
+.banner--3 {
+	padding: 0;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	.banner__header {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0 3%;
+		font-size: rem(21);
+		font-size: 4.7vw;
+		font-style: italic;
+
+		@include respond(1315px) {
+			font-size: 4.35vw;
+			font-weight: bold;
+		}
+
+		.text--nowrap {
+			font-size: rem(12);
+			font-size: 3vw;
+			text-transform: uppercase;
+			letter-spacing: rem(2);
+			font-style: normal;
+			display: block;
+			vertical-align: middle;
+
+			@include breakpoint(md) {
+				display: inline;
+			}
+
+			@include respond(1315px) {
+				font-size: 2.19vw;
+				font-weight: 100;
+			}
 		}
 	}
 }
