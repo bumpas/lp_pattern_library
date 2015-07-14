@@ -119,7 +119,7 @@ $(function(){
 	});
 
 	// PDP Whats in the box link
-	$('.pdp-buystack a#whatsinthebox').on('click', function(){
+	$('.pdp-buystack a#whatsinthebox, .pdp-buystack a:last').on('click', function(){
 		var whatsInTheBoxModule = $('.otter-tab .whats-in-the-box'),
 			classes = whatsInTheBoxModule.closest('.otter-tab').attr('class').split(' '),
 			tab = null;
