@@ -7,6 +7,7 @@
 @import "frontend/svg";
 
 //box sizing for our modules
+.module,
 .module1,
 .module50,
 .module50pad,
@@ -57,6 +58,7 @@ img, embed, object, video {
 @import "frontend/modules/heading";
 @import "frontend/modules/banner";
 @import "frontend/modules/footer";
+@import "frontend/modules/promo50";
 
 // Plugins
 @import "frontend/plugins/slick";

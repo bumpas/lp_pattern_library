@@ -1,0 +1,120 @@
+.module--promo50 {
+
+	@include respond(1025px) {
+		position: relative;
+
+		> .row {
+			position: absolute;
+			transform: translateY(-100%);
+		}
+	}
+
+	@include respond(1025px) {
+		.module__heading {
+			display: none;
+		}
+	}
+
+	> .row {
+		background: $white;
+		display: table;
+		width: 100%;
+
+		@include respond(1025px) {
+			background: rgba(0,0,0,0.5);
+		}
+
+		.row {
+			display: table;
+			width: 100%;
+		}
+	}
+
+	picture {
+		display: table-row;
+		vertical-align: middle;
+
+		@include respond(1025px) {
+			display: table-cell;
+			width: 120px;
+			height: auto;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	.copy {
+		display: table-row;
+		vertical-align: middle;
+		text-align: center;
+
+		@include respond(1025px) {
+			display: table-cell;
+			text-align: left;
+		}
+	}
+
+	.buttons {
+		display: table-row;
+		vertical-align: middle;
+		width: 1%;
+		text-align: center;
+		white-space: normal;
+
+		@include respond(1025px) {
+			display: table-cell;
+		}
+	}
+
+	.col {
+		display: table-row;
+		width: 100%;
+
+		@include respond(600px) {
+			display: table-cell;
+			width: 50%;
+		}
+	}
+
+	h2 {
+		color: $aqua;
+		font-size: rem(20);
+		margin: rem(20) rem(20) rem(15) rem(20);
+		@include CoreSansCN();
+
+		@include respond(1025px) {
+			color: $white;
+			font-size: rem(24);
+			@include CoreSansCN();
+			margin: 0 rem(20) rem(10) rem(20);
+		}
+	}
+
+	h3 {
+		color: $black;
+		font-size: rem(24);
+		margin: 0 rem(20) rem(20) rem(20);
+		font-weight: 700;
+		@include CoreSansCN-bold();
+
+		@include respond(1025px) {
+			color: $aqua;
+			font-size: rem(20);
+			margin: 0 rem(20) 0 rem(20);
+			@include CoreSansCN();
+		}
+	}
+
+	.btn {
+		margin: 0 0 rem(20) 0;
+		white-space: nowrap;
+
+		@include respond(1025px) {
+			margin: 0 rem(20) 0 0;
+		}
+	}
+}
