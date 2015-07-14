@@ -65,3 +65,8 @@ img, embed, object, video {
 @import "frontend/plugins/video";
 
 @import "frontend/utilities";
+
+//Q&A tab-hiding kludge for PDP pages
+li[data-section="q-and-a"] {
+        display: none !important;
+}
