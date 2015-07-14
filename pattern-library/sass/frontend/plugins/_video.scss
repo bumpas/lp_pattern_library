@@ -59,14 +59,14 @@
 		width: 74px;
 		border: 0;
 		outline: 0;
-
-		&:after {
-			content: "close x";
-			color: white;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+		
+		// &:after {
+		// 	content: "close x";
+		// 	color: white;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// }
 
 		&:hover {
 			background: none;
