@@ -9,13 +9,6 @@ var $ = require('gulp-load-plugins')({
 
 var timestampFormat = "X dddd, MMMM Do YYYY, h:mm:ss a ZZ";
 
-// Handle Errors
-var errorFunction = function(error)
-{
-	$.util.beep();
-	console.log(error);
-}
-
 var src = {
 	sass: 'sass/**/*.scss',
 	svg: 'svg-sprites/svgs/**/*.svg',
@@ -166,20 +159,29 @@ gulp.task('publish', ['build'], function(){
 
 // Compile html partials into index.html
 gulp.task('html', function(){
+
 	gulp.src(['html/index.html'])
-		.pipe($.plumber({
-			errorHandler: errorFunction
-		}))
 		.pipe($.fileInclude({
 			prefix: '@@',
 			basepath: '@file'
 		}))
+		.on('error', function(error){
+
+			console.log(error);
+			$.notifier.notify({
+				title: "HTML Error",
+				message: "There was an error compiling the HTML partials",
+				sound: "Hero"
+			});
+
+		})
 		.pipe(gulp.dest('.'))
 		.pipe($.browserSync.reload({stream: true}));
 });
 
 // Browser Sync serve task
 gulp.task('serve', ['sass', 'svg', 'js', 'html'], function(){
+
 	$.browserSync.init({
 		server: "./"
 	});
