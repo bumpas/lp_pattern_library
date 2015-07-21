@@ -9,6 +9,13 @@ var $ = require('gulp-load-plugins')({
 
 var timestampFormat = "X dddd, MMMM Do YYYY, h:mm:ss a ZZ";
 
+// Handle Errors
+var errorFunction = function(error)
+{
+	$.util.beep();
+	console.log(error);
+}
+
 var src = {
 	sass: 'sass/**/*.scss',
 	svg: 'svg-sprites/svgs/**/*.svg',
@@ -140,6 +147,7 @@ gulp.task('build', function(){
 		.pipe(gulp.dest('build'));
 });
 
+// Publish to ecommdev.office.otterbox.com/lifeproof/pattern-library
 gulp.task('publish', ['build'], function(){
 	console.log("Publishing to http://ecommdev.office.otterbox.com/lifeproof/pattern-library");
 	return gulp.src('build/**')
@@ -156,8 +164,22 @@ gulp.task('publish', ['build'], function(){
 		}));
 });
 
+// Compile html partials into index.html
+gulp.task('html', function(){
+	gulp.src(['html/index.html'])
+		.pipe($.plumber({
+			errorHandler: errorFunction
+		}))
+		.pipe($.fileInclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe(gulp.dest('.'))
+		.pipe($.browserSync.reload({stream: true}));
+});
+
 // Browser Sync serve task
-gulp.task('serve', ['sass', 'svg', 'js'], function(){
+gulp.task('serve', ['sass', 'svg', 'js', 'html'], function(){
 	$.browserSync.init({
 		server: "./"
 	});
@@ -165,7 +187,7 @@ gulp.task('serve', ['sass', 'svg', 'js'], function(){
 	gulp.watch(src.sass, ['sass']);
 	gulp.watch(src.svg, ['svg']);
 	gulp.watch(src.js, ['js']);
-	gulp.watch("./*.html").on('change', $.browserSync.reload);
+	gulp.watch("html/*.html", ['html']);
 });
 
 // Default task (serve up Browser Sync)
