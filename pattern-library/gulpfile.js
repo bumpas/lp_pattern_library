@@ -123,22 +123,37 @@ gulp.task('svg', function(){
 // Output to build directory
 gulp.task('build', function(){
 
-	return $.del('build', function(){
-		return gulp.src([
-				'index.html',
-				'css/frontend.css',
-				'css/frontend.min.css',
-				'css/styles.css',
-				'css/styles.min.css',
-				'images/**',
-				'fonts/**',
-				'videos/**',
-				'js/jquery.js',
-				'js/frontend.js',
-				'js/plugins/**'
-			], { base: '.' })
-			.pipe(gulp.dest('build'));
-	});
+	$.del.sync('build');
+	return gulp.src([
+			'index.html',
+			'css/frontend.css',
+			'css/frontend.min.css',
+			'css/styles.css',
+			'css/styles.min.css',
+			'images/**',
+			'fonts/**',
+			'videos/**',
+			'js/jquery.js',
+			'js/frontend.js',
+			'js/plugins/**'
+		], { base: '.' })
+		.pipe(gulp.dest('build'));
+});
+
+gulp.task('publish', ['build'], function(){
+	console.log("Publishing to http://ecommdev.office.otterbox.com/lifeproof/pattern-library");
+	return gulp.src('build/**')
+		.pipe($.rsync({
+			hostname: 'ecommdev.office.otterbox.com',
+			destination: '/vhosts/default/lifeproof/pattern-library/',
+			root: 'build',
+			incremental: true,
+			progress: true,
+			emptyDirectories: true,
+			recursive: true,
+			clean: true,
+			exclude: ['.DS_Store']
+		}));
 });
 
 // Browser Sync serve task
