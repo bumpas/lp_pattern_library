@@ -134,6 +134,7 @@ gulp.task('build', function(){
 			'fonts/**',
 			'videos/**',
 			'js/jquery.js',
+			'js/jquery-ui.js',
 			'js/frontend.js',
 			'js/plugins/**'
 		], { base: '.' })
