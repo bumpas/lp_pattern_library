@@ -126,6 +126,7 @@ gulp.task('build', function(){
 	$.del.sync('build');
 	return gulp.src([
 			'index.html',
+			'favicon.ico',
 			'css/frontend.css',
 			'css/frontend.min.css',
 			'css/styles.css',
