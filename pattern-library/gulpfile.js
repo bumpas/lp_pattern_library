@@ -123,26 +123,67 @@ gulp.task('svg', function(){
 // Output to build directory
 gulp.task('build', function(){
 
-	return $.del('build', function(){
-		return gulp.src([
-				'index.html',
-				'css/frontend.css',
-				'css/frontend.min.css',
-				'css/styles.css',
-				'css/styles.min.css',
-				'images/**',
-				'fonts/**',
-				'videos/**',
-				'js/jquery.js',
-				'js/frontend.js',
-				'js/plugins/**'
-			], { base: '.' })
-			.pipe(gulp.dest('build'));
-	});
+	$.del.sync('build');
+	return gulp.src([
+			'index.html',
+			'favicon.ico',
+			'css/frontend.css',
+			'css/frontend.min.css',
+			'css/styles.css',
+			'css/styles.min.css',
+			'images/**',
+			'fonts/**',
+			'videos/**',
+			'js/jquery.js',
+			'js/jquery-ui.js',
+			'js/frontend.js',
+			'js/plugins/**'
+		], { base: '.' })
+		.pipe(gulp.dest('build'));
+});
+
+// Publish to ecommdev.office.otterbox.com/lifeproof/pattern-library
+gulp.task('publish', ['build'], function(){
+	console.log("Publishing to http://ecommdev.office.otterbox.com/lifeproof/pattern-library");
+	return gulp.src('build/**')
+		.pipe($.rsync({
+			hostname: 'ecommdev.office.otterbox.com',
+			destination: '/vhosts/default/lifeproof/pattern-library/',
+			root: 'build',
+			incremental: true,
+			progress: true,
+			emptyDirectories: true,
+			recursive: true,
+			clean: true,
+			exclude: ['.DS_Store']
+		}));
+});
+
+// Compile html partials into index.html
+gulp.task('html', function(){
+
+	gulp.src(['html/index.html'])
+		.pipe($.fileInclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.on('error', function(error){
+
+			console.log(error);
+			$.notifier.notify({
+				title: "HTML Error",
+				message: "There was an error compiling the HTML partials",
+				sound: "Hero"
+			});
+
+		})
+		.pipe(gulp.dest('.'))
+		.pipe($.browserSync.reload({stream: true}));
 });
 
 // Browser Sync serve task
-gulp.task('serve', ['sass', 'svg', 'js'], function(){
+gulp.task('serve', ['sass', 'svg', 'js', 'html'], function(){
+
 	$.browserSync.init({
 		server: "./"
 	});
@@ -150,7 +191,7 @@ gulp.task('serve', ['sass', 'svg', 'js'], function(){
 	gulp.watch(src.sass, ['sass']);
 	gulp.watch(src.svg, ['svg']);
 	gulp.watch(src.js, ['js']);
-	gulp.watch("./*.html").on('change', $.browserSync.reload);
+	gulp.watch("html/*.html", ['html']);
 });
 
 // Default task (serve up Browser Sync)

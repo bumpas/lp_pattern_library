@@ -25,6 +25,7 @@ config.codekit
 pattern-library/**/frontend.js
 pattern-library/**/frontend.min.js
 pattern-library/**/sprites.svg
+index.html
 
 ## Ignore build directory
 pattern-library/build

@@ -22,7 +22,8 @@
 .module--heading,
 .module--specs,
 .banner,
-.footer {
+.footer,
+.module .video {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -59,6 +60,7 @@ img, embed, object, video {
 @import "frontend/modules/banner";
 @import "frontend/modules/footer";
 @import "frontend/modules/promo50";
+@import "frontend/modules/video";
 
 // Plugins
 @import "frontend/plugins/slick";

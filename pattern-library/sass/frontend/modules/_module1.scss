@@ -62,7 +62,7 @@
 	}
 }
 
-// modifiers for individual styles 
+// modifiers for individual styles
 
 .module1--iphone6 {
 	.module1__heading {
@@ -101,7 +101,7 @@
 				height: auto;
 			}
 		}
-		
+
 		@include breakpoint(md) {
 			color: $white;
 		}
@@ -140,7 +140,6 @@
 
 	.module1__btns {
 		.btn {
-			font-weight: 100;
 			margin-left: rem(14);
 			margin-right: rem(14);
 			margin-bottom: rem(5);
