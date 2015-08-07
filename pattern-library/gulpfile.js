@@ -137,6 +137,7 @@ gulp.task('build', function(){
 			'js/jquery.js',
 			'js/jquery-ui.js',
 			'js/frontend.js',
+			'js/frontend.min.js',
 			'js/plugins/**'
 		], { base: '.' })
 		.pipe(gulp.dest('build'));
