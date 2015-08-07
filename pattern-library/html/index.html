@@ -30,6 +30,7 @@
 
 		@@include('colors.html')
 		@@include('typography.html')
+		@@include('icons.html')
 		@@include('buttons.html')
 
 		<a name="modules" title="Modules"></a>
@@ -114,6 +115,7 @@
 			@@include('footer.html')
 
 		</section>
+
 	</div>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="js/jquery.js"></script>
@@ -158,6 +160,19 @@
 
 			$('select#buttons-text-color').on('change', function(){
 				buttonSection.css('color', $(this).val());
+			});
+
+			$.get('images/sprites.svg', function(data){
+				var ids = [];
+				$(data).find('symbol').each(function(){
+					ids.push($(this).attr('id'));
+				});
+				ids = ids.sort();
+				var html = "";
+				ids.forEach(function(id, index){
+					html += "<li title='#" + id + "'><svg><use xlink:href='images/sprites.svg#" + id + "'/></svg><div>#" + id + "</div></li>";
+				});
+				$('section.icons ul').append(html);
 			});
 
 		});
