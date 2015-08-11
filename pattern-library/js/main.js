@@ -43,10 +43,12 @@ $(function(){
 		var el =$(this);
 		var prev =$(this).prev();
 		if (el.text() == el.data("text-swap")) {
+			el.removeClass("active");
     		el.text(el.data("text-original"));
     		prev.slideUp();
   		} else {
     		el.data("text-original", el.text());
+    		el.addClass("active");
     		el.text(el.data("text-swap"));
     		prev.slideDown();
     	}

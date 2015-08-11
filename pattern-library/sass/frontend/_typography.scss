@@ -26,13 +26,16 @@ a {
 .link {
 	text-decoration: none;
 	text-transform: uppercase;
+
+	&:after {
+		position: relative;
+		@include Icons;
+	}
 }
 
 .link--arrow {
 
 	&:after {
-		@include Icons;
-		position: relative;
 		content: "\f105";
 		margin-left: 4px;
 	}
@@ -42,11 +45,35 @@ a {
 
 	&:after {
 		@include Icons;
-		//font-size: 1.2rem;
-		position: relative;
 		content: "\e600";
 		margin-left: 6px;
 		top: 2px;
+	}
+}
+
+.link--plusCircled {
+	color: $black;
+	line-height: 24px;
+
+	&:after {
+		content: "\e602";
+		border: 1px solid #959595;
+		border-radius: 50%;
+		font-size: 11px;
+		padding: 5px;
+		margin-left: rem(8);
+		transition: all .5s ease;
+	}
+
+	&.active {
+		&:after {
+			content: "\e604";
+			transform: rotate(360deg);
+		}
+	}
+
+	&:hover {
+		color: $black;
 	}
 }
 
