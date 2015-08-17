@@ -22,10 +22,10 @@ config.codekit
 **/.DS_Store
 
 ## Ignore procedurally generated items
-pattern-library/**/frontend.js
-pattern-library/**/frontend.min.js
-pattern-library/**/sprites.svg
+js/frontend.js
+js/frontend.min.js
+images/sprites.svg
 index.html
 
 ## Ignore build directory
-pattern-library/build
+build
