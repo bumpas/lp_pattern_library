@@ -25,7 +25,7 @@ config.codekit
 js/frontend.js
 js/frontend.min.js
 images/sprites.svg
-index.html
+/index.html
 
 ## Ignore build directory
 build
