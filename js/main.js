@@ -156,6 +156,15 @@ $(function(){
 	    });
 	});
 
+	//fineprint overlay
+	$('.fineprint__text').on('click', function() {
+		$(this).next().fadeIn();
+	});
+
+	$('.fineprint__close').on('click', function() {
+		$(this).parent().fadeOut();
+	});
+
 });
 
 
