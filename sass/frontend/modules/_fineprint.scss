@@ -1,0 +1,78 @@
+.fineprint {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  
+  &__text {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 1% 1% 0;
+    font-size: .8rem;
+    color: $black;
+    text-align: right;
+
+    @include breakpoint(md) {
+      color: $white;
+    }
+  }
+  
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    font-size: .8rem;
+    line-height: 1.45;
+    color: white;
+    z-index: 10;
+    
+    @include breakpoint(md) {
+      position: absolute;
+    }
+  }
+  
+  &__copy {
+    position: relative;
+    float: left;
+    width: 75%;
+    padding: 0 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    @include breakpoint(md) {
+      width: 90%;
+    }
+  }
+  
+  &__close {
+    position: relative;
+    display: block;
+    float: right;
+    width: 25%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-left: 1px solid #666;
+    background-color: rgba(255,255,255,.3);
+    z-index: 100;
+    
+    span {
+      position: relative;
+      top: 50%;
+    }
+    
+    @include breakpoint(md) {
+      width: 10%;
+    }
+  }
+}
