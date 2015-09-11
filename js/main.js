@@ -86,28 +86,34 @@ $(function(){
 	});
 
 	// PDP Whats in the box link
-	$('.pdp-buystack a#whatsinthebox, .pdp-buystack a:last').on('click', function(){
+	$('.pdp-buystack a.whats-in-the-box').on('click', function(){
 		var whatsInTheBoxModule = $('.otter-tab .whats-in-the-box'),
 			classes = whatsInTheBoxModule.closest('.otter-tab').attr('class').split(' '),
-			tab = null;
+			tabClass = null;
 
 		// Determine which otter tab "What's in the box?" is on.
 		for(c in classes) {
 			if (classes[c] == 'otter-tab' || classes[c] == 'primetime') continue;
 			if ($('.otter-tabs nav li[data-section="' + classes[c] + '"]').length == 1) {
-				tab = classes[c];
+				tabClass = classes[c];
 				break;
 			}
 		}
 		// If no tab found, don't do anything
-		if (tab == null) {
+		if (tabClass == null) {
 			return false;
 		}
 
 		// Click the tab if necessary
-		var tab = $('.otter-tabs nav li[data-section="' + tab + '"]');
+		var tab = $('.otter-tabs nav li[data-section="' + tabClass + '"]');
 		if (!tab.hasClass('active')) {
 			tab.trigger('click');
+		}
+
+		// Click mobile section
+		var section = $('.otter-tabs section.' + tabClass);
+		if (!section.hasClass('primetime')) {
+			section.find('h5:first').trigger('click');
 		}
 
 		// Scroll to the module
