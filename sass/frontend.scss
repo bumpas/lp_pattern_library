@@ -38,6 +38,21 @@
 
 }
 
+// CSS Media Query Indicators (for JavaScript)
+body:before {
+	position: absolute;
+	visibility: hidden;
+	left: -999px;
+	top: -999px;
+	content: 'mobile';
+	@include respond(768px) {
+		content: 'tablet';
+	}
+	@include respond(1025px) {
+		content: 'desktop';
+	}
+}
+
 // All media should be relatively sized
 img, embed, object, video {
 	max-width: 100%;
