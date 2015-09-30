@@ -17,6 +17,7 @@ var src = {
 		'js/plugins/svg4everybody.js',
 		'js/plugins/jquery-svg-shim.js',
 		'js/plugins/indexof-polyfill.js',
+		'js/plugins/jquery.throttle-debounce.js',
 		'js/main.js'
 	]
 };
