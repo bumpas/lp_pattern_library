@@ -86,6 +86,20 @@
 		}
 	}
 
+
+	.row.title {
+		padding: 0;
+
+		> div {
+			padding: 20px 0 10px 0;
+			border-top: 6px solid rgba(0,0,0,0);
+		}
+
+		.active {
+			border-top-color: $aqua;
+		}
+	}
+
 	// Fixing backend dev's style issues
 	.colors {
 		ul {
