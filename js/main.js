@@ -171,6 +171,40 @@ $(function(){
 		$(this).parent().fadeOut();
 	});
 
+	// Comparison chart mobile sticky product titles
+	$('.module--compare').each(function(){
+
+		// Set variables
+		var compare = $(this),
+			title = compare.find('.title'),
+			stickyEndOffset = title.outerHeight(),
+			stickyEndElement = compare.children('div:last()').prev();
+
+		// Create the sticky title
+		var stickyTitle = title.clone().addClass('title--sticky').prependTo(compare);
+
+		// On Scroll handler
+		$(window).on('scroll resize', $.throttle(100, function(){
+
+			var stickyStart = title.offset().top;
+			var stickyEnd = stickyEndElement.offset().top - stickyEndOffset;
+
+			// Sticky titles (scrolling within the comparison chart)
+			if ( stickyStart <= window.pageYOffset && window.pageYOffset <= stickyEnd ) {
+				stickyTitle.removeClass('after').addClass('during');
+
+			// Hide sticky titles after (scrolling beyond comparison chart)
+			} else if ( window.pageYOffset > stickyEnd ) {
+				stickyTitle.removeClass('during').addClass('after');
+
+			// Not sticky title (scrolling before comparison chart)
+			} else {
+				stickyTitle.removeClass('during after');
+			}
+		})).trigger('scroll');
+
+	});
+
 });
 
 
