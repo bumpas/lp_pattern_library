@@ -63,7 +63,7 @@ gulp.task('sass', function(){
 		}))
 
 		// Combine media queries
-		.pipe($.cmq())
+		//.pipe($.cmq())
 
 		// Timestamp
 		.pipe($.insert.prepend(timestamp))

@@ -6,7 +6,5 @@
 			"folder_exclude_patterns": ["bower_components", "node_modules", "fonts"],
 			"file_exclude_patterns": []
 		}
-	],
-
-
+	]
 }
